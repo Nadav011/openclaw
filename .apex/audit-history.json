@@ -1,0 +1,40 @@
+{
+  "projectName": "openclaw",
+  "projectPath": "/home/nadavcohen/Desktop/openclaw-desktop/openclaw",
+  "entries": [
+    {
+      "timestamp": "2026-02-05T17:28:36.734Z",
+      "score": 36,
+      "maxScore": 70,
+      "verdict": "FAILED",
+      "passCount": 10,
+      "failCount": 8,
+      "warnCount": 14,
+      "duration": 142033,
+      "gatesRun": 70
+    },
+    {
+      "timestamp": "2026-02-05T17:49:44.138Z",
+      "score": 36,
+      "maxScore": 70,
+      "verdict": "FAILED",
+      "passCount": 10,
+      "failCount": 8,
+      "warnCount": 14,
+      "duration": 155087,
+      "gatesRun": 70
+    },
+    {
+      "timestamp": "2026-02-05T19:14:07.711Z",
+      "score": 38,
+      "maxScore": 70,
+      "verdict": "FAILED",
+      "passCount": 11,
+      "failCount": 7,
+      "warnCount": 14,
+      "duration": 176939,
+      "gatesRun": 70
+    }
+  ],
+  "lastUpdated": "2026-02-05T19:14:08.632Z"
+}

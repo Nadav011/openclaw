@@ -1,0 +1,3635 @@
+metadata:
+ version: 23.2.0
+ format: yaml
+ target_model: generic
+ project_name: ui
+ project_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+ timestamp: 2026-02-05T19:12:44.324Z
+ duration_ms: 80304
+summary:
+ score: 39
+ max_score: 70
+ percentage: 56
+ verdict: FAILED
+ by_severity:
+  CRITICAL: 1
+  HIGH: 89
+  MEDIUM: 51
+  LOW: 0
+  INFO: 0
+ by_cluster:
+  FOUNDATION:
+   passed: 3
+   failed: 4
+   total: 7
+  STRUCTURE:
+   passed: 2
+   failed: 4
+   total: 7
+  SENSATION:
+   passed: 5
+   failed: 2
+   total: 7
+  INTEGRITY:
+   passed: 1
+   failed: 1
+   total: 7
+  PERFORMANCE:
+   passed: 1
+   failed: 3
+   total: 7
+  NEURAL:
+   passed: 1
+   failed: 1
+   total: 7
+  EVOLUTION:
+   passed: 2
+   failed: 4
+   total: 7
+  SUPPLY_CHAIN:
+   passed: 0
+   failed: 6
+   total: 7
+  RESILIENCE:
+   passed: 0
+   failed: 7
+   total: 7
+  OBSERVABILITY:
+   passed: 0
+   failed: 7
+   total: 7
+ total_issues: 141
+ auto_fixable: 58
+ blocking_deployment: 1
+ blocking_pr: 89
+instructions:
+ fix_order: "Fix issues in order: CRITICAL -> HIGH -> AUTO-FIXABLE -> MEDIUM -> LOW"
+ verification: "After each fix, run: pnpm apex audit --gates <gate_id>"
+ important_notes:
+  - CRITICAL issues BLOCK deployment - fix immediately
+  - HIGH issues BLOCK PR merge - fix before review
+  - Auto-fixable issues can be fixed with /heal command
+  - "Total estimated fix time: Major overhaul (~1166 minutes)"
+ model_specific:
+  - Place any reasoning inside <think>...</think> tags before JSON output
+  - Follow the exact schema provided in this report
+  - "Recommended temperature: 0.3"
+  - "Maximum tokens: 8,192"
+fix_plan:
+ total_issues: 141
+ estimated_effort: Major overhaul (~1166 minutes)
+ phases:
+  - phase: 1
+    name: Critical Blockers
+    description: Fix deployment-blocking issues immediately
+    issue_ids:
+     - APEX-G50-0
+    estimated_time: 30 minutes
+    can_autofix: false
+  - phase: 2
+    name: High Priority
+    description: Fix PR-blocking issues before code review
+    issue_ids:
+     - APEX-G7-0
+     - APEX-G9-0
+     - APEX-G9-1
+     - APEX-G9-2
+     - APEX-G9-3
+     - APEX-G9-4
+     - APEX-G9-5
+     - APEX-G9-6
+     - APEX-G9-7
+     - APEX-G9-8
+     - APEX-G9-9
+     - APEX-G9-10
+     - APEX-G9-11
+     - APEX-G9-12
+     - APEX-G9-13
+     - APEX-G9-14
+     - APEX-G9-15
+     - APEX-G9-16
+     - APEX-G9-17
+     - APEX-G9-18
+     - APEX-G9-19
+     - APEX-G9-20
+     - APEX-G9-21
+     - APEX-G9-22
+     - APEX-G9-23
+     - APEX-G9-24
+     - APEX-G9-25
+     - APEX-G9-26
+     - APEX-G9-27
+     - APEX-G9-28
+     - APEX-G9-29
+     - APEX-G9-30
+     - APEX-G17-0
+     - APEX-G17-1
+     - APEX-G17-2
+     - APEX-G17-3
+     - APEX-G17-4
+     - APEX-G17-5
+     - APEX-G17-6
+     - APEX-G17-7
+     - APEX-G17-8
+     - APEX-G17-9
+     - APEX-G17-10
+     - APEX-G17-11
+     - APEX-G17-12
+     - APEX-G17-13
+     - APEX-G17-14
+     - APEX-G17-15
+     - APEX-G17-16
+     - APEX-G17-17
+     - APEX-G17-18
+     - APEX-G17-19
+     - APEX-G17-20
+     - APEX-G17-21
+     - APEX-G17-22
+     - APEX-G17-23
+     - APEX-G17-24
+     - APEX-G17-25
+     - APEX-G17-26
+     - APEX-G17-27
+     - APEX-G17-28
+     - APEX-G17-29
+     - APEX-G17-30
+     - APEX-G17-31
+     - APEX-G17-32
+     - APEX-G17-33
+     - APEX-G17-34
+     - APEX-G17-35
+     - APEX-G17-36
+     - APEX-G17-37
+     - APEX-G17-38
+     - APEX-G17-39
+     - APEX-G17-40
+     - APEX-G17-41
+     - APEX-G17-42
+     - APEX-G17-43
+     - APEX-G17-44
+     - APEX-G17-45
+     - APEX-G17-46
+     - APEX-G17-47
+     - APEX-G17-48
+     - APEX-G17-49
+     - APEX-G17-50
+     - APEX-G17-51
+     - APEX-G17-52
+     - APEX-G17-53
+     - APEX-G30-0
+     - APEX-G46-0
+     - APEX-G59-0
+    estimated_time: 890 minutes
+    can_autofix: true
+  - phase: 3
+    name: Quick Auto-Fixes
+    description: Apply automated fixes for remaining issues
+    issue_ids:
+     - APEX-G57-0
+     - APEX-G60-0
+     - APEX-G63-0
+    estimated_time: 6 minutes
+    can_autofix: true
+  - phase: 4
+    name: Manual Review
+    description: Review and fix remaining issues manually
+    issue_ids:
+     - APEX-G2-0
+     - APEX-G3-0
+     - APEX-G5-0
+     - APEX-G8-0
+     - APEX-G8-1
+     - APEX-G8-2
+     - APEX-G8-3
+     - APEX-G8-4
+     - APEX-G8-5
+     - APEX-G8-6
+     - APEX-G8-7
+     - APEX-G8-8
+     - APEX-G8-9
+     - APEX-G8-10
+     - APEX-G8-11
+     - APEX-G8-12
+     - APEX-G8-13
+     - APEX-G8-14
+     - APEX-G8-15
+     - APEX-G8-16
+     - APEX-G8-17
+     - APEX-G8-18
+     - APEX-G8-19
+     - APEX-G11-0
+     - APEX-G12-0
+     - APEX-G19-0
+     - APEX-G24-0
+     - APEX-G33-0
+     - APEX-G34-0
+     - APEX-G42-0
+     - APEX-G45-0
+     - APEX-G47-0
+     - APEX-G48-0
+     - APEX-G51-0
+     - APEX-G52-0
+     - APEX-G53-0
+     - APEX-G55-0
+     - APEX-G56-0
+     - APEX-G58-0
+     - APEX-G61-0
+     - APEX-G62-0
+     - APEX-G64-0
+     - APEX-G65-0
+     - APEX-G66-0
+     - APEX-G67-0
+     - APEX-G68-0
+     - APEX-G69-0
+     - APEX-G70-0
+    estimated_time: 240 minutes
+    can_autofix: false
+by_file:
+ project:
+  file: project
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+  language: unknown
+  total_issues: 35
+  critical_count: 1
+  high_count: 4
+  auto_fixable_count: 4
+  issues:
+   - &a1
+     id: APEX-G50-0
+     gate_id: 50
+     gate_name: Deps_Audit
+     cluster: SUPPLY_CHAIN
+     severity: CRITICAL
+     severity_score: 9.5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No lock file found
+     explanation: No lock file found
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 50
+     apex_law: "#1 ZERO TRUST"
+     documentation_url: https://apex.dev/gates/50
+     manual_steps:
+      - Run npm install to generate package-lock.json
+      - Or use pnpm/yarn/bun for their lock files
+   - &a2
+     id: APEX-G7-0
+     gate_id: 7
+     gate_name: Truth_Anchor
+     cluster: FOUNDATION
+     severity: HIGH
+     severity_score: 7.5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: "Invalid config files: package.json"
+     explanation: "Invalid config files: package.json"
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 7
+     apex_law: "#1 ZERO TRUST"
+     documentation_url: https://apex.dev/gates/7
+     manual_steps:
+      - Fix JSON/YAML syntax errors in config files
+      - Ensure config files are not empty
+      - package.json must have 'name' and 'version' fields
+      - tsconfig.json must have 'compilerOptions' section
+      - GitHub workflow files must have 'name' and 'on' fields
+      - YAML files use spaces for indentation, not tabs
+   - &a88
+     id: APEX-G30-0
+     gate_id: 30
+     gate_name: Lazy_Loading
+     cluster: PERFORMANCE
+     severity: HIGH
+     severity_score: 7.5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: Only 0 lazy loading usages found
+     explanation: Only 0 lazy loading usages found
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 30
+     apex_law: "#2 INFINITE SCALE"
+     documentation_url: https://apex.dev/gates/30
+     manual_steps:
+      - import dynamic from 'next/dynamic'
+      - 'const Component = dynamic(() => import("./Component"), { loading: () => <Loading /> })'
+      - Wrap lazy components with <Suspense fallback={...}>
+      - Add loading="lazy" to below-fold images
+   - &a89
+     id: APEX-G46-0
+     gate_id: 46
+     gate_name: CI_Pipeline
+     cluster: EVOLUTION
+     severity: HIGH
+     severity_score: 7.5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No CI/CD pipeline found
+     explanation: No CI/CD pipeline found
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 46
+     apex_law: ""
+     documentation_url: https://apex.dev/gates/46
+     manual_steps:
+      - Create .github/workflows/ci.yml
+      - "Add jobs: lint -> build -> test (in dependency order)"
+      - Enable concurrency to cancel stale runs
+   - &a90
+     id: APEX-G59-0
+     gate_id: 59
+     gate_name: Graceful_Deg
+     cluster: RESILIENCE
+     severity: HIGH
+     severity_score: 7.5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: Graceful degradation patterns missing or poorly implemented
+     explanation: Graceful degradation patterns missing or poorly implemented
+     fix_confidence: 0.8
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 59
+     apex_law: "#1 ZERO TRUST"
+     documentation_url: https://apex.dev/gates/59
+     manual_steps:
+      - Create app/loading.tsx with skeleton/spinner component
+      - Create app/not-found.tsx with helpful 404 message and navigation
+      - Wrap async components with <Suspense fallback={<Loading />}>
+      - Add timeout handling for external requests with AbortController
+   - &a91
+     id: APEX-G2-0
+     gate_id: 2
+     gate_name: DNA_Alignment
+     cluster: FOUNDATION
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No AI_CONTEXT.md or CLAUDE.md in project (optional but recommended)
+     explanation: No AI_CONTEXT.md or CLAUDE.md in project (optional but recommended)
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 2
+     apex_law: "#1 ZERO TRUST"
+     documentation_url: https://apex.dev/gates/2
+     manual_steps:
+      - Run /scan to generate AI_CONTEXT.md
+      - Or create .claude/AI_CONTEXT.md manually with project info
+   - &a92
+     id: APEX-G3-0
+     gate_id: 3
+     gate_name: Schema_Lock
+     cluster: FOUNDATION
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No validation library installed; 4 unused production dependencies
+     explanation: No validation library installed; 4 unused production dependencies
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 3
+     apex_law: "#1 ZERO TRUST"
+     documentation_url: https://apex.dev/gates/3
+     manual_steps:
+      - "Remove unused deps: @noble/ed25519, dompurify, lit, marked"
+      - "Install zod: bun add zod"
+   - &a93
+     id: APEX-G5-0
+     gate_id: 5
+     gate_name: Boundary_Check
+     cluster: FOUNDATION
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: 81 client-side API usages need 'use client' or typeof guard (AST verified)
+     explanation: 81 client-side API usages need 'use client' or typeof guard (AST verified)
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 5
+     apex_law: "#1 ZERO TRUST"
+     documentation_url: https://apex.dev/gates/5
+     manual_steps:
+      - Add 'use client' at the top of components using React hooks
+      - Add 'use client' for files using browser APIs (localStorage, etc.)
+      - "Or wrap browser API access in: if (typeof window !== 'undefined')"
+      - Consider extracting client logic into separate components
+   - &a115
+     id: APEX-G12-0
+     gate_id: 12
+     gate_name: Barrel_Export
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: "Dynamic imports: 0, Lazy components: 0, Routes: 0"
+     explanation: "Dynamic imports: 0, Lazy components: 0, Routes: 0"
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 12
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/12
+     manual_steps:
+      - Use dynamic import() for code splitting heavy modules
+      - Use React.lazy() or next/dynamic for component-level splitting
+   - &a116
+     id: APEX-G19-0
+     gate_id: 19
+     gate_name: Responsive
+     cluster: SENSATION
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: "Speculative UX: parallel-load"
+     explanation: "Speculative UX: parallel-load"
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 19
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/19
+     manual_steps:
+      - Use useOptimistic() for instant feedback on mutations
+      - Add prefetch on hover/focus for predictive loading
+      - Use Suspense boundaries for streaming SSR and code splitting
+      - Consider stale-while-revalidate for better perceived performance
+   - &a117
+     id: APEX-G24-0
+     gate_id: 24
+     gate_name: XSS_Prevent
+     cluster: INTEGRITY
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No hardcoded secrets, but .env not in .gitignore
+     explanation: No hardcoded secrets, but .env not in .gitignore
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 24
+     apex_law: "#1 ZERO TRUST"
+     documentation_url: https://apex.dev/gates/24
+     manual_steps:
+      - Add .env and .env.* to .gitignore
+   - &a118
+     id: APEX-G33-0
+     gate_id: 33
+     gate_name: Cache_Headers
+     cluster: PERFORMANCE
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No cache configuration found
+     explanation: No cache configuration found
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 33
+     apex_law: "#4 ROI"
+     documentation_url: https://apex.dev/gates/33
+     manual_steps:
+      - "Add cache headers in next.config.js:"
+      - "{ source: '/_next/static/:path*', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] }"
+      - Or configure in vercel.json, netlify.toml, or _headers file
+   - &a119
+     id: APEX-G34-0
+     gate_id: 34
+     gate_name: Core_Web_Vitals
+     cluster: PERFORMANCE
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No CWV anti-patterns, but no monitoring detected
+     explanation: No CWV anti-patterns, but no monitoring detected
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 34
+     apex_law: "#2 INFINITE SCALE"
+     documentation_url: https://apex.dev/gates/34
+     manual_steps:
+      - Add @vercel/speed-insights or web-vitals for CWV monitoring
+      - Monitor LCP, CLS, INP in production
+   - &a120
+     id: APEX-G42-0
+     gate_id: 42
+     gate_name: Example_Code
+     cluster: NEURAL
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: Limited simulation/preview capabilities
+     explanation: Limited simulation/preview capabilities
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 42
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/42
+     manual_steps:
+      - 'Add --dry-run flag: if (dryRun) { console.log("Would:", action); return; }'
+      - "Show diff preview: console.log(createPatch(original, modified))"
+      - "Create backups: fs.copyFile(file, `${file}.bak`) before modifications"
+      - Initialize git for version-controlled rollback
+   - &a121
+     id: APEX-G45-0
+     gate_id: 45
+     gate_name: PR_Template
+     cluster: EVOLUTION
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No PR template found
+     explanation: No PR template found
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 45
+     apex_law: ""
+     documentation_url: https://apex.dev/gates/45
+     manual_steps:
+      - Create .github/pull_request_template.md
+      - "Include: Summary, Changes, Test Plan, Checklist (5+ items)"
+   - &a122
+     id: APEX-G47-0
+     gate_id: 47
+     gate_name: Deploy_Checks
+     cluster: EVOLUTION
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No deployment configuration found
+     explanation: No deployment configuration found
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 47
+     apex_law: ""
+     documentation_url: https://apex.dev/gates/47
+     manual_steps:
+      - Create vercel.json for Vercel deployment
+      - Or create Dockerfile for containerized deployment
+      - Add engines.node to package.json
+   - &a123
+     id: APEX-G48-0
+     gate_id: 48
+     gate_name: Rollback_Ready
+     cluster: EVOLUTION
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: "Partial rollback: 40 semver tags (v2026.1.30)"
+     explanation: "Partial rollback: 40 semver tags (v2026.1.30)"
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 48
+     apex_law: ""
+     documentation_url: https://apex.dev/gates/48
+     manual_steps: []
+   - &a124
+     id: APEX-G51-0
+     gate_id: 51
+     gate_name: Lock_Integrity
+     cluster: SUPPLY_CHAIN
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No SBOM generation configured
+     explanation: No SBOM generation configured
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 51
+     apex_law: "#1 ZERO TRUST"
+     documentation_url: https://apex.dev/gates/51
+     manual_steps:
+      - Install @cyclonedx/cyclonedx-npm for CycloneDX format
+      - Or use @spdx/tools for SPDX format
+      - Add sbom script to package.json
+      - Generate SBOM in CI pipeline
+   - &a125
+     id: APEX-G52-0
+     gate_id: 52
+     gate_name: License_Check
+     cluster: SUPPLY_CHAIN
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: "npm audit failed: Command failed: npm audit --json"
+     explanation: "npm audit failed: Command failed: npm audit --json"
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 52
+     apex_law: "#1 ZERO TRUST"
+     documentation_url: https://apex.dev/gates/52
+     manual_steps:
+      - Ensure npm is installed and accessible
+      - Check if package-lock.json exists
+      - Run npm audit manually to diagnose
+   - &a126
+     id: APEX-G53-0
+     gate_id: 53
+     gate_name: SBOM_Gen
+     cluster: SUPPLY_CHAIN
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: Could not run license-checker
+     explanation: Could not run license-checker
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 53
+     apex_law: "#1 ZERO TRUST"
+     documentation_url: https://apex.dev/gates/53
+     manual_steps:
+      - "Install license-checker: npm install -D license-checker"
+      - "Or run manually: npx license-checker --json --production"
+   - &a127
+     id: APEX-G55-0
+     gate_id: 55
+     gate_name: Typosquat
+     cluster: SUPPLY_CHAIN
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: 5 potentially suspicious package(s) found (3 high, 2 medium risk)
+     explanation: 5 potentially suspicious package(s) found (3 high, 2 medium risk)
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 55
+     apex_law: "#1 ZERO TRUST"
+     documentation_url: https://apex.dev/gates/55
+     manual_steps:
+      - Verify suspicious packages are intentional
+      - Check npm registry for package authenticity
+      - Review package author and download counts
+      - Consider using npm-audit-resolver for package verification
+   - &a128
+     id: APEX-G56-0
+     gate_id: 56
+     gate_name: Outdated_Check
+     cluster: SUPPLY_CHAIN
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No supply chain attestation configured
+     explanation: No supply chain attestation configured
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 56
+     apex_law: "#1 ZERO TRUST"
+     documentation_url: https://apex.dev/gates/56
+     manual_steps:
+      - "Enable npm provenance: add { publishConfig: { provenance: true } } to package.json"
+      - "Configure SLSA L3 provenance: uses: slsa-framework/slsa-github-generator@v2"
+      - "Enable GPG commit signing: git config commit.gpgsign true"
+      - "Use Gitsign for keyless signing: https://github.com/sigstore/gitsign"
+      - "See SLSA levels: https://slsa.dev/spec/v1.0/levels"
+   - &a129
+     id: APEX-G57-0
+     gate_id: 57
+     gate_name: Error_Bounds
+     cluster: RESILIENCE
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No error boundaries found
+     explanation: No error boundaries found
+     fix_confidence: 0.8
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 57
+     apex_law: "#1 ZERO TRUST"
+     documentation_url: https://apex.dev/gates/57
+     manual_steps:
+      - Create an ErrorBoundary component with getDerivedStateFromError
+      - Add componentDidCatch for error logging
+      - Include retry functionality for recoverable errors
+      - Wrap critical UI sections with error boundaries
+   - &a130
+     id: APEX-G58-0
+     gate_id: 58
+     gate_name: Offline_Detect
+     cluster: RESILIENCE
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No offline detection found
+     explanation: No offline detection found
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 58
+     apex_law: "#1 ZERO TRUST"
+     documentation_url: https://apex.dev/gates/58
+     manual_steps:
+      - Create useOnlineStatus hook with navigator.onLine + event listeners
+      - Add visual indicator when user is offline
+      - Use serwist or next-pwa for PWA support with caching
+      - Configure service worker with cache strategies
+   - &a131
+     id: APEX-G60-0
+     gate_id: 60
+     gate_name: Health_Endpt
+     cluster: RESILIENCE
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No health check endpoint found (server not running for live test)
+     explanation: No health check endpoint found (server not running for live test)
+     fix_confidence: 0.8
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 60
+     apex_law: "#1 ZERO TRUST"
+     documentation_url: https://apex.dev/gates/60
+     manual_steps:
+      - Create app/api/health/route.ts with GET handler
+      - "Return { status: 'healthy', timestamp: Date.now(), checks: {...} }"
+      - Include database connectivity check
+      - Include external service checks (Redis, APIs, etc.)
+      - Start dev server to enable live health check testing
+   - &a132
+     id: APEX-G61-0
+     gate_id: 61
+     gate_name: Retry_Pattern
+     cluster: RESILIENCE
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No retry patterns found for external calls
+     explanation: No retry patterns found for external calls
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 61
+     apex_law: "#1 ZERO TRUST"
+     documentation_url: https://apex.dev/gates/61
+     manual_steps:
+      - Use p-retry for promise-based retries with backoff
+      - "Configure retry in TanStack Query: { retry: 3, retryDelay: attemptIndex => ... }"
+      - Use axios-retry for HTTP retries
+      - Consider cockatiel for comprehensive resilience patterns
+   - &a133
+     id: APEX-G62-0
+     gate_id: 62
+     gate_name: Circuit_Break
+     cluster: RESILIENCE
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No circuit breaker or rate limiting found
+     explanation: No circuit breaker or rate limiting found
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 62
+     apex_law: "#1 ZERO TRUST"
+     documentation_url: https://apex.dev/gates/62
+     manual_steps:
+      - Use @upstash/ratelimit for serverless rate limiting
+      - Use cockatiel for circuit breaker patterns
+      - Implement circuit breaker for external service calls
+      - Add rate limiting to protect against abuse
+   - &a134
+     id: APEX-G63-0
+     gate_id: 63
+     gate_name: Data_Recovery
+     cluster: RESILIENCE
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: "Partial data resilience (score: 37/100): localStorage, backup strategy, restore procedure, job queue, queue retry, job tracking, revalidation"
+     explanation: "Partial data resilience (score: 37/100): localStorage, backup strategy, restore procedure, job queue, queue retry, job tracking, revalidation"
+     fix_confidence: 0.8
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 63
+     apex_law: "#1 ZERO TRUST"
+     documentation_url: https://apex.dev/gates/63
+     manual_steps:
+      - Implement autosave for forms and editors
+      - Add beforeunload warning for unsaved changes
+      - Add dead letter queue for failed jobs
+      - Invalidate queries after mutations (TanStack Query invalidateQueries)
+   - &a135
+     id: APEX-G64-0
+     gate_id: 64
+     gate_name: Struct_Logging
+     cluster: OBSERVABILITY
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No structured logging library installed
+     explanation: No structured logging library installed
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 64
+     apex_law: "#4 ROI"
+     documentation_url: https://apex.dev/gates/64
+     manual_steps:
+      - "Install pino: npm install pino"
+      - "Or winston: npm install winston"
+   - &a136
+     id: APEX-G65-0
+     gate_id: 65
+     gate_name: Error_Track
+     cluster: OBSERVABILITY
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No error tracking library installed
+     explanation: No error tracking library installed
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 65
+     apex_law: "#4 ROI"
+     documentation_url: https://apex.dev/gates/65
+     manual_steps:
+      - Install @sentry/nextjs for Next.js apps
+      - Install @sentry/react for React apps
+   - &a137
+     id: APEX-G66-0
+     gate_id: 66
+     gate_name: Perf_Monitor
+     cluster: OBSERVABILITY
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No performance monitoring detected
+     explanation: No performance monitoring detected
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 66
+     apex_law: "#4 ROI"
+     documentation_url: https://apex.dev/gates/66
+     manual_steps:
+      - Install @vercel/speed-insights for automatic Core Web Vitals
+      - "Or use web-vitals: import { onCLS, onLCP, onINP } from 'web-vitals'"
+   - &a138
+     id: APEX-G67-0
+     gate_id: 67
+     gate_name: User_Analytics
+     cluster: OBSERVABILITY
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No analytics tracking detected
+     explanation: No analytics tracking detected
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 67
+     apex_law: "#4 ROI"
+     documentation_url: https://apex.dev/gates/67
+     manual_steps:
+      - Install @vercel/analytics for simple analytics
+      - Or posthog-js for detailed product analytics
+   - &a139
+     id: APEX-G68-0
+     gate_id: 68
+     gate_name: Trace_Context
+     cluster: OBSERVABILITY
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No tracing library installed
+     explanation: No tracing library installed
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 68
+     apex_law: "#4 ROI"
+     documentation_url: https://apex.dev/gates/68
+     manual_steps:
+      - Install @opentelemetry/sdk-trace-node
+      - Install @opentelemetry/api for trace API
+   - &a140
+     id: APEX-G69-0
+     gate_id: 69
+     gate_name: Metrics_Export
+     cluster: OBSERVABILITY
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No metrics library installed
+     explanation: No metrics library installed
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 69
+     apex_law: "#4 ROI"
+     documentation_url: https://apex.dev/gates/69
+     manual_steps:
+      - Install @opentelemetry/sdk-metrics
+      - Or prom-client for Prometheus metrics
+   - &a141
+     id: APEX-G70-0
+     gate_id: 70
+     gate_name: Dashboard_Ready
+     cluster: OBSERVABILITY
+     severity: MEDIUM
+     severity_score: 5
+     file: project
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui
+     message: No dashboard or alert configuration files found
+     explanation: No dashboard or alert configuration files found
+     fix_confidence: 0.4
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 70
+     apex_law: "#4 ROI"
+     documentation_url: https://apex.dev/gates/70
+     manual_steps:
+      - Create dashboards/*.json for Grafana dashboards
+      - Create alerts.yaml for alerting rules
+      - Export dashboards from your monitoring tool and commit to repo
+ src/ui/views/nodes.ts:
+  file: src/ui/views/nodes.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/nodes.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a3
+     id: APEX-G9-0
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/views/nodes.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/nodes.ts
+     line: 1086
+     message: "File exceeds limit: 1086 LOC (1138 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/views/config-form.node.ts:
+  file: src/ui/views/config-form.node.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/config-form.node.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a4
+     id: APEX-G9-1
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/views/config-form.node.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/config-form.node.ts
+     line: 720
+     message: "File exceeds limit: 720 LOC (779 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/views/config.ts:
+  file: src/ui/views/config.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/config.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a5
+     id: APEX-G9-2
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/views/config.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/config.ts
+     line: 653
+     message: "File exceeds limit: 653 LOC (691 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/app-render.ts:
+  file: src/ui/app-render.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-render.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a6
+     id: APEX-G9-3
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/app-render.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-render.ts
+     line: 590
+     message: "File exceeds limit: 590 LOC (608 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/types.ts:
+  file: src/ui/types.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/types.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a7
+     id: APEX-G9-4
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/types.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/types.ts
+     line: 471
+     message: "File exceeds limit: 471 LOC (527 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/views/cron.ts:
+  file: src/ui/views/cron.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/cron.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a8
+     id: APEX-G9-5
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/views/cron.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/cron.ts
+     line: 450
+     message: "File exceeds limit: 450 LOC (462 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/views/config-form.render.ts:
+  file: src/ui/views/config-form.render.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/config-form.render.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a9
+     id: APEX-G9-6
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/views/config-form.render.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/config-form.render.ts
+     line: 445
+     message: "File exceeds limit: 445 LOC (473 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/views/chat.ts:
+  file: src/ui/views/chat.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/chat.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a10
+     id: APEX-G9-7
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/views/chat.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/chat.ts
+     line: 438
+     message: "File exceeds limit: 438 LOC (488 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/app.ts:
+  file: src/ui/app.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a11
+     id: APEX-G9-8
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/app.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app.ts
+     line: 416
+     message: "File exceeds limit: 416 LOC (476 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/app-render.helpers.ts:
+  file: src/ui/app-render.helpers.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-render.helpers.ts
+  language: typescript
+  total_issues: 2
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a12
+     id: APEX-G9-9
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/app-render.helpers.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-render.helpers.ts
+     line: 309
+     message: "File exceeds limit: 309 LOC (332 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+   - &a103
+     id: APEX-G8-9
+     gate_id: 8
+     gate_name: File_Org
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: src/ui/app-render.helpers.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-render.helpers.ts
+     line: 1
+     message: File name "app-render.helpers" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)
+     explanation: Found 38 organization issues (0 critical, 38 warnings)
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 8
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/8
+ src/ui/app-settings.ts:
+  file: src/ui/app-settings.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-settings.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a13
+     id: APEX-G9-10
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/app-settings.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-settings.ts
+     line: 302
+     message: "File exceeds limit: 302 LOC (333 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/views/channels.ts:
+  file: src/ui/views/channels.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/channels.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a14
+     id: APEX-G9-11
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/views/channels.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/channels.ts
+     line: 289
+     message: "File exceeds limit: 289 LOC (311 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/gateway.ts:
+  file: src/ui/gateway.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/gateway.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a15
+     id: APEX-G9-12
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/gateway.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/gateway.ts
+     line: 266
+     message: "File exceeds limit: 266 LOC (298 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/views/sessions.ts:
+  file: src/ui/views/sessions.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/sessions.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a16
+     id: APEX-G9-13
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/views/sessions.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/sessions.ts
+     line: 253
+     message: "File exceeds limit: 253 LOC (269 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/views/channels.nostr-profile-form.ts:
+  file: src/ui/views/channels.nostr-profile-form.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/channels.nostr-profile-form.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a17
+     id: APEX-G9-14
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/views/channels.nostr-profile-form.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/channels.nostr-profile-form.ts
+     line: 251
+     message: "File exceeds limit: 251 LOC (321 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/views/overview.ts:
+  file: src/ui/views/overview.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/overview.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a18
+     id: APEX-G9-15
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/views/overview.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/overview.ts
+     line: 249
+     message: "File exceeds limit: 249 LOC (257 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/chat/grouped-render.ts:
+  file: src/ui/chat/grouped-render.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/chat/grouped-render.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a19
+     id: APEX-G9-16
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/chat/grouped-render.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/chat/grouped-render.ts
+     line: 249
+     message: "File exceeds limit: 249 LOC (277 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/app-gateway.ts:
+  file: src/ui/app-gateway.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-gateway.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a20
+     id: APEX-G9-17
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/app-gateway.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-gateway.ts
+     line: 242
+     message: "File exceeds limit: 242 LOC (262 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/icons.ts:
+  file: src/ui/icons.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/icons.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a21
+     id: APEX-G9-18
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/icons.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/icons.ts
+     line: 233
+     message: "File exceeds limit: 233 LOC (249 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/app-chat.ts:
+  file: src/ui/app-chat.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-chat.ts
+  language: typescript
+  total_issues: 2
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a22
+     id: APEX-G9-19
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/app-chat.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-chat.ts
+     line: 218
+     message: "File exceeds limit: 218 LOC (243 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+   - &a114
+     id: APEX-G11-0
+     gate_id: 11
+     gate_name: No_Circular
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: src/ui/app-chat.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-chat.ts
+     line: 1
+     message: "Circular dependency chain #1: src/ui/app-chat.ts -> src/ui/app-settings.ts"
+     explanation: Found 1 circular dependency chains
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 11
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/11
+ src/ui/app-channels.ts:
+  file: src/ui/app-channels.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-channels.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a23
+     id: APEX-G9-20
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/app-channels.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-channels.ts
+     line: 215
+     message: "File exceeds limit: 215 LOC (241 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/views/channels.nostr.ts:
+  file: src/ui/views/channels.nostr.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/channels.nostr.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a24
+     id: APEX-G9-21
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/views/channels.nostr.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/channels.nostr.ts
+     line: 213
+     message: "File exceeds limit: 213 LOC (235 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/app-tool-stream.ts:
+  file: src/ui/app-tool-stream.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-tool-stream.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a25
+     id: APEX-G9-22
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/app-tool-stream.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-tool-stream.ts
+     line: 212
+     message: "File exceeds limit: 212 LOC (241 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/app-view-state.ts:
+  file: src/ui/app-view-state.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-view-state.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a26
+     id: APEX-G9-23
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/app-view-state.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-view-state.ts
+     line: 205
+     message: "File exceeds limit: 205 LOC (207 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/views/skills.ts:
+  file: src/ui/views/skills.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/skills.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a27
+     id: APEX-G9-24
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/views/skills.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/skills.ts
+     line: 183
+     message: "File exceeds limit: 183 LOC (192 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/controllers/cron.ts:
+  file: src/ui/controllers/cron.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/cron.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a28
+     id: APEX-G9-25
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/controllers/cron.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/cron.ts
+     line: 177
+     message: "File exceeds limit: 177 LOC (188 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/navigation.ts:
+  file: src/ui/navigation.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/navigation.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a29
+     id: APEX-G9-26
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/navigation.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/navigation.ts
+     line: 174
+     message: "File exceeds limit: 174 LOC (187 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/controllers/config.ts:
+  file: src/ui/controllers/config.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/config.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a30
+     id: APEX-G9-27
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/controllers/config.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/config.ts
+     line: 174
+     message: "File exceeds limit: 174 LOC (186 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/tool-display.ts:
+  file: src/ui/tool-display.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/tool-display.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a31
+     id: APEX-G9-28
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/tool-display.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/tool-display.ts
+     line: 172
+     message: "File exceeds limit: 172 LOC (196 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/controllers/chat.ts:
+  file: src/ui/controllers/chat.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/chat.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a32
+     id: APEX-G9-29
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/controllers/chat.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/chat.ts
+     line: 170
+     message: "File exceeds limit: 170 LOC (191 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/views/config-form.analyze.ts:
+  file: src/ui/views/config-form.analyze.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/config-form.analyze.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 1
+  auto_fixable_count: 0
+  issues:
+   - &a33
+     id: APEX-G9-30
+     gate_id: 9
+     gate_name: Atomic_Size
+     cluster: STRUCTURE
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/views/config-form.analyze.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/config-form.analyze.ts
+     line: 167
+     message: "File exceeds limit: 167 LOC (187 total lines) > 150 limit"
+     explanation: 31 files exceed 150 LOC limit
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 9
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/9
+ src/ui/components/resizable-divider.ts:
+  file: src/ui/components/resizable-divider.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/components/resizable-divider.ts
+  language: typescript
+  total_issues: 2
+  critical_count: 0
+  high_count: 2
+  auto_fixable_count: 2
+  issues:
+   - &a34
+     id: APEX-G17-0
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/components/resizable-divider.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/components/resizable-divider.ts
+     line: 32
+     message: "Using left: -4px; instead of inset-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "left: -4px;"
+     suggested_fix: "inset-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a35
+     id: APEX-G17-1
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/ui/components/resizable-divider.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/components/resizable-divider.ts
+     line: 33
+     message: "Using right: -4px; instead of inset-inline-end:"
+     explanation: Found 54 RTL violations
+     code_snippet: "right: -4px;"
+     suggested_fix: "inset-inline-end:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+ src/styles/layout.css:
+  file: src/styles/layout.css
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/layout.css
+  language: css
+  total_issues: 3
+  critical_count: 0
+  high_count: 3
+  auto_fixable_count: 3
+  issues:
+   - &a36
+     id: APEX-G17-2
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/layout.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/layout.css
+     line: 312
+     message: "Using text-align: left instead of text-align: start"
+     explanation: Found 54 RTL violations
+     code_snippet: "text-align: left"
+     suggested_fix: "text-align: start"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a37
+     id: APEX-G17-3
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/layout.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/layout.css
+     line: 493
+     message: "Using text-align: left instead of text-align: start"
+     explanation: Found 54 RTL violations
+     code_snippet: "text-align: left"
+     suggested_fix: "text-align: start"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a38
+     id: APEX-G17-4
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/layout.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/layout.css
+     line: 574
+     message: "Using border-right: instead of border-inline-end:"
+     explanation: Found 54 RTL violations
+     code_snippet: "border-right:"
+     suggested_fix: "border-inline-end:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+ src/styles/components.css:
+  file: src/styles/components.css
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css
+  language: css
+  total_issues: 15
+  critical_count: 0
+  high_count: 15
+  auto_fixable_count: 15
+  issues:
+   - &a39
+     id: APEX-G17-5
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/components.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css
+     line: 370
+     message: "Using margin-left: instead of margin-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "margin-left:"
+     suggested_fix: "margin-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a40
+     id: APEX-G17-6
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/components.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css
+     line: 370
+     message: "Using left: 6 instead of inset-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "left: 6"
+     suggested_fix: "inset-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a41
+     id: APEX-G17-7
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/components.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css
+     line: 462
+     message: "Using padding-right: instead of padding-inline-end:"
+     explanation: Found 54 RTL violations
+     code_snippet: "padding-right:"
+     suggested_fix: "padding-inline-end:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a42
+     id: APEX-G17-8
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/components.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css
+     line: 462
+     message: "Using right: 3 instead of inset-inline-end:"
+     explanation: Found 54 RTL violations
+     code_snippet: "right: 3"
+     suggested_fix: "inset-inline-end:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a43
+     id: APEX-G17-9
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/components.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css
+     line: 666
+     message: "Using text-align: right instead of text-align: end"
+     explanation: Found 54 RTL violations
+     code_snippet: "text-align: right"
+     suggested_fix: "text-align: end"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a44
+     id: APEX-G17-10
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/components.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css
+     line: 691
+     message: "Using text-align: left instead of text-align: start"
+     explanation: Found 54 RTL violations
+     code_snippet: "text-align: left"
+     suggested_fix: "text-align: start"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a45
+     id: APEX-G17-11
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/components.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css
+     line: 725
+     message: "Using margin-right: instead of margin-inline-end:"
+     explanation: Found 54 RTL violations
+     code_snippet: "margin-right:"
+     suggested_fix: "margin-inline-end:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a46
+     id: APEX-G17-12
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/components.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css
+     line: 725
+     message: "Using right: 6 instead of inset-inline-end:"
+     explanation: Found 54 RTL violations
+     code_snippet: "right: 6"
+     suggested_fix: "inset-inline-end:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a47
+     id: APEX-G17-13
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/components.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css
+     line: 1152
+     message: "Using padding-left: instead of padding-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "padding-left:"
+     suggested_fix: "padding-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a48
+     id: APEX-G17-14
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/components.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css
+     line: 1152
+     message: "Using left: 1 instead of inset-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "left: 1"
+     suggested_fix: "inset-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a49
+     id: APEX-G17-15
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/components.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css
+     line: 1168
+     message: "Using left: 2 instead of inset-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "left: 2"
+     suggested_fix: "inset-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a50
+     id: APEX-G17-16
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/components.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css
+     line: 1168
+     message: "Using border-left: instead of border-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "border-left:"
+     suggested_fix: "border-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a51
+     id: APEX-G17-17
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/components.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css
+     line: 1169
+     message: "Using padding-left: instead of padding-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "padding-left:"
+     suggested_fix: "padding-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a52
+     id: APEX-G17-18
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/components.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css
+     line: 1169
+     message: "Using left: 1 instead of inset-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "left: 1"
+     suggested_fix: "inset-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a53
+     id: APEX-G17-19
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/components.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css
+     line: 1312
+     message: "Using text-align: right instead of text-align: end"
+     explanation: Found 54 RTL violations
+     code_snippet: "text-align: right"
+     suggested_fix: "text-align: end"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+ src/styles/config.css:
+  file: src/styles/config.css
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css
+  language: css
+  total_issues: 11
+  critical_count: 0
+  high_count: 11
+  auto_fixable_count: 11
+  issues:
+   - &a54
+     id: APEX-G17-20
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/config.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css
+     line: 26
+     message: "Using right: 1 instead of inset-inline-end:"
+     explanation: Found 54 RTL violations
+     code_snippet: "right: 1"
+     suggested_fix: "inset-inline-end:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a55
+     id: APEX-G17-21
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/config.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css
+     line: 26
+     message: "Using border-right: instead of border-inline-end:"
+     explanation: Found 54 RTL violations
+     code_snippet: "border-right:"
+     suggested_fix: "border-inline-end:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a56
+     id: APEX-G17-22
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/config.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css
+     line: 64
+     message: "Using left: 2 instead of inset-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "left: 2"
+     suggested_fix: "inset-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a57
+     id: APEX-G17-23
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/config.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css
+     line: 107
+     message: "Using right: 2 instead of inset-inline-end:"
+     explanation: Found 54 RTL violations
+     code_snippet: "right: 2"
+     suggested_fix: "inset-inline-end:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a58
+     id: APEX-G17-24
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/config.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css
+     line: 151
+     message: "Using text-align: left instead of text-align: start"
+     explanation: Found 54 RTL violations
+     code_snippet: "text-align: left"
+     suggested_fix: "text-align: start"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a59
+     id: APEX-G17-25
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/config.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css
+     line: 791
+     message: "Using left: 1 instead of inset-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "left: 1"
+     suggested_fix: "inset-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a60
+     id: APEX-G17-26
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/config.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css
+     line: 791
+     message: "Using border-left: instead of border-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "border-left:"
+     suggested_fix: "border-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a61
+     id: APEX-G17-27
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/config.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css
+     line: 792
+     message: "Using right: 1 instead of inset-inline-end:"
+     explanation: Found 54 RTL violations
+     code_snippet: "right: 1"
+     suggested_fix: "inset-inline-end:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a62
+     id: APEX-G17-28
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/config.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css
+     line: 792
+     message: "Using border-right: instead of border-inline-end:"
+     explanation: Found 54 RTL violations
+     code_snippet: "border-right:"
+     suggested_fix: "border-inline-end:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a63
+     id: APEX-G17-29
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/config.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css
+     line: 964
+     message: "Using left: 3 instead of inset-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "left: 3"
+     suggested_fix: "inset-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a64
+     id: APEX-G17-30
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/config.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css
+     line: 1343
+     message: "Using border-right: instead of border-inline-end:"
+     explanation: Found 54 RTL violations
+     code_snippet: "border-right:"
+     suggested_fix: "border-inline-end:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+ src/styles/chat/layout.css:
+  file: src/styles/chat/layout.css
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/layout.css
+  language: css
+  total_issues: 2
+  critical_count: 0
+  high_count: 2
+  auto_fixable_count: 2
+  issues:
+   - &a65
+     id: APEX-G17-31
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/layout.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/layout.css
+     line: 66
+     message: "Using right: 1 instead of inset-inline-end:"
+     explanation: Found 54 RTL violations
+     code_snippet: "right: 1"
+     suggested_fix: "inset-inline-end:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a66
+     id: APEX-G17-32
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/layout.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/layout.css
+     line: 150
+     message: "Using right: 4 instead of inset-inline-end:"
+     explanation: Found 54 RTL violations
+     code_snippet: "right: 4"
+     suggested_fix: "inset-inline-end:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+ src/styles/chat/sidebar.css:
+  file: src/styles/chat/sidebar.css
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/sidebar.css
+  language: css
+  total_issues: 5
+  critical_count: 0
+  high_count: 5
+  auto_fixable_count: 5
+  issues:
+   - &a67
+     id: APEX-G17-33
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/sidebar.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/sidebar.css
+     line: 22
+     message: "Using left: 1 instead of inset-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "left: 1"
+     suggested_fix: "inset-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a68
+     id: APEX-G17-34
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/sidebar.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/sidebar.css
+     line: 22
+     message: "Using border-left: instead of border-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "border-left:"
+     suggested_fix: "border-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a69
+     id: APEX-G17-35
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/sidebar.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/sidebar.css
+     line: 102
+     message: "Using left: 0 instead of inset-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "left: 0"
+     suggested_fix: "inset-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a70
+     id: APEX-G17-36
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/sidebar.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/sidebar.css
+     line: 103
+     message: "Using right: 0 instead of inset-inline-end:"
+     explanation: Found 54 RTL violations
+     code_snippet: "right: 0"
+     suggested_fix: "inset-inline-end:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a71
+     id: APEX-G17-37
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/sidebar.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/sidebar.css
+     line: 115
+     message: "Using border-left: instead of border-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "border-left:"
+     suggested_fix: "border-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+ src/styles/chat/grouped.css:
+  file: src/styles/chat/grouped.css
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/grouped.css
+  language: css
+  total_issues: 8
+  critical_count: 0
+  high_count: 8
+  auto_fixable_count: 8
+  issues:
+   - &a72
+     id: APEX-G17-38
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/grouped.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/grouped.css
+     line: 11
+     message: "Using margin-left: instead of margin-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "margin-left:"
+     suggested_fix: "margin-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a73
+     id: APEX-G17-39
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/grouped.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/grouped.css
+     line: 11
+     message: "Using left: 4 instead of inset-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "left: 4"
+     suggested_fix: "inset-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a74
+     id: APEX-G17-40
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/grouped.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/grouped.css
+     line: 12
+     message: "Using margin-right: instead of margin-inline-end:"
+     explanation: Found 54 RTL violations
+     code_snippet: "margin-right:"
+     suggested_fix: "margin-inline-end:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a75
+     id: APEX-G17-41
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/grouped.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/grouped.css
+     line: 12
+     message: "Using right: 1 instead of inset-inline-end:"
+     explanation: Found 54 RTL violations
+     code_snippet: "right: 1"
+     suggested_fix: "inset-inline-end:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a76
+     id: APEX-G17-42
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/grouped.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/grouped.css
+     line: 116
+     message: "Using padding-right: instead of padding-inline-end:"
+     explanation: Found 54 RTL violations
+     code_snippet: "padding-right:"
+     suggested_fix: "padding-inline-end:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a77
+     id: APEX-G17-43
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/grouped.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/grouped.css
+     line: 116
+     message: "Using right: 3 instead of inset-inline-end:"
+     explanation: Found 54 RTL violations
+     code_snippet: "right: 3"
+     suggested_fix: "inset-inline-end:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a78
+     id: APEX-G17-44
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/grouped.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/grouped.css
+     line: 122
+     message: "Using right: 8 instead of inset-inline-end:"
+     explanation: Found 54 RTL violations
+     code_snippet: "right: 8"
+     suggested_fix: "inset-inline-end:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a79
+     id: APEX-G17-45
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/grouped.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/grouped.css
+     line: 159
+     message: "Using left: 0 instead of inset-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "left: 0"
+     suggested_fix: "inset-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+ src/styles/chat/text.css:
+  file: src/styles/chat/text.css
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/text.css
+  language: css
+  total_issues: 8
+  critical_count: 0
+  high_count: 8
+  auto_fixable_count: 8
+  issues:
+   - &a80
+     id: APEX-G17-46
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/text.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/text.css
+     line: 37
+     message: "Using padding-left: instead of padding-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "padding-left:"
+     suggested_fix: "padding-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a81
+     id: APEX-G17-47
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/text.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/text.css
+     line: 37
+     message: "Using left: 1 instead of inset-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "left: 1"
+     suggested_fix: "inset-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a82
+     id: APEX-G17-48
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/text.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/text.css
+     line: 78
+     message: "Using left: 3 instead of inset-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "left: 3"
+     suggested_fix: "inset-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a83
+     id: APEX-G17-49
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/text.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/text.css
+     line: 78
+     message: "Using border-left: instead of border-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "border-left:"
+     suggested_fix: "border-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a84
+     id: APEX-G17-50
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/text.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/text.css
+     line: 79
+     message: "Using padding-left: instead of padding-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "padding-left:"
+     suggested_fix: "padding-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a85
+     id: APEX-G17-51
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/text.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/text.css
+     line: 79
+     message: "Using left: 1 instead of inset-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "left: 1"
+     suggested_fix: "inset-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a86
+     id: APEX-G17-52
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/text.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/text.css
+     line: 80
+     message: "Using margin-left: instead of margin-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "margin-left:"
+     suggested_fix: "margin-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+   - &a87
+     id: APEX-G17-53
+     gate_id: 17
+     gate_name: A11y_ARIA
+     cluster: SENSATION
+     severity: HIGH
+     severity_score: 7.5
+     file: src/styles/chat/text.css
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/text.css
+     line: 80
+     message: "Using left: 0 instead of inset-inline-start:"
+     explanation: Found 54 RTL violations
+     code_snippet: "left: 0"
+     suggested_fix: "inset-inline-start:"
+     fix_confidence: 0.9
+     auto_fixable: true
+     verify_command: pnpm apex audit --gates 17
+     apex_law: "#6 RESPONSIVE"
+     documentation_url: https://apex.dev/gates/17
+ vite.config.ts:
+  file: vite.config.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/vite.config.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 0
+  auto_fixable_count: 0
+  issues:
+   - &a94
+     id: APEX-G8-0
+     gate_id: 8
+     gate_name: File_Org
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: vite.config.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/vite.config.ts
+     line: 1
+     message: File name "vite.config" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)
+     explanation: Found 38 organization issues (0 critical, 38 warnings)
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 8
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/8
+ src/ui/markdown.test.ts:
+  file: src/ui/markdown.test.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/markdown.test.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 0
+  auto_fixable_count: 0
+  issues:
+   - &a95
+     id: APEX-G8-1
+     gate_id: 8
+     gate_name: File_Org
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: src/ui/markdown.test.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/markdown.test.ts
+     line: 1
+     message: File name "markdown.test" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)
+     explanation: Found 38 organization issues (0 critical, 38 warnings)
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 8
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/8
+ src/ui/navigation.browser.test.ts:
+  file: src/ui/navigation.browser.test.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/navigation.browser.test.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 0
+  auto_fixable_count: 0
+  issues:
+   - &a96
+     id: APEX-G8-2
+     gate_id: 8
+     gate_name: File_Org
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: src/ui/navigation.browser.test.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/navigation.browser.test.ts
+     line: 1
+     message: File name "navigation.browser.test" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)
+     explanation: Found 38 organization issues (0 critical, 38 warnings)
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 8
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/8
+ src/ui/app-settings.test.ts:
+  file: src/ui/app-settings.test.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-settings.test.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 0
+  auto_fixable_count: 0
+  issues:
+   - &a97
+     id: APEX-G8-3
+     gate_id: 8
+     gate_name: File_Org
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: src/ui/app-settings.test.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-settings.test.ts
+     line: 1
+     message: File name "app-settings.test" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)
+     explanation: Found 38 organization issues (0 critical, 38 warnings)
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 8
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/8
+ src/ui/navigation.test.ts:
+  file: src/ui/navigation.test.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/navigation.test.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 0
+  auto_fixable_count: 0
+  issues:
+   - &a98
+     id: APEX-G8-4
+     gate_id: 8
+     gate_name: File_Org
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: src/ui/navigation.test.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/navigation.test.ts
+     line: 1
+     message: File name "navigation.test" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)
+     explanation: Found 38 organization issues (0 critical, 38 warnings)
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 8
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/8
+ src/ui/chat-markdown.browser.test.ts:
+  file: src/ui/chat-markdown.browser.test.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/chat-markdown.browser.test.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 0
+  auto_fixable_count: 0
+  issues:
+   - &a99
+     id: APEX-G8-5
+     gate_id: 8
+     gate_name: File_Org
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: src/ui/chat-markdown.browser.test.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/chat-markdown.browser.test.ts
+     line: 1
+     message: File name "chat-markdown.browser.test" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)
+     explanation: Found 38 organization issues (0 critical, 38 warnings)
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 8
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/8
+ src/ui/uuid.test.ts:
+  file: src/ui/uuid.test.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/uuid.test.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 0
+  auto_fixable_count: 0
+  issues:
+   - &a100
+     id: APEX-G8-6
+     gate_id: 8
+     gate_name: File_Org
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: src/ui/uuid.test.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/uuid.test.ts
+     line: 1
+     message: File name "uuid.test" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)
+     explanation: Found 38 organization issues (0 critical, 38 warnings)
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 8
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/8
+ src/ui/config-form.browser.test.ts:
+  file: src/ui/config-form.browser.test.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/config-form.browser.test.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 0
+  auto_fixable_count: 0
+  issues:
+   - &a101
+     id: APEX-G8-7
+     gate_id: 8
+     gate_name: File_Org
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: src/ui/config-form.browser.test.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/config-form.browser.test.ts
+     line: 1
+     message: File name "config-form.browser.test" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)
+     explanation: Found 38 organization issues (0 critical, 38 warnings)
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 8
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/8
+ src/ui/format.test.ts:
+  file: src/ui/format.test.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/format.test.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 0
+  auto_fixable_count: 0
+  issues:
+   - &a102
+     id: APEX-G8-8
+     gate_id: 8
+     gate_name: File_Org
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: src/ui/format.test.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/format.test.ts
+     line: 1
+     message: File name "format.test" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)
+     explanation: Found 38 organization issues (0 critical, 38 warnings)
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 8
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/8
+ src/ui/focus-mode.browser.test.ts:
+  file: src/ui/focus-mode.browser.test.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/focus-mode.browser.test.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 0
+  auto_fixable_count: 0
+  issues:
+   - &a104
+     id: APEX-G8-10
+     gate_id: 8
+     gate_name: File_Org
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: src/ui/focus-mode.browser.test.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/focus-mode.browser.test.ts
+     line: 1
+     message: File name "focus-mode.browser.test" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)
+     explanation: Found 38 organization issues (0 critical, 38 warnings)
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 8
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/8
+ src/ui/__screenshots__/navigation.browser.test.ts:
+  file: src/ui/__screenshots__/navigation.browser.test.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/__screenshots__/navigation.browser.test.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 0
+  auto_fixable_count: 0
+  issues:
+   - &a105
+     id: APEX-G8-11
+     gate_id: 8
+     gate_name: File_Org
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: src/ui/__screenshots__/navigation.browser.test.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/__screenshots__/navigation.browser.test.ts
+     line: 1
+     message: File name "navigation.browser.test" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)
+     explanation: Found 38 organization issues (0 critical, 38 warnings)
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 8
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/8
+ src/ui/__screenshots__/config-form.browser.test.ts:
+  file: src/ui/__screenshots__/config-form.browser.test.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/__screenshots__/config-form.browser.test.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 0
+  auto_fixable_count: 0
+  issues:
+   - &a106
+     id: APEX-G8-12
+     gate_id: 8
+     gate_name: File_Org
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: src/ui/__screenshots__/config-form.browser.test.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/__screenshots__/config-form.browser.test.ts
+     line: 1
+     message: File name "config-form.browser.test" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)
+     explanation: Found 38 organization issues (0 critical, 38 warnings)
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 8
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/8
+ src/ui/controllers/channels.types.ts:
+  file: src/ui/controllers/channels.types.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/channels.types.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 0
+  auto_fixable_count: 0
+  issues:
+   - &a107
+     id: APEX-G8-13
+     gate_id: 8
+     gate_name: File_Org
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: src/ui/controllers/channels.types.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/channels.types.ts
+     line: 1
+     message: File name "channels.types" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)
+     explanation: Found 38 organization issues (0 critical, 38 warnings)
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 8
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/8
+ src/ui/controllers/chat.test.ts:
+  file: src/ui/controllers/chat.test.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/chat.test.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 0
+  auto_fixable_count: 0
+  issues:
+   - &a108
+     id: APEX-G8-14
+     gate_id: 8
+     gate_name: File_Org
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: src/ui/controllers/chat.test.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/chat.test.ts
+     line: 1
+     message: File name "chat.test" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)
+     explanation: Found 38 organization issues (0 critical, 38 warnings)
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 8
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/8
+ src/ui/controllers/config.test.ts:
+  file: src/ui/controllers/config.test.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/config.test.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 0
+  auto_fixable_count: 0
+  issues:
+   - &a109
+     id: APEX-G8-15
+     gate_id: 8
+     gate_name: File_Org
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: src/ui/controllers/config.test.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/config.test.ts
+     line: 1
+     message: File name "config.test" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)
+     explanation: Found 38 organization issues (0 critical, 38 warnings)
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 8
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/8
+ src/ui/chat/message-normalizer.test.ts:
+  file: src/ui/chat/message-normalizer.test.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/chat/message-normalizer.test.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 0
+  auto_fixable_count: 0
+  issues:
+   - &a110
+     id: APEX-G8-16
+     gate_id: 8
+     gate_name: File_Org
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: src/ui/chat/message-normalizer.test.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/chat/message-normalizer.test.ts
+     line: 1
+     message: File name "message-normalizer.test" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)
+     explanation: Found 38 organization issues (0 critical, 38 warnings)
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 8
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/8
+ src/ui/chat/tool-helpers.test.ts:
+  file: src/ui/chat/tool-helpers.test.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/chat/tool-helpers.test.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 0
+  auto_fixable_count: 0
+  issues:
+   - &a111
+     id: APEX-G8-17
+     gate_id: 8
+     gate_name: File_Org
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: src/ui/chat/tool-helpers.test.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/chat/tool-helpers.test.ts
+     line: 1
+     message: File name "tool-helpers.test" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)
+     explanation: Found 38 organization issues (0 critical, 38 warnings)
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 8
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/8
+ src/ui/chat/message-extract.test.ts:
+  file: src/ui/chat/message-extract.test.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/chat/message-extract.test.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 0
+  auto_fixable_count: 0
+  issues:
+   - &a112
+     id: APEX-G8-18
+     gate_id: 8
+     gate_name: File_Org
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: src/ui/chat/message-extract.test.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/chat/message-extract.test.ts
+     line: 1
+     message: File name "message-extract.test" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)
+     explanation: Found 38 organization issues (0 critical, 38 warnings)
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 8
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/8
+ src/ui/views/channels.types.ts:
+  file: src/ui/views/channels.types.ts
+  absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/channels.types.ts
+  language: typescript
+  total_issues: 1
+  critical_count: 0
+  high_count: 0
+  auto_fixable_count: 0
+  issues:
+   - &a113
+     id: APEX-G8-19
+     gate_id: 8
+     gate_name: File_Org
+     cluster: STRUCTURE
+     severity: MEDIUM
+     severity_score: 5
+     file: src/ui/views/channels.types.ts
+     absolute_path: /home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/channels.types.ts
+     line: 1
+     message: File name "channels.types" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)
+     explanation: Found 38 organization issues (0 critical, 38 warnings)
+     fix_confidence: 0.5
+     auto_fixable: false
+     verify_command: pnpm apex audit --gates 8
+     apex_law: "#3 IMMORTALITY"
+     documentation_url: https://apex.dev/gates/8
+issues:
+ - *a1
+ - *a2
+ - *a3
+ - *a4
+ - *a5
+ - *a6
+ - *a7
+ - *a8
+ - *a9
+ - *a10
+ - *a11
+ - *a12
+ - *a13
+ - *a14
+ - *a15
+ - *a16
+ - *a17
+ - *a18
+ - *a19
+ - *a20
+ - *a21
+ - *a22
+ - *a23
+ - *a24
+ - *a25
+ - *a26
+ - *a27
+ - *a28
+ - *a29
+ - *a30
+ - *a31
+ - *a32
+ - *a33
+ - *a34
+ - *a35
+ - *a36
+ - *a37
+ - *a38
+ - *a39
+ - *a40
+ - *a41
+ - *a42
+ - *a43
+ - *a44
+ - *a45
+ - *a46
+ - *a47
+ - *a48
+ - *a49
+ - *a50
+ - *a51
+ - *a52
+ - *a53
+ - *a54
+ - *a55
+ - *a56
+ - *a57
+ - *a58
+ - *a59
+ - *a60
+ - *a61
+ - *a62
+ - *a63
+ - *a64
+ - *a65
+ - *a66
+ - *a67
+ - *a68
+ - *a69
+ - *a70
+ - *a71
+ - *a72
+ - *a73
+ - *a74
+ - *a75
+ - *a76
+ - *a77
+ - *a78
+ - *a79
+ - *a80
+ - *a81
+ - *a82
+ - *a83
+ - *a84
+ - *a85
+ - *a86
+ - *a87
+ - *a88
+ - *a89
+ - *a90
+ - *a91
+ - *a92
+ - *a93
+ - *a94
+ - *a95
+ - *a96
+ - *a97
+ - *a98
+ - *a99
+ - *a100
+ - *a101
+ - *a102
+ - *a103
+ - *a104
+ - *a105
+ - *a106
+ - *a107
+ - *a108
+ - *a109
+ - *a110
+ - *a111
+ - *a112
+ - *a113
+ - *a114
+ - *a115
+ - *a116
+ - *a117
+ - *a118
+ - *a119
+ - *a120
+ - *a121
+ - *a122
+ - *a123
+ - *a124
+ - *a125
+ - *a126
+ - *a127
+ - *a128
+ - *a129
+ - *a130
+ - *a131
+ - *a132
+ - *a133
+ - *a134
+ - *a135
+ - *a136
+ - *a137
+ - *a138
+ - *a139
+ - *a140
+ - *a141
+critical_issues:
+ - *a1
+blocking_issues:
+ - *a1
+ - *a2
+ - *a3
+ - *a4
+ - *a5
+ - *a6
+ - *a7
+ - *a8
+ - *a9
+ - *a10
+ - *a11
+ - *a12
+ - *a13
+ - *a14
+ - *a15
+ - *a16
+ - *a17
+ - *a18
+ - *a19
+ - *a20
+ - *a21
+ - *a22
+ - *a23
+ - *a24
+ - *a25
+ - *a26
+ - *a27
+ - *a28
+ - *a29
+ - *a30
+ - *a31
+ - *a32
+ - *a33
+ - *a34
+ - *a35
+ - *a36
+ - *a37
+ - *a38
+ - *a39
+ - *a40
+ - *a41
+ - *a42
+ - *a43
+ - *a44
+ - *a45
+ - *a46
+ - *a47
+ - *a48
+ - *a49
+ - *a50
+ - *a51
+ - *a52
+ - *a53
+ - *a54
+ - *a55
+ - *a56
+ - *a57
+ - *a58
+ - *a59
+ - *a60
+ - *a61
+ - *a62
+ - *a63
+ - *a64
+ - *a65
+ - *a66
+ - *a67
+ - *a68
+ - *a69
+ - *a70
+ - *a71
+ - *a72
+ - *a73
+ - *a74
+ - *a75
+ - *a76
+ - *a77
+ - *a78
+ - *a79
+ - *a80
+ - *a81
+ - *a82
+ - *a83
+ - *a84
+ - *a85
+ - *a86
+ - *a87
+ - *a88
+ - *a89
+ - *a90
+quick_wins:
+ - *a34
+ - *a35
+ - *a36
+ - *a37
+ - *a38
+ - *a39
+ - *a40
+ - *a41
+ - *a42
+ - *a43

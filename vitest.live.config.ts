@@ -10,6 +10,11 @@ export default defineConfig({
   test: {
     ...baseTest,
     maxWorkers: 1,
+    poolOptions: {
+      forks: {
+        execArgv: ["--max-old-space-size=1024"],
+      },
+    },
     include: ["src/**/*.live.test.ts"],
     exclude,
   },

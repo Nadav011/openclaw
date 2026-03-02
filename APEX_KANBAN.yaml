@@ -1,0 +1,3698 @@
+# APEX KANBAN - Claude-Actionable Tasks
+# Each task includes file:line for direct navigation
+# Use: code --goto file:line to jump to issue
+
+apex_kanban:
+  project: "openclaw"
+  project_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw"
+  last_audit: "2026-02-05T19:14:07.711Z"
+  score: 38
+  max_score: 70
+  verdict: "FAILED"
+
+  summary:
+    total_issues: 819
+    fixed_since_last: 0
+    remaining: 819
+    by_gate:
+      g2: 1
+      g4: 43
+      g5: 10
+      g6: 5
+      g8: 20
+      g9: 686
+      g10: 20
+      g11: 18
+      g14: 4
+      g22: 1
+      g38: 1
+      g40: 1
+      g45: 1
+      g46: 1
+      g47: 1
+      g48: 1
+      g51: 1
+      g52: 1
+      g53: 1
+      g55: 1
+      g56: 1
+
+  # ============================================
+  # TODO: Issues to fix (newest first)
+  # ============================================
+  todo:
+
+    - id: "g4_type_claw-desktop-openclaw-scripts-update-clawtributors_L259"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/scripts/update-clawtributors.ts:259:43"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "any[]"
+      fix: "unknown[]"
+      auto_fixable: true
+
+    - id: "g4_type_claw-desktop-openclaw-scripts-update-clawtributors_L260"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/scripts/update-clawtributors.ts:260:16"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "any[]"
+      fix: "unknown[]"
+      auto_fixable: true
+
+    - id: "g4_type_ktop-openclaw-desktop-openclaw-scripts-bench-model_L52"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/scripts/bench-model.ts:52:16"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "Model<any>"
+      fix: "Model<unknown>"
+      auto_fixable: true
+
+    - id: "g4_type_sktop-openclaw-desktop-openclaw-src-security-audit_L829"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/security/audit.ts:829:29"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "(telegramCfg.commands as { nativeSkills?: unknown "
+      fix: "(telegramCfg.commands as { nativeSkills?: unknown "
+      auto_fixable: true
+
+    - id: "g4_type_esktop-openclaw-desktop-openclaw-src-plugins-hooks_L338"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/plugins/hooks.ts:338:38"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "hook.handler as any"
+      fix: "hook.handler as unknown"
+      auto_fixable: true
+
+    - id: "g4_type_esktop-openclaw-desktop-openclaw-src-plugins-hooks_L344"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/plugins/hooks.ts:344:35"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "out as any"
+      fix: "out as unknown"
+      auto_fixable: true
+
+    - id: "g4_type_Desktop-openclaw-desktop-openclaw-src-telegram-bot_L444"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/telegram/bot.ts:444:44"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "reaction as any"
+      fix: "reaction as unknown"
+      auto_fixable: true
+
+    - id: "g4_type_Desktop-openclaw-desktop-openclaw-src-telegram-bot_L445"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/telegram/bot.ts:445:41"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "reaction.chat as any"
+      fix: "reaction.chat as unknown"
+      auto_fixable: true
+
+    - id: "g4_type_sktop-openclaw-desktop-openclaw-src-gateway-client_L135"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/gateway/client.ts:135:13"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "((_host: string, cert: CertMeta) => {         cons"
+      fix: "((_host: string, cert: CertMeta) => {         cons"
+      auto_fixable: true
+
+    - id: "g4_type_law-desktop-openclaw-src-gateway-tools-invoke-http_L235"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/gateway/tools-invoke-http.ts:235:52"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "tool as any"
+      fix: "tool as unknown"
+      auto_fixable: true
+
+    - id: "g4_type_law-desktop-openclaw-src-gateway-tools-invoke-http_L241"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/gateway/tools-invoke-http.ts:241:51"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "tool as any"
+      fix: "tool as unknown"
+      auto_fixable: true
+
+    - id: "g4_type_law-desktop-openclaw-src-gateway-tools-invoke-http_L311"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/gateway/tools-invoke-http.ts:311:28"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "tool as any"
+      fix: "tool as unknown"
+      auto_fixable: true
+
+    - id: "g4_type_law-desktop-openclaw-src-gateway-tools-invoke-http_L315"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/gateway/tools-invoke-http.ts:315:35"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "tool as any"
+      fix: "tool as unknown"
+      auto_fixable: true
+
+    - id: "g4_type_nclaw-src-agents-session-tool-result-guard-wrapper_L29"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/agents/session-tool-result-guard-wrapper.ts:29:17"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "message: any"
+      fix: "message: unknown"
+      auto_fixable: true
+
+    - id: "g4_type_enclaw-desktop-openclaw-src-agents-bash-tools.exec_L755"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/agents/bash-tools.exec.ts:755:14"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "AgentTool<any, ExecToolDetails>"
+      fix: "AgentTool<unknown, ExecToolDetails>"
+      auto_fixable: true
+
+    - id: "g4_type_law-desktop-openclaw-src-agents-bash-tools.process_L48"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/agents/bash-tools.process.ts:48:14"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "AgentTool<any>"
+      fix: "AgentTool<unknown>"
+      auto_fixable: true
+
+    - id: "g4_type_p-openclaw-desktop-openclaw-src-agents-apply-patch_L77"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/agents/apply-patch.ts:77:14"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "AgentTool<any, ApplyPatchToolDetails>"
+      fix: "AgentTool<unknown, ApplyPatchToolDetails>"
+      auto_fixable: true
+
+    - id: "g4_type_top-openclaw-src-agents-pi-tool-definition-adapter_L13"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/agents/pi-tool-definition-adapter.ts:13:31"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "AgentTool<any, unknown>"
+      fix: "AgentTool<unknown, unknown>"
+      auto_fixable: true
+
+    - id: "g4_type_top-openclaw-src-agents-pi-tool-definition-adapter_L86"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/agents/pi-tool-definition-adapter.ts:86:38"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "func.parameters as any"
+      fix: "func.parameters as unknown"
+      auto_fixable: true
+
+    - id: "g4_type_-openclaw-desktop-openclaw-extensions-twitch-index_L16"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/extensions/twitch/index.ts:16:51"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "twitchPlugin as any"
+      fix: "twitchPlugin as unknown"
+      auto_fixable: true
+
+    - id: "g4_type_desktop-openclaw-src-channels-plugins-types.plugin_L48"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/channels/plugins/types.plugin.ts:48:45"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "ResolvedAccount = any"
+      fix: "ResolvedAccount = unknown"
+      auto_fixable: true
+
+    - id: "g4_type_claw-src-auto-reply-reply-get-reply-inline-actions_L28"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/auto-reply/reply/get-reply-inline-actions.ts:28:44"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "result: any"
+      fix: "result: unknown"
+      auto_fixable: true
+
+    - id: "g4_type_claw-src-auto-reply-reply-get-reply-inline-actions_L196"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/auto-reply/reply/get-reply-inline-actions.ts:196:14"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "{           command: rawArgs,           commandNam"
+      fix: "{           command: rawArgs,           commandNam"
+      auto_fixable: true
+
+    - id: "g4_type_esktop-openclaw-src-auto-reply-reply-get-reply-run_L288"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/auto-reply/reply/get-reply-run.ts:288:67"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "command.channel as any"
+      fix: "command.channel as unknown"
+      auto_fixable: true
+
+    - id: "g4_type_esktop-openclaw-src-auto-reply-reply-commands-core_L86"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/auto-reply/reply/commands-core.ts:86:83"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "params.command.channel as any"
+      fix: "params.command.channel as unknown"
+      auto_fixable: true
+
+    - id: "g4_type_-openclaw-desktop-openclaw-src-agents-tools-common_L9"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/agents/tools/common.ts:9:38"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "AgentTool<any, unknown>"
+      fix: "AgentTool<unknown, unknown>"
+      auto_fixable: true
+
+    - id: "g4_type_top-openclaw-extensions-llm-task-src-llm-task-tool_L21"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/extensions/llm-task/src/llm-task-tool.ts:21:24"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "mod as any"
+      fix: "mod as unknown"
+      auto_fixable: true
+
+    - id: "g4_type_top-openclaw-extensions-llm-task-src-llm-task-tool_L22"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/extensions/llm-task/src/llm-task-tool.ts:22:22"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "mod as any"
+      fix: "mod as unknown"
+      auto_fixable: true
+
+    - id: "g4_type_top-openclaw-extensions-llm-task-src-llm-task-tool_L117"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/extensions/llm-task/src/llm-task-tool.ts:117:28"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "params as any"
+      fix: "params as unknown"
+      auto_fixable: true
+
+    - id: "g4_type_top-openclaw-extensions-llm-task-src-llm-task-tool_L118"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/extensions/llm-task/src/llm-task-tool.ts:118:22"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "params as any"
+      fix: "params as unknown"
+      auto_fixable: true
+
+    - id: "g4_type_top-openclaw-extensions-llm-task-src-llm-task-tool_L156"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/extensions/llm-task/src/llm-task-tool.ts:156:32"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "params as any"
+      fix: "params as unknown"
+      auto_fixable: true
+
+    - id: "g4_type_top-openclaw-extensions-llm-task-src-llm-task-tool_L198"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/extensions/llm-task/src/llm-task-tool.ts:198:45"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "result as any"
+      fix: "result as unknown"
+      auto_fixable: true
+
+    - id: "g4_type_top-openclaw-extensions-llm-task-src-llm-task-tool_L211"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/extensions/llm-task/src/llm-task-tool.ts:211:35"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "params as any"
+      fix: "params as unknown"
+      auto_fixable: true
+
+    - id: "g4_type_top-openclaw-extensions-llm-task-src-llm-task-tool_L214"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/extensions/llm-task/src/llm-task-tool.ts:214:50"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "schema as any"
+      fix: "schema as unknown"
+      auto_fixable: true
+
+    - id: "g4_type_-openclaw-src-hooks-bundled-session-memory-handler_L41"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/src/hooks/bundled/session-memory/handler.ts:41:38"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "c: any"
+      fix: "c: unknown"
+      auto_fixable: true
+
+    - id: "g4_type_sktop-openclaw-extensions-tlon-src-monitor-history_L39"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/extensions/tlon/src/monitor/history.ts:39:17"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "data: any = await api.scry(scryPath)"
+      fix: "data: unknown = await api.scry(scryPath)"
+      auto_fixable: true
+
+    - id: "g4_type_sktop-openclaw-extensions-tlon-src-monitor-history_L44"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/extensions/tlon/src/monitor/history.ts:44:16"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "any[]"
+      fix: "unknown[]"
+      auto_fixable: true
+
+    - id: "g4_type_desktop-openclaw-extensions-tlon-src-monitor-utils_L53"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/extensions/tlon/src/monitor/utils.ts:53:18"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "block: any"
+      fix: "block: unknown"
+      auto_fixable: true
+
+    - id: "g4_type_desktop-openclaw-extensions-tlon-src-monitor-utils_L56"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/extensions/tlon/src/monitor/utils.ts:56:23"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "item: any"
+      fix: "item: unknown"
+      auto_fixable: true
+
+    - id: "g4_type_desktop-openclaw-extensions-tlon-src-monitor-index_L125"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/extensions/tlon/src/monitor/index.ts:125:43"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "update: any"
+      fix: "update: unknown"
+      auto_fixable: true
+
+    - id: "g4_type_desktop-openclaw-extensions-tlon-src-monitor-index_L164"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/extensions/tlon/src/monitor/index.ts:164:78"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "update: any"
+      fix: "update: unknown"
+      auto_fixable: true
+
+    - id: "g4_type_top-openclaw-extensions-tlon-src-monitor-discovery_L35"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/extensions/tlon/src/monitor/discovery.ts:35:19"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "initData: any"
+      fix: "initData: unknown"
+      auto_fixable: true
+
+    - id: "g4_type_top-openclaw-extensions-tlon-src-monitor-discovery_L45"
+      gate: 4
+      gate_name: "Type_Purity"
+      severity: "FAIL"
+      location: "~/Desktop/openclaw-desktop/openclaw/extensions/tlon/src/monitor/discovery.ts:45:79"
+      issue: "Usage of untyped code defeats TypeScript's type safety"
+      code: "Record<string, any>"
+      fix: "Record<string, unknown>"
+      auto_fixable: true
+
+    - id: "g9_size_src-memory-manager_L2264"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/memory/manager.ts:2264"
+      issue: "File exceeds limit: 2264 LOC (2399 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-bluebubbles-src-monitor_L2199"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/bluebubbles/src/monitor.ts:2199"
+      issue: "File exceeds limit: 2199 LOC (2471 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-bash-tools.exec_L1484"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/bash-tools.exec.ts:1484"
+      issue: "File exceeds limit: 1484 LOC (1573 total lines) > 150 limit"
+
+    - id: "g9_size_src-tts-tts_L1428"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/tts/tts.ts:1428"
+      issue: "File exceeds limit: 1428 LOC (1582 total lines) > 150 limit"
+
+    - id: "g9_size_src-line-flex-templates_L1309"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/line/flex-templates.ts:1309"
+      issue: "File exceeds limit: 1309 LOC (1512 total lines) > 150 limit"
+
+    - id: "g9_size_src-infra-exec-approvals_L1259"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/infra/exec-approvals.ts:1259"
+      issue: "File exceeds limit: 1259 LOC (1378 total lines) > 150 limit"
+
+    - id: "g9_size_src-media-understanding-runner_L1235"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/media-understanding/runner.ts:1235"
+      issue: "File exceeds limit: 1235 LOC (1306 total lines) > 150 limit"
+
+    - id: "g9_size_src-node-host-runner_L1192"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/node-host/runner.ts:1192"
+      issue: "File exceeds limit: 1192 LOC (1278 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-update-cli_L1161"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/cli/update-cli.ts:1161"
+      issue: "File exceeds limit: 1161 LOC (1264 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-views-nodes_L1086"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "ui/src/ui/views/nodes.ts:1086"
+      issue: "File exceeds limit: 1086 LOC (1138 total lines) > 150 limit"
+
+    - id: "g9_size_src-config-schema_L986"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/config/schema.ts:986"
+      issue: "File exceeds limit: 986 LOC (1027 total lines) > 150 limit"
+
+    - id: "g9_size_src-infra-outbound-message-action-runner_L986"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/infra/outbound/message-action-runner.ts:986"
+      issue: "File exceeds limit: 986 LOC (1046 total lines) > 150 limit"
+
+    - id: "g9_size_src-security-audit-extra_L973"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/security/audit-extra.ts:973"
+      issue: "File exceeds limit: 973 LOC (1067 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-mattermost-src-mattermost-monitor_L926"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/mattermost/src/mattermost/monitor.ts:926"
+      issue: "File exceeds limit: 926 LOC (990 total lines) > 150 limit"
+
+    - id: "g9_size_src-security-audit_L915"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/security/audit.ts:915"
+      issue: "File exceeds limit: 915 LOC (986 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-server-ws-connection-message-handler_L910"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/gateway/server/ws-connection/message-handler.ts:910"
+      issue: "File exceeds limit: 910 LOC (959 total lines) > 150 limit"
+
+    - id: "g9_size_src-infra-outbound-outbound-session_L882"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/infra/outbound/outbound-session.ts:882"
+      issue: "File exceeds limit: 882 LOC (930 total lines) > 150 limit"
+
+    - id: "g9_size_src-infra-heartbeat-runner_L877"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/infra/heartbeat-runner.ts:877"
+      issue: "File exceeds limit: 877 LOC (971 total lines) > 150 limit"
+
+    - id: "g9_size_src-discord-monitor-native-command_L872"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/discord/monitor/native-command.ts:872"
+      issue: "File exceeds limit: 872 LOC (909 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-googlechat-src-monitor_L867"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/googlechat/src/monitor.ts:867"
+      issue: "File exceeds limit: 867 LOC (952 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-pi-embedded-runner-run-attempt_L830"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/pi-embedded-runner/run/attempt.ts:830"
+      issue: "File exceeds limit: 830 LOC (912 total lines) > 150 limit"
+
+    - id: "g9_size_src-infra-state-migrations_L828"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/infra/state-migrations.ts:828"
+      issue: "File exceeds limit: 828 LOC (907 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-openresponses-http_L805"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/gateway/openresponses-http.ts:805"
+      issue: "File exceeds limit: 805 LOC (916 total lines) > 150 limit"
+
+    - id: "g9_size_src-markdown-ir_L801"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/markdown/ir.ts:801"
+      issue: "File exceeds limit: 801 LOC (883 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-hooks-cli_L761"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/cli/hooks-cli.ts:761"
+      issue: "File exceeds limit: 761 LOC (856 total lines) > 150 limit"
+
+    - id: "g9_size_src-infra-update-runner_L758"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/infra/update-runner.ts:758"
+      issue: "File exceeds limit: 758 LOC (831 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-line-src-channel_L740"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/line/src/channel.ts:740"
+      issue: "File exceeds limit: 740 LOC (783 total lines) > 150 limit"
+
+    - id: "g9_size_src-config-zod-schema.providers-core_L739"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/config/zod-schema.providers-core.ts:739"
+      issue: "File exceeds limit: 739 LOC (783 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-health_L728"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/commands/health.ts:728"
+      issue: "File exceeds limit: 728 LOC (788 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-views-config-form.node_L720"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "ui/src/ui/views/config-form.node.ts:720"
+      issue: "File exceeds limit: 720 LOC (779 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-tools-browser-tool_L699"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/tools/browser-tool.ts:699"
+      issue: "File exceeds limit: 699 LOC (726 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-zalo-src-monitor_L687"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/zalo/src/monitor.ts:687"
+      issue: "File exceeds limit: 687 LOC (756 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-zalouser-src-channel_L673"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/zalouser/src/channel.ts:673"
+      issue: "File exceeds limit: 673 LOC (687 total lines) > 150 limit"
+
+    - id: "g9_size_src-telegram-bot-handlers_L668"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/telegram/bot-handlers.ts:668"
+      issue: "File exceeds limit: 668 LOC (731 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-session-utils_L664"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/gateway/session-utils.ts:664"
+      issue: "File exceeds limit: 664 LOC (715 total lines) > 150 limit"
+
+    - id: "g9_size_src-telegram-send_L662"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/telegram/send.ts:662"
+      issue: "File exceeds limit: 662 LOC (751 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-models-list.status-command_L659"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/commands/models/list.status-command.ts:659"
+      issue: "File exceeds limit: 659 LOC (692 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-server-methods-chat_L653"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/gateway/server-methods/chat.ts:653"
+      issue: "File exceeds limit: 653 LOC (692 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-views-config_L653"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "ui/src/ui/views/config.ts:653"
+      issue: "File exceeds limit: 653 LOC (691 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-memory-cli_L652"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/cli/memory-cli.ts:652"
+      issue: "File exceeds limit: 652 LOC (684 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-pi-embedded-runner-run_L652"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/pi-embedded-runner/run.ts:652"
+      issue: "File exceeds limit: 652 LOC (694 total lines) > 150 limit"
+
+    - id: "g9_size_src-telegram-bot-message-context_L651"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/telegram/bot-message-context.ts:651"
+      issue: "File exceeds limit: 651 LOC (689 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-commands-allowlist_L649"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/auto-reply/reply/commands-allowlist.ts:649"
+      issue: "File exceeds limit: 649 LOC (696 total lines) > 150 limit"
+
+    - id: "g9_size_src-discord-monitor-provider_L648"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/discord/monitor/provider.ts:648"
+      issue: "File exceeds limit: 648 LOC (686 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-bash-tools.process_L646"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/bash-tools.process.ts:646"
+      issue: "File exceeds limit: 646 LOC (667 total lines) > 150 limit"
+
+    - id: "g9_size_src-browser-extension-relay_L641"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/browser/extension-relay.ts:641"
+      issue: "File exceeds limit: 641 LOC (720 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-matrix-src-matrix-monitor-handler_L640"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/matrix/src/matrix/monitor/handler.ts:640"
+      issue: "File exceeds limit: 640 LOC (672 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-status_L635"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/auto-reply/status.ts:635"
+      issue: "File exceeds limit: 635 LOC (699 total lines) > 150 limit"
+
+    - id: "g9_size_src-imessage-monitor-monitor-provider_L635"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/imessage/monitor/monitor-provider.ts:635"
+      issue: "File exceeds limit: 635 LOC (687 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-onboard-channels_L633"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/commands/onboard-channels.ts:633"
+      issue: "File exceeds limit: 633 LOC (676 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-voice-call-src-manager_L625"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/voice-call/src/manager.ts:625"
+      issue: "File exceeds limit: 625 LOC (868 total lines) > 150 limit"
+
+    - id: "g9_size_src-telegram-bot-native-commands_L619"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/telegram/bot-native-commands.ts:619"
+      issue: "File exceeds limit: 619 LOC (642 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-auth-choice.apply.api-providers_L614"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/commands/auth-choice.apply.api-providers.ts:614"
+      issue: "File exceeds limit: 614 LOC (648 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-tools-web-fetch_L612"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/tools/web-fetch.ts:612"
+      issue: "File exceeds limit: 612 LOC (655 total lines) > 150 limit"
+
+    - id: "g9_size_src-tui-tui_L609"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/tui/tui.ts:609"
+      issue: "File exceeds limit: 609 LOC (666 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-commands-registry.data_L599"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/auto-reply/commands-registry.data.ts:599"
+      issue: "File exceeds limit: 599 LOC (615 total lines) > 150 limit"
+
+    - id: "g9_size_nsions-msteams-src-monitor-handler-message-handler_L599"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/msteams/src/monitor-handler/message-handler.ts:599"
+      issue: "File exceeds limit: 599 LOC (641 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-app-render_L590"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "ui/src/ui/app-render.ts:590"
+      issue: "File exceeds limit: 590 LOC (608 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-diagnostics-otel-src-service_L590"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/diagnostics-otel/src/service.ts:590"
+      issue: "File exceeds limit: 590 LOC (637 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-status.command_L588"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/commands/status.command.ts:588"
+      issue: "File exceeds limit: 588 LOC (619 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-google-gemini-cli-auth-oauth_L587"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/google-gemini-cli-auth/oauth.ts:587"
+      issue: "File exceeds limit: 587 LOC (663 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-slack-src-channel_L587"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/slack/src/channel.ts:587"
+      issue: "File exceeds limit: 587 LOC (606 total lines) > 150 limit"
+
+    - id: "g9_size_src-slack-monitor-slash_L585"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/slack/monitor/slash.ts:585"
+      issue: "File exceeds limit: 585 LOC (617 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-system-prompt_L584"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/system-prompt.ts:584"
+      issue: "File exceeds limit: 584 LOC (625 total lines) > 150 limit"
+
+    - id: "g9_size_src-browser-server-context_L577"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/browser/server-context.ts:577"
+      issue: "File exceeds limit: 577 LOC (670 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-googlechat-src-channel_L576"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/googlechat/src/channel.ts:576"
+      issue: "File exceeds limit: 576 LOC (585 total lines) > 150 limit"
+
+    - id: "g9_size_src-browser-chrome.executables_L572"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/browser/chrome.executables.ts:572"
+      issue: "File exceeds limit: 572 LOC (627 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-node-cli-daemon_L570"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/cli/node-cli/daemon.ts:570"
+      issue: "File exceeds limit: 570 LOC (609 total lines) > 150 limit"
+
+    - id: "g9_size_src-config-zod-schema_L558"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/config/zod-schema.ts:558"
+      issue: "File exceeds limit: 558 LOC (564 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-pi-embedded-helpers-errors_L555"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/pi-embedded-helpers/errors.ts:555"
+      issue: "File exceeds limit: 555 LOC (625 total lines) > 150 limit"
+
+    - id: "g9_size_src-signal-monitor-event-handler_L555"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/signal/monitor/event-handler.ts:555"
+      issue: "File exceeds limit: 555 LOC (581 total lines) > 150 limit"
+
+    - id: "g9_size_src-config-io_L549"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/config/io.ts:549"
+      issue: "File exceeds limit: 549 LOC (617 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-test-helpers.mocks_L548"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/gateway/test-helpers.mocks.ts:548"
+      issue: "File exceeds limit: 548 LOC (586 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-configure.wizard_L548"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/commands/configure.wizard.ts:548"
+      issue: "File exceeds limit: 548 LOC (596 total lines) > 150 limit"
+
+    - id: "g9_size_src-browser-pw-session_L543"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/browser/pw-session.ts:543"
+      issue: "File exceeds limit: 543 LOC (629 total lines) > 150 limit"
+
+    - id: "g9_size_src-infra-bonjour-discovery_L542"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/infra/bonjour-discovery.ts:542"
+      issue: "File exceeds limit: 542 LOC (604 total lines) > 150 limit"
+
+    - id: "g9_size_src-slack-monitor-message-handler-prepare_L539"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/slack/monitor/message-handler/prepare.ts:539"
+      issue: "File exceeds limit: 539 LOC (584 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-zalouser-src-monitor_L538"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/zalouser/src/monitor.ts:538"
+      issue: "File exceeds limit: 538 LOC (592 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-cli-credentials_L535"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/cli-credentials.ts:535"
+      issue: "File exceeds limit: 535 LOC (610 total lines) > 150 limit"
+
+    - id: "g9_size_src-config-zod-schema.agent-runtime_L534"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/config/zod-schema.agent-runtime.ts:534"
+      issue: "File exceeds limit: 534 LOC (555 total lines) > 150 limit"
+
+    - id: "g9_size_src-browser-routes-agent.act_L531"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/browser/routes/agent.act.ts:531"
+      issue: "File exceeds limit: 531 LOC (542 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-agent-runner-execution_L530"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/auto-reply/reply/agent-runner-execution.ts:530"
+      issue: "File exceeds limit: 530 LOC (580 total lines) > 150 limit"
+
+    - id: "g9_size_src-channels-plugins-onboarding-slack_L526"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/channels/plugins/onboarding/slack.ts:526"
+      issue: "File exceeds limit: 526 LOC (545 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-channels-capabilities_L525"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/commands/channels/capabilities.ts:525"
+      issue: "File exceeds limit: 525 LOC (557 total lines) > 150 limit"
+
+    - id: "g9_size_src-infra-device-pairing_L524"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/infra/device-pairing.ts:524"
+      issue: "File exceeds limit: 524 LOC (559 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-server-methods-nodes_L523"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/gateway/server-methods/nodes.ts:523"
+      issue: "File exceeds limit: 523 LOC (538 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-model-selection_L523"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/auto-reply/reply/model-selection.ts:523"
+      issue: "File exceeds limit: 523 LOC (585 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-server.impl_L522"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/gateway/server.impl.ts:522"
+      issue: "File exceeds limit: 522 LOC (591 total lines) > 150 limit"
+
+    - id: "g9_size_src-telegram-bot-delivery_L522"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/telegram/bot/delivery.ts:522"
+      issue: "File exceeds limit: 522 LOC (559 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-plugins-cli_L512"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/cli/plugins-cli.ts:512"
+      issue: "File exceeds limit: 512 LOC (551 total lines) > 150 limit"
+
+    - id: "g9_size_src-discord-monitor-message-handler.preflight_L512"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/discord/monitor/message-handler.preflight.ts:512"
+      issue: "File exceeds limit: 512 LOC (539 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-model-picker_L511"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/commands/model-picker.ts:511"
+      issue: "File exceeds limit: 511 LOC (558 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-protocol-index_L511"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/gateway/protocol/index.ts:511"
+      issue: "File exceeds limit: 511 LOC (523 total lines) > 150 limit"
+
+    - id: "g9_size_src-browser-pw-tools-core.interactions_L510"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/browser/pw-tools-core.interactions.ts:510"
+      issue: "File exceeds limit: 510 LOC (547 total lines) > 150 limit"
+
+    - id: "g9_size_src-line-send_L509"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/line/send.ts:509"
+      issue: "File exceeds limit: 509 LOC (638 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-cli-runner-helpers_L506"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/cli-runner/helpers.ts:506"
+      issue: "File exceeds limit: 506 LOC (547 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-tools-discord-actions-guild_L505"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/tools/discord-actions-guild.ts:505"
+      issue: "File exceeds limit: 505 LOC (508 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-browser-cli-manage_L504"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/cli/browser-cli-manage.ts:504"
+      issue: "File exceeds limit: 504 LOC (522 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-whatsapp-src-channel_L503"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/whatsapp/src/channel.ts:503"
+      issue: "File exceeds limit: 503 LOC (510 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-nostr-src-nostr-bus_L501"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/nostr/src/nostr-bus.ts:501"
+      issue: "File exceeds limit: 501 LOC (717 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-agent_L500"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/commands/agent.ts:500"
+      issue: "File exceeds limit: 500 LOC (527 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-tlon-src-monitor-index_L496"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/tlon/src/monitor/index.ts:496"
+      issue: "File exceeds limit: 496 LOC (554 total lines) > 150 limit"
+
+    - id: "g9_size_src-security-fix_L493"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/security/fix.ts:493"
+      issue: "File exceeds limit: 493 LOC (544 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-agent-runner_L491"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/auto-reply/reply/agent-runner.ts:491"
+      issue: "File exceeds limit: 491 LOC (525 total lines) > 150 limit"
+
+    - id: "g9_size_src-discord-monitor-exec-approvals_L489"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/discord/monitor/exec-approvals.ts:489"
+      issue: "File exceeds limit: 489 LOC (580 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-directive-handling.impl_L488"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/auto-reply/reply/directive-handling.impl.ts:488"
+      issue: "File exceeds limit: 488 LOC (503 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-telegram-src-channel_L487"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/telegram/src/channel.ts:487"
+      issue: "File exceeds limit: 487 LOC (493 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-models-config.providers_L483"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/models-config.providers.ts:483"
+      issue: "File exceeds limit: 483 LOC (555 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-commands-registry_L481"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/auto-reply/commands-registry.ts:481"
+      issue: "File exceeds limit: 481 LOC (521 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-server-methods-agent_L481"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/gateway/server-methods/agent.ts:481"
+      issue: "File exceeds limit: 481 LOC (499 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-tools-web-search_L481"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/tools/web-search.ts:481"
+      issue: "File exceeds limit: 481 LOC (538 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-pi-embedded-subscribe_L479"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/pi-embedded-subscribe.ts:479"
+      issue: "File exceeds limit: 479 LOC (554 total lines) > 150 limit"
+
+    - id: "g9_size_src-plugins-registry_L478"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/plugins/registry.ts:478"
+      issue: "File exceeds limit: 478 LOC (516 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-subagent-announce_L477"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/subagent-announce.ts:477"
+      issue: "File exceeds limit: 477 LOC (522 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-zalouser-src-onboarding_L476"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/zalouser/src/onboarding.ts:476"
+      issue: "File exceeds limit: 476 LOC (506 total lines) > 150 limit"
+
+    - id: "g9_size_src-channels-plugins-onboarding-discord_L476"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/channels/plugins/onboarding/discord.ts:476"
+      issue: "File exceeds limit: 476 LOC (495 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-memory-lancedb-index_L473"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/memory-lancedb/index.ts:473"
+      issue: "File exceeds limit: 473 LOC (610 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-types_L471"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "ui/src/ui/types.ts:471"
+      issue: "File exceeds limit: 471 LOC (527 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-voice-call-index_L469"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/voice-call/index.ts:469"
+      issue: "File exceeds limit: 469 LOC (494 total lines) > 150 limit"
+
+    - id: "g9_size_src-telegram-bot_L468"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/telegram/bot.ts:468"
+      issue: "File exceeds limit: 468 LOC (506 total lines) > 150 limit"
+
+    - id: "g9_size_src-canvas-host-server_L468"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/canvas-host/server.ts:468"
+      issue: "File exceeds limit: 468 LOC (517 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-onboard-auth.config-core_L468"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/commands/onboard-auth.config-core.ts:468"
+      issue: "File exceeds limit: 468 LOC (508 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-model-scan_L467"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/model-scan.ts:467"
+      issue: "File exceeds limit: 467 LOC (514 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-get-reply-directives_L466"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/auto-reply/reply/get-reply-directives.ts:466"
+      issue: "File exceeds limit: 466 LOC (488 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-pi-embedded-runner-compact_L465"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/pi-embedded-runner/compact.ts:465"
+      issue: "File exceeds limit: 465 LOC (499 total lines) > 150 limit"
+
+    - id: "g9_size_src-tui-tui-command-handlers_L463"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/tui/tui-command-handlers.ts:463"
+      issue: "File exceeds limit: 463 LOC (478 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-test-helpers.server_L461"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/gateway/test-helpers.server.ts:461"
+      issue: "File exceeds limit: 461 LOC (493 total lines) > 150 limit"
+
+    - id: "g9_size_src-pairing-pairing-store_L459"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/pairing/pairing-store.ts:459"
+      issue: "File exceeds limit: 459 LOC (498 total lines) > 150 limit"
+
+    - id: "g9_size_src-config-zod-schema.core_L459"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/config/zod-schema.core.ts:459"
+      issue: "File exceeds limit: 459 LOC (507 total lines) > 150 limit"
+
+    - id: "g9_size_src-infra-outbound-target-resolver_L459"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/infra/outbound/target-resolver.ts:459"
+      issue: "File exceeds limit: 459 LOC (498 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-models-list.probe_L455"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/commands/models/list.probe.ts:455"
+      issue: "File exceeds limit: 455 LOC (497 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-status-all-channels_L454"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/commands/status-all/channels.ts:454"
+      issue: "File exceeds limit: 454 LOC (502 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-skills-install_L450"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/skills-install.ts:450"
+      issue: "File exceeds limit: 450 LOC (489 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-views-cron_L450"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "ui/src/ui/views/cron.ts:450"
+      issue: "File exceeds limit: 450 LOC (462 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-server-methods-sessions_L449"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/gateway/server-methods/sessions.ts:449"
+      issue: "File exceeds limit: 449 LOC (474 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-tools-discord-actions-messaging_L447"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/tools/discord-actions-messaging.ts:447"
+      issue: "File exceeds limit: 447 LOC (450 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-msteams-src-channel_L446"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/msteams/src/channel.ts:446"
+      issue: "File exceeds limit: 446 LOC (461 total lines) > 150 limit"
+
+    - id: "g9_size_src-wizard-onboarding.finalize_L445"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/wizard/onboarding.finalize.ts:445"
+      issue: "File exceeds limit: 445 LOC (476 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-tools-nodes-tool_L445"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/tools/nodes-tool.ts:445"
+      issue: "File exceeds limit: 445 LOC (463 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-views-config-form.render_L445"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "ui/src/ui/views/config-form.render.ts:445"
+      issue: "File exceeds limit: 445 LOC (473 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-apply-patch_L443"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/apply-patch.ts:443"
+      issue: "File exceeds limit: 443 LOC (504 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-exec-approvals-cli_L442"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/cli/exec-approvals-cli.ts:442"
+      issue: "File exceeds limit: 442 LOC (473 total lines) > 150 limit"
+
+    - id: "g9_size_src-wizard-onboarding_L441"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/wizard/onboarding.ts:441"
+      issue: "File exceeds limit: 441 LOC (481 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-status-all_L440"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/commands/status-all.ts:440"
+      issue: "File exceeds limit: 440 LOC (465 total lines) > 150 limit"
+
+    - id: "g9_size_src-cron-isolated-agent-run_L440"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/cron/isolated-agent/run.ts:440"
+      issue: "File exceeds limit: 440 LOC (476 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-views-chat_L438"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "ui/src/ui/views/chat.ts:438"
+      issue: "File exceeds limit: 438 LOC (488 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-tools-session-status-tool_L436"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/tools/session-status-tool.ts:436"
+      issue: "File exceeds limit: 436 LOC (473 total lines) > 150 limit"
+
+    - id: "g9_size_src-channels-dock_L434"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/channels/dock.ts:434"
+      issue: "File exceeds limit: 434 LOC (454 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-matrix-src-channel_L434"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/matrix/src/channel.ts:434"
+      issue: "File exceeds limit: 434 LOC (445 total lines) > 150 limit"
+
+    - id: "g9_size_src-infra-tailscale_L431"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/infra/tailscale.ts:431"
+      issue: "File exceeds limit: 431 LOC (496 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-onboard-helpers_L429"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/commands/onboard-helpers.ts:429"
+      issue: "File exceeds limit: 429 LOC (475 total lines) > 150 limit"
+
+    - id: "g9_size_scripts-update-clawtributors_L424"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "scripts/update-clawtributors.ts:424"
+      issue: "File exceeds limit: 424 LOC (478 total lines) > 150 limit"
+
+    - id: "g9_size_src-daemon-launchd_L422"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/daemon/launchd.ts:422"
+      issue: "File exceeds limit: 422 LOC (466 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-bluebubbles-src-send_L422"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/bluebubbles/src/send.ts:422"
+      issue: "File exceeds limit: 422 LOC (469 total lines) > 150 limit"
+
+    - id: "g9_size_commands-onboard-non-interactive-local-auth-choice_L422"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/commands/onboard-non-interactive/local/auth-choice.ts:422"
+      issue: "File exceeds limit: 422 LOC (445 total lines) > 150 limit"
+
+    - id: "g9_size_src-browser-routes-agent.storage_L421"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/browser/routes/agent.storage.ts:421"
+      issue: "File exceeds limit: 421 LOC (436 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-get-reply-run_L421"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/auto-reply/reply/get-reply-run.ts:421"
+      issue: "File exceeds limit: 421 LOC (430 total lines) > 150 limit"
+
+    - id: "g9_size_src-browser-cdp_L420"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/browser/cdp.ts:420"
+      issue: "File exceeds limit: 420 LOC (455 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-client_L419"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/gateway/client.ts:419"
+      issue: "File exceeds limit: 419 LOC (441 total lines) > 150 limit"
+
+    - id: "g9_size_src-config-plugin-auto-enable_L417"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/config/plugin-auto-enable.ts:417"
+      issue: "File exceeds limit: 417 LOC (457 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-discord-src-channel_L417"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/discord/src/channel.ts:417"
+      issue: "File exceeds limit: 417 LOC (424 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-voice-call-src-providers-plivo_L417"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/voice-call/src/providers/plivo.ts:417"
+      issue: "File exceeds limit: 417 LOC (504 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-app_L416"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "ui/src/ui/app.ts:416"
+      issue: "File exceeds limit: 416 LOC (476 total lines) > 150 limit"
+
+    - id: "g9_size_src-discord-monitor-message-handler.process_L416"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/discord/monitor/message-handler.process.ts:416"
+      issue: "File exceeds limit: 416 LOC (430 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-session-utils.fs_L414"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/gateway/session-utils.fs.ts:414"
+      issue: "File exceeds limit: 414 LOC (460 total lines) > 150 limit"
+
+    - id: "g9_size_src-daemon-systemd_L414"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/daemon/systemd.ts:414"
+      issue: "File exceeds limit: 414 LOC (450 total lines) > 150 limit"
+
+    - id: "g9_size_src-daemon-inspect_L414"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/daemon/inspect.ts:414"
+      issue: "File exceeds limit: 414 LOC (447 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-msteams-src-messenger_L414"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/msteams/src/messenger.ts:414"
+      issue: "File exceeds limit: 414 LOC (496 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-google-antigravity-auth-index_L412"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/google-antigravity-auth/index.ts:412"
+      issue: "File exceeds limit: 412 LOC (462 total lines) > 150 limit"
+
+    - id: "g9_size_src-plugins-loader_L412"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/plugins/loader.ts:412"
+      issue: "File exceeds limit: 412 LOC (453 total lines) > 150 limit"
+
+    - id: "g9_size_src-web-auto-reply-monitor_L412"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/web/auto-reply/monitor.ts:412"
+      issue: "File exceeds limit: 412 LOC (452 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-models-cli_L411"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/cli/models-cli.ts:411"
+      issue: "File exceeds limit: 411 LOC (445 total lines) > 150 limit"
+
+    - id: "g9_size_src-acp-translator_L410"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/acp/translator.ts:410"
+      issue: "File exceeds limit: 410 LOC (457 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-matrix-src-onboarding_L410"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/matrix/src/onboarding.ts:410"
+      issue: "File exceeds limit: 410 LOC (443 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-zalo-src-channel_L409"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/zalo/src/channel.ts:409"
+      issue: "File exceeds limit: 409 LOC (416 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-server-methods-config_L409"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/gateway/server-methods/config.ts:409"
+      issue: "File exceeds limit: 409 LOC (417 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-commands-subagents_L409"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/auto-reply/reply/commands-subagents.ts:409"
+      issue: "File exceeds limit: 409 LOC (436 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-hooks-mapping_L408"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/gateway/hooks-mapping.ts:408"
+      issue: "File exceeds limit: 408 LOC (440 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-dispatch-from-config_L408"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/auto-reply/reply/dispatch-from-config.ts:408"
+      issue: "File exceeds limit: 408 LOC (458 total lines) > 150 limit"
+
+    - id: "g9_size_src-media-understanding-apply_L407"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/media-understanding/apply.ts:407"
+      issue: "File exceeds limit: 407 LOC (434 total lines) > 150 limit"
+
+    - id: "g9_size_src-config-defaults_L407"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/config/defaults.ts:407"
+      issue: "File exceeds limit: 407 LOC (470 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-msteams-src-onboarding_L407"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/msteams/src/onboarding.ts:407"
+      issue: "File exceeds limit: 407 LOC (433 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-skills-workspace_L407"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/skills/workspace.ts:407"
+      issue: "File exceeds limit: 407 LOC (443 total lines) > 150 limit"
+
+    - id: "g9_size_-plugins-actions-discord-handle-action.guild-admin_L407"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/channels/plugins/actions/discord/handle-action.guild-admin.ts:407"
+      issue: "File exceeds limit: 407 LOC (438 total lines) > 150 limit"
+
+    - id: "g9_size_src-plugins-types_L406"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/plugins/types.ts:406"
+      issue: "File exceeds limit: 406 LOC (529 total lines) > 150 limit"
+
+    - id: "g9_size_src-config-sessions-store_L405"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/config/sessions/store.ts:405"
+      issue: "File exceeds limit: 405 LOC (468 total lines) > 150 limit"
+
+    - id: "g9_size_src-line-bot-message-context_L404"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/line/bot-message-context.ts:404"
+      issue: "File exceeds limit: 404 LOC (461 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-msteams-src-send_L404"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/msteams/src/send.ts:404"
+      issue: "File exceeds limit: 404 LOC (520 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-chunk_L403"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/auto-reply/chunk.ts:403"
+      issue: "File exceeds limit: 403 LOC (501 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-nodes-cli-register.status_L403"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/cli/nodes-cli/register.status.ts:403"
+      issue: "File exceeds limit: 403 LOC (423 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-ws-log_L402"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/gateway/ws-log.ts:402"
+      issue: "File exceeds limit: 402 LOC (450 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-models-auth_L402"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/commands/models/auth.ts:402"
+      issue: "File exceeds limit: 402 LOC (449 total lines) > 150 limit"
+
+    - id: "g9_size_src-memory-batch-gemini_L400"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/memory/batch-gemini.ts:400"
+      issue: "File exceeds limit: 400 LOC (432 total lines) > 150 limit"
+
+    - id: "g9_size_src-slack-monitor-context_L400"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/slack/monitor/context.ts:400"
+      issue: "File exceeds limit: 400 LOC (431 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-bluebubbles-src-channel_L399"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/bluebubbles/src/channel.ts:399"
+      issue: "File exceeds limit: 399 LOC (416 total lines) > 150 limit"
+
+    - id: "g9_size_src-discord-monitor-allow-list_L399"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/discord/monitor/allow-list.ts:399"
+      issue: "File exceeds limit: 399 LOC (425 total lines) > 150 limit"
+
+    - id: "g9_size_src-media-understanding-attachments_L398"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/media-understanding/attachments.ts:398"
+      issue: "File exceeds limit: 398 LOC (432 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-pi-tools_L398"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/pi-tools.ts:398"
+      issue: "File exceeds limit: 398 LOC (435 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-nextcloud-talk-src-channel_L395"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "extensions/nextcloud-talk/src/channel.ts:395"
+      issue: "File exceeds limit: 395 LOC (411 total lines) > 150 limit"
+
+    - id: "g9_size_src-web-auto-reply-monitor-process-message_L394"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/web/auto-reply/monitor/process-message.ts:394"
+      issue: "File exceeds limit: 394 LOC (421 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-subagent-registry_L393"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/subagent-registry.ts:393"
+      issue: "File exceeds limit: 393 LOC (430 total lines) > 150 limit"
+
+    - id: "g9_size_src-plugins-install_L393"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/plugins/install.ts:393"
+      issue: "File exceeds limit: 393 LOC (442 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-bash-command_L393"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/auto-reply/reply/bash-command.ts:393"
+      issue: "File exceeds limit: 393 LOC (426 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-tools-image-tool_L391"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/agents/tools/image-tool.ts:391"
+      issue: "File exceeds limit: 391 LOC (447 total lines) > 150 limit"
+
+    - id: "g9_size_src-telegram-bot-helpers_L391"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/telegram/bot/helpers.ts:391"
+      issue: "File exceeds limit: 391 LOC (452 total lines) > 150 limit"
+
+    - id: "g9_size_src-hooks-install_L390"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/hooks/install.ts:390"
+      issue: "File exceeds limit: 390 LOC (445 total lines) > 150 limit"
+
+    - id: "g9_size_src-channels-plugins-group-mentions_L388"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/channels/plugins/group-mentions.ts:388"
+      issue: "File exceeds limit: 388 LOC (409 total lines) > 150 limit"
+
+    - id: "g2_config_general_L0"
+      gate: 2
+      gate_name: "DNA_Alignment"
+      severity: "WARN"
+      file: "general"
+      issue: "Project DNA missing recommended sections: Stack"
+      fix: "Add sections: Stack; Include project description and tech stack"
+
+    - id: "g5_boundary_src-browser-cdp.helpers_L144"
+      gate: 5
+      gate_name: "Boundary_Check"
+      severity: "WARN"
+      location: "src/browser/cdp.helpers.ts:144"
+      issue: "Client API \"WebSocket\" used without 'use client' or typeof guard"
+      fix: "Add 'use client' directive or wrap in: if (typeof window !== 'undefined')"
+
+    - id: "g5_boundary_src-browser-pw-tools-core.storage_L69"
+      gate: 5
+      gate_name: "Boundary_Check"
+      severity: "WARN"
+      location: "src/browser/pw-tools-core.storage.ts:69"
+      issue: "Client API \"window.localStorage\" used without 'use client' or typeof guard"
+      fix: "Add 'use client' directive or wrap in: if (typeof window !== 'undefined')"
+
+    - id: "g5_boundary_src-browser-pw-tools-core.storage_L107"
+      gate: 5
+      gate_name: "Boundary_Check"
+      severity: "WARN"
+      location: "src/browser/pw-tools-core.storage.ts:107"
+      issue: "Client API \"window.localStorage\" used without 'use client' or typeof guard"
+      fix: "Add 'use client' directive or wrap in: if (typeof window !== 'undefined')"
+
+    - id: "g5_boundary_src-browser-pw-tools-core.storage_L123"
+      gate: 5
+      gate_name: "Boundary_Check"
+      severity: "WARN"
+      location: "src/browser/pw-tools-core.storage.ts:123"
+      issue: "Client API \"window.localStorage\" used without 'use client' or typeof guard"
+      fix: "Add 'use client' directive or wrap in: if (typeof window !== 'undefined')"
+
+    - id: "g5_boundary_src-browser-cdp_L362"
+      gate: 5
+      gate_name: "Boundary_Check"
+      severity: "WARN"
+      location: "src/browser/cdp.ts:362"
+      issue: "Client API \"document.querySelector\" used without 'use client' or typeof guard"
+      fix: "Add 'use client' directive or wrap in: if (typeof window !== 'undefined')"
+
+    - id: "g5_boundary_src-browser-cdp_L365"
+      gate: 5
+      gate_name: "Boundary_Check"
+      severity: "WARN"
+      location: "src/browser/cdp.ts:365"
+      issue: "Client API \"document.body\" used without 'use client' or typeof guard"
+      fix: "Add 'use client' directive or wrap in: if (typeof window !== 'undefined')"
+
+    - id: "g5_boundary_src-browser-cdp_L409"
+      gate: 5
+      gate_name: "Boundary_Check"
+      severity: "WARN"
+      location: "src/browser/cdp.ts:409"
+      issue: "Client API \"document.querySelector\" used without 'use client' or typeof guard"
+      fix: "Add 'use client' directive or wrap in: if (typeof window !== 'undefined')"
+
+    - id: "g5_boundary_src-browser-pw-tools-core.interactions_L444"
+      gate: 5
+      gate_name: "Boundary_Check"
+      severity: "WARN"
+      location: "src/browser/pw-tools-core.interactions.ts:444"
+      issue: "Client API \"document.querySelector\" used without 'use client' or typeof guard"
+      fix: "Add 'use client' directive or wrap in: if (typeof window !== 'undefined')"
+
+    - id: "g5_boundary_src-browser-pw-tools-core.interactions_L447"
+      gate: 5
+      gate_name: "Boundary_Check"
+      severity: "WARN"
+      location: "src/browser/pw-tools-core.interactions.ts:447"
+      issue: "Client API \"document.createElement\" used without 'use client' or typeof guard"
+      fix: "Add 'use client' directive or wrap in: if (typeof window !== 'undefined')"
+
+    - id: "g5_boundary_src-browser-pw-tools-core.interactions_L461"
+      gate: 5
+      gate_name: "Boundary_Check"
+      severity: "WARN"
+      location: "src/browser/pw-tools-core.interactions.ts:461"
+      issue: "Client API \"document.createElement\" used without 'use client' or typeof guard"
+      fix: "Add 'use client' directive or wrap in: if (typeof window !== 'undefined')"
+
+    - id: "g6_law_src-runtime_L12"
+      gate: 6
+      gate_name: "Law_Enforcement"
+      severity: "WARN"
+      location: "src/runtime.ts:12"
+      issue: "console.log call should be removed"
+      code: "console.log(...)"
+      fix: "Remove this console statement or use a proper logger"
+      auto_fixable: true
+
+    - id: "g6_law_src-globals_L31"
+      gate: 6
+      gate_name: "Law_Enforcement"
+      severity: "WARN"
+      location: "src/globals.ts:31"
+      issue: "console.log call should be removed"
+      code: "console.log(...)"
+      fix: "Remove this console statement or use a proper logger"
+      auto_fixable: true
+
+    - id: "g6_law_src-globals_L38"
+      gate: 6
+      gate_name: "Law_Enforcement"
+      severity: "WARN"
+      location: "src/globals.ts:38"
+      issue: "console.log call should be removed"
+      code: "console.log(...)"
+      fix: "Remove this console statement or use a proper logger"
+      auto_fixable: true
+
+    - id: "g6_law_test-test-env_L47"
+      gate: 6
+      gate_name: "Law_Enforcement"
+      severity: "WARN"
+      location: "test/test-env.ts:47"
+      issue: "console.log call should be removed"
+      code: "console.log(...)"
+      fix: "Remove this console statement or use a proper logger"
+      auto_fixable: true
+
+    - id: "g6_law_scripts-test-force_L13"
+      gate: 6
+      gate_name: "Law_Enforcement"
+      severity: "WARN"
+      location: "scripts/test-force.ts:13"
+      issue: "console.log call should be removed"
+      code: "console.log(...)"
+      fix: "Remove this console statement or use a proper logger"
+      auto_fixable: true
+
+    - id: "g8_org_vitest.e2e.config_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "vitest.e2e.config.ts:1"
+      issue: "File name \"vitest.e2e.config\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_vitest.extensions.config_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "vitest.extensions.config.ts:1"
+      issue: "File name \"vitest.extensions.config\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_vitest.unit.config_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "vitest.unit.config.ts:1"
+      issue: "File name \"vitest.unit.config\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_vitest.live.config_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "vitest.live.config.ts:1"
+      issue: "File name \"vitest.live.config\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_vitest.gateway.config_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "vitest.gateway.config.ts:1"
+      issue: "File name \"vitest.gateway.config\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-docker-setup.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/docker-setup.test.ts:1"
+      issue: "File name \"docker-setup.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-index.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/index.test.ts:1"
+      issue: "File name \"index.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-globals.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/globals.test.ts:1"
+      issue: "File name \"globals.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-channel-web.barrel.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/channel-web.barrel.test.ts:1"
+      issue: "File name \"channel-web.barrel.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-git-hooks.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/git-hooks.test.ts:1"
+      issue: "File name \"git-hooks.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-logger.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/logger.test.ts:1"
+      issue: "File name \"logger.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-utils.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/utils.test.ts:1"
+      issue: "File name \"utils.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-postinstall-patcher.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/postinstall-patcher.test.ts:1"
+      issue: "File name \"postinstall-patcher.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-polls.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/polls.test.ts:1"
+      issue: "File name \"polls.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_test-media-understanding.auto.e2e.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "test/media-understanding.auto.e2e.test.ts:1"
+      issue: "File name \"media-understanding.auto.e2e.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_test-auto-reply.retry.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "test/auto-reply.retry.test.ts:1"
+      issue: "File name \"auto-reply.retry.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_test-inbound-contract.providers.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "test/inbound-contract.providers.test.ts:1"
+      issue: "File name \"inbound-contract.providers.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_test-gateway.multi.e2e.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "test/gateway.multi.e2e.test.ts:1"
+      issue: "File name \"gateway.multi.e2e.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_test-provider-timeout.e2e.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "test/provider-timeout.e2e.test.ts:1"
+      issue: "File name \"provider-timeout.e2e.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_scripts-update-clawtributors.types_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "scripts/update-clawtributors.types.ts:1"
+      issue: "File name \"update-clawtributors.types\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g9_size_src-agents-auth-health_L225"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/auth-health.ts:225"
+      issue: "File exceeds limit: 225 LOC (253 total lines) > 150 limit"
+
+    - id: "g9_size_src-tui-gateway-chat_L225"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/tui/gateway-chat.ts:225"
+      issue: "File exceeds limit: 225 LOC (254 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-nostr-src-seen-tracker_L224"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/nostr/src/seen-tracker.ts:224"
+      issue: "File exceeds limit: 224 LOC (304 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-cron-cli-register.cron-add_L224"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/cli/cron-cli/register.cron-add.ts:224"
+      issue: "File exceeds limit: 224 LOC (238 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-voice-call-src-tunnel_L223"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/voice-call/src/tunnel.ts:223"
+      issue: "File exceeds limit: 223 LOC (316 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-commands-models_L223"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/auto-reply/reply/commands-models.ts:223"
+      issue: "File exceeds limit: 223 LOC (260 total lines) > 150 limit"
+
+    - id: "g9_size_scripts-protocol-gen-swift_L221"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "scripts/protocol-gen-swift.ts:221"
+      issue: "File exceeds limit: 221 LOC (245 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-auth-choice-options_L220"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/auth-choice-options.ts:220"
+      issue: "File exceeds limit: 220 LOC (234 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-exec-directive_L220"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/auto-reply/reply/exec/directive.ts:220"
+      issue: "File exceeds limit: 220 LOC (231 total lines) > 150 limit"
+
+    - id: "g9_size_src-imessage-client_L219"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/imessage/client.ts:219"
+      issue: "File exceeds limit: 219 LOC (245 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-lobster-src-lobster-tool_L219"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/lobster/src/lobster-tool.ts:219"
+      issue: "File exceeds limit: 219 LOC (253 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-app-chat_L218"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "ui/src/ui/app-chat.ts:218"
+      issue: "File exceeds limit: 218 LOC (243 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-reply-elevated_L218"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/auto-reply/reply/reply-elevated.ts:218"
+      issue: "File exceeds limit: 218 LOC (234 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-cron-cli-shared_L217"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/cli/cron-cli/shared.ts:217"
+      issue: "File exceeds limit: 217 LOC (240 total lines) > 150 limit"
+
+    - id: "g9_size_src-cron-service-jobs_L217"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/cron/service/jobs.ts:217"
+      issue: "File exceeds limit: 217 LOC (237 total lines) > 150 limit"
+
+    - id: "g9_size_src-routing-resolve-route_L216"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/routing/resolve-route.ts:216"
+      issue: "File exceeds limit: 216 LOC (247 total lines) > 150 limit"
+
+    - id: "g9_size_src-logging-logger_L215"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/logging/logger.ts:215"
+      issue: "File exceeds limit: 215 LOC (254 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-app-channels_L215"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "ui/src/ui/app-channels.ts:215"
+      issue: "File exceeds limit: 215 LOC (241 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-sandbox-browser_L215"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/sandbox/browser.ts:215"
+      issue: "File exceeds limit: 215 LOC (233 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-nextcloud-talk-src-monitor_L214"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/nextcloud-talk/src/monitor.ts:214"
+      issue: "File exceeds limit: 214 LOC (249 total lines) > 150 limit"
+
+    - id: "g9_size_src-channels-plugins-actions-discord-handle-action_L214"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/channels/plugins/actions/discord/handle-action.ts:214"
+      issue: "File exceeds limit: 214 LOC (232 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-views-channels.nostr_L213"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "ui/src/ui/views/channels.nostr.ts:213"
+      issue: "File exceeds limit: 213 LOC (235 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-failover-error_L212"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/failover-error.ts:212"
+      issue: "File exceeds limit: 212 LOC (232 total lines) > 150 limit"
+
+    - id: "g9_size_src-signal-format_L212"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/signal/format.ts:212"
+      issue: "File exceeds limit: 212 LOC (239 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-agents.commands.identity_L212"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/agents.commands.identity.ts:212"
+      issue: "File exceeds limit: 212 LOC (235 total lines) > 150 limit"
+
+    - id: "g9_size_src-memory-embeddings_L212"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/memory/embeddings.ts:212"
+      issue: "File exceeds limit: 212 LOC (239 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-app-tool-stream_L212"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "ui/src/ui/app-tool-stream.ts:212"
+      issue: "File exceeds limit: 212 LOC (241 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-server-methods_L211"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/gateway/server-methods.ts:211"
+      issue: "File exceeds limit: 211 LOC (217 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-opencode-zen-models_L211"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/opencode-zen-models.ts:211"
+      issue: "File exceeds limit: 211 LOC (308 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-directive-handling.parse_L211"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/auto-reply/reply/directive-handling.parse.ts:211"
+      issue: "File exceeds limit: 211 LOC (216 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-mattermost-src-mattermost-send_L211"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/mattermost/src/mattermost/send.ts:211"
+      issue: "File exceeds limit: 211 LOC (232 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-protocol-schema-types_L211"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/gateway/protocol/schema/types.ts:211"
+      issue: "File exceeds limit: 211 LOC (214 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-pi-embedded-subscribe.handlers.tools_L210"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/pi-embedded-subscribe.handlers.tools.ts:210"
+      issue: "File exceeds limit: 210 LOC (231 total lines) > 150 limit"
+
+    - id: "g9_size_src-channels-plugins-slack.actions_L210"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/channels/plugins/slack.actions.ts:210"
+      issue: "File exceeds limit: 210 LOC (223 total lines) > 150 limit"
+
+    - id: "g9_size_src-imessage-targets_L209"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/imessage/targets.ts:209"
+      issue: "File exceeds limit: 209 LOC (235 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-twitch-src-monitor_L209"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/twitch/src/monitor.ts:209"
+      issue: "File exceeds limit: 209 LOC (262 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-matrix-src-matrix-send-media_L209"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/matrix/src/matrix/send/media.ts:209"
+      issue: "File exceeds limit: 209 LOC (231 total lines) > 150 limit"
+
+    - id: "g9_size_src-security-windows-acl_L208"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/security/windows-acl.ts:208"
+      issue: "File exceeds limit: 208 LOC (230 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-progress_L208"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/cli/progress.ts:208"
+      issue: "File exceeds limit: 208 LOC (231 total lines) > 150 limit"
+
+    - id: "g9_size_src-telegram-sticker-cache_L208"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/telegram/sticker-cache.ts:208"
+      issue: "File exceeds limit: 208 LOC (265 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-msteams-src-attachments-download_L208"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/msteams/src/attachments/download.ts:208"
+      issue: "File exceeds limit: 208 LOC (239 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-anthropic-payload-log_L207"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/anthropic-payload-log.ts:207"
+      issue: "File exceeds limit: 207 LOC (232 total lines) > 150 limit"
+
+    - id: "g9_size_src-plugins-config-state_L207"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/plugins/config-state.ts:207"
+      issue: "File exceeds limit: 207 LOC (222 total lines) > 150 limit"
+
+    - id: "g9_size_src-media-store_L207"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/media/store.ts:207"
+      issue: "File exceeds limit: 207 LOC (243 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-configure.gateway_L207"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/configure.gateway.ts:207"
+      issue: "File exceeds limit: 207 LOC (225 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-thinking_L206"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/auto-reply/thinking.ts:206"
+      issue: "File exceeds limit: 206 LOC (230 total lines) > 150 limit"
+
+    - id: "g9_size_src-infra-restart_L206"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/infra/restart.ts:206"
+      issue: "File exceeds limit: 206 LOC (223 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-twitch-src-twitch-client_L206"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/twitch/src/twitch-client.ts:206"
+      issue: "File exceeds limit: 206 LOC (278 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-minimax-portal-auth-oauth_L205"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/minimax-portal-auth/oauth.ts:205"
+      issue: "File exceeds limit: 205 LOC (248 total lines) > 150 limit"
+
+    - id: "g9_size_src-hooks-hooks-status_L205"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/hooks/hooks-status.ts:205"
+      issue: "File exceeds limit: 205 LOC (230 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-app-view-state_L205"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "ui/src/ui/app-view-state.ts:205"
+      issue: "File exceeds limit: 205 LOC (207 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-daemon-cli-shared_L205"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/cli/daemon-cli/shared.ts:205"
+      issue: "File exceeds limit: 205 LOC (216 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-onboarding-plugin-install_L205"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/onboarding/plugin-install.ts:205"
+      issue: "File exceeds limit: 205 LOC (222 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-browser-cli-state.cookies-storage_L204"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/cli/browser-cli-state.cookies-storage.ts:204"
+      issue: "File exceeds limit: 204 LOC (216 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-program-register.agent_L204"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/cli/program/register.agent.ts:204"
+      issue: "File exceeds limit: 204 LOC (214 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-server-methods-cron_L203"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/gateway/server-methods/cron.ts:203"
+      issue: "File exceeds limit: 203 LOC (205 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-onboard-auth.config-minimax_L202"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/onboard-auth.config-minimax.ts:202"
+      issue: "File exceeds limit: 202 LOC (216 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-browser-cli-debug_L201"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/cli/browser-cli-debug.ts:201"
+      issue: "File exceeds limit: 201 LOC (210 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-bedrock-discovery_L201"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/bedrock-discovery.ts:201"
+      issue: "File exceeds limit: 201 LOC (225 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-llm-task-src-llm-task-tool_L201"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/llm-task/src/llm-task-tool.ts:201"
+      issue: "File exceeds limit: 201 LOC (241 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-tool-images_L200"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/tool-images.ts:200"
+      issue: "File exceeds limit: 200 LOC (225 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-cron-cli-register.cron-edit_L200"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/cli/cron-cli/register.cron-edit.ts:200"
+      issue: "File exceeds limit: 200 LOC (208 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-twitch-src-plugin_L199"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/twitch/src/plugin.ts:199"
+      issue: "File exceeds limit: 199 LOC (275 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-voice-call-src-types_L199"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/voice-call/src/types.ts:199"
+      issue: "File exceeds limit: 199 LOC (274 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-mattermost-src-mattermost-client_L199"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/mattermost/src/mattermost/client.ts:199"
+      issue: "File exceeds limit: 199 LOC (221 total lines) > 150 limit"
+
+    - id: "g9_size_src-browser-pw-tools-core.state_L198"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/browser/pw-tools-core.state.ts:198"
+      issue: "File exceeds limit: 198 LOC (211 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-agents.config_L198"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/agents.config.ts:198"
+      issue: "File exceeds limit: 198 LOC (217 total lines) > 150 limit"
+
+    - id: "g9_size_src-config-group-policy_L198"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/config/group-policy.ts:198"
+      issue: "File exceeds limit: 198 LOC (214 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-test-helpers.openai-mock_L197"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/gateway/test-helpers.openai-mock.ts:197"
+      issue: "File exceeds limit: 197 LOC (213 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-pi-embedded-subscribe.tools_L197"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/pi-embedded-subscribe.tools.ts:197"
+      issue: "File exceeds limit: 197 LOC (210 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-tools-sessions-list-tool_L197"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/tools/sessions-list-tool.ts:197"
+      issue: "File exceeds limit: 197 LOC (218 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-node-registry_L196"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/gateway/node-registry.ts:196"
+      issue: "File exceeds limit: 196 LOC (211 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-status.summary_L196"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/status.summary.ts:196"
+      issue: "File exceeds limit: 196 LOC (206 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-live-image-probe_L195"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/gateway/live-image-probe.ts:195"
+      issue: "File exceeds limit: 195 LOC (215 total lines) > 150 limit"
+
+    - id: "g9_size_src-slack-send_L195"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/slack/send.ts:195"
+      issue: "File exceeds limit: 195 LOC (209 total lines) > 150 limit"
+
+    - id: "g9_size_src-macos-gateway-daemon_L195"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/macos/gateway-daemon.ts:195"
+      issue: "File exceeds limit: 195 LOC (225 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-server-methods-skills_L195"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/gateway/server-methods/skills.ts:195"
+      issue: "File exceeds limit: 195 LOC (199 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-pi-embedded-helpers-bootstrap_L194"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/pi-embedded-helpers/bootstrap.ts:194"
+      issue: "File exceeds limit: 194 LOC (221 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-agent-runner-memory_L194"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/auto-reply/reply/agent-runner-memory.ts:194"
+      issue: "File exceeds limit: 194 LOC (202 total lines) > 150 limit"
+
+    - id: "g9_size_src-channels-plugins-actions-telegram_L194"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/channels/plugins/actions/telegram.ts:194"
+      issue: "File exceeds limit: 194 LOC (205 total lines) > 150 limit"
+
+    - id: "g9_size_src-plugins-commands_L193"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/plugins/commands.ts:193"
+      issue: "File exceeds limit: 193 LOC (305 total lines) > 150 limit"
+
+    - id: "g9_size_src-infra-ssh-tunnel_L193"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/infra/ssh-tunnel.ts:193"
+      issue: "File exceeds limit: 193 LOC (215 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-tlon-src-onboarding_L193"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/tlon/src/onboarding.ts:193"
+      issue: "File exceeds limit: 193 LOC (216 total lines) > 150 limit"
+
+    - id: "g9_size_src-browser-pw-tools-core.snapshot_L192"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/browser/pw-tools-core.snapshot.ts:192"
+      issue: "File exceeds limit: 192 LOC (206 total lines) > 150 limit"
+
+    - id: "g9_size_src-telegram-monitor_L191"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/telegram/monitor.ts:191"
+      issue: "File exceeds limit: 191 LOC (211 total lines) > 150 limit"
+
+    - id: "g9_size_src-config-paths_L191"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/config/paths.ts:191"
+      issue: "File exceeds limit: 191 LOC (255 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-queue-directive_L191"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/auto-reply/reply/queue/directive.ts:191"
+      issue: "File exceeds limit: 191 LOC (197 total lines) > 150 limit"
+
+    - id: "g9_size_src-browser-client-actions-observe_L190"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/browser/client-actions-observe.ts:190"
+      issue: "File exceeds limit: 190 LOC (201 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-commands-info_L190"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/auto-reply/reply/commands-info.ts:190"
+      issue: "File exceeds limit: 190 LOC (205 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-server-methods-devices_L188"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/gateway/server-methods/devices.ts:188"
+      issue: "File exceeds limit: 188 LOC (191 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-net_L187"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/gateway/net.ts:187"
+      issue: "File exceeds limit: 187 LOC (238 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-uninstall_L187"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/uninstall.ts:187"
+      issue: "File exceeds limit: 187 LOC (206 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-msteams-src-directory-live_L187"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/msteams/src/directory-live.ts:187"
+      issue: "File exceeds limit: 187 LOC (207 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-status.scan_L186"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/status.scan.ts:186"
+      issue: "File exceeds limit: 186 LOC (204 total lines) > 150 limit"
+
+    - id: "g9_size_src-tui-tui-formatters_L186"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/tui/tui-formatters.ts:186"
+      issue: "File exceeds limit: 186 LOC (220 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-session-transcript-repair_L185"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/session-transcript-repair.ts:185"
+      issue: "File exceeds limit: 185 LOC (221 total lines) > 150 limit"
+
+    - id: "g9_size_src-canvas-host-a2ui_L185"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/canvas-host/a2ui.ts:185"
+      issue: "File exceeds limit: 185 LOC (220 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-voice-call-src-core-bridge_L185"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/voice-call/src/core-bridge.ts:185"
+      issue: "File exceeds limit: 185 LOC (202 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-nostr-src-nostr-state-store_L185"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/nostr/src/nostr-state-store.ts:185"
+      issue: "File exceeds limit: 185 LOC (228 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-abort_L185"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/auto-reply/reply/abort.ts:185"
+      issue: "File exceeds limit: 185 LOC (206 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-synthetic-models_L184"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/synthetic-models.ts:184"
+      issue: "File exceeds limit: 184 LOC (189 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-onboard-skills_L184"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/onboard-skills.ts:184"
+      issue: "File exceeds limit: 184 LOC (199 total lines) > 150 limit"
+
+    - id: "g9_size_src-tui-tui-event-handlers_L184"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/tui/tui-event-handlers.ts:184"
+      issue: "File exceeds limit: 184 LOC (198 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-matrix-src-actions_L184"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/matrix/src/actions.ts:184"
+      issue: "File exceeds limit: 184 LOC (196 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-session-reset-model_L184"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/auto-reply/reply/session-reset-model.ts:184"
+      issue: "File exceeds limit: 184 LOC (203 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-agent-delivery_L184"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/agent/delivery.ts:184"
+      issue: "File exceeds limit: 184 LOC (199 total lines) > 150 limit"
+
+    - id: "g9_size_src-slack-resolve-users_L183"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/slack/resolve-users.ts:183"
+      issue: "File exceeds limit: 183 LOC (195 total lines) > 150 limit"
+
+    - id: "g9_size_src-infra-outbound-outbound-send-service_L183"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/infra/outbound/outbound-send-service.ts:183"
+      issue: "File exceeds limit: 183 LOC (194 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-views-skills_L183"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "ui/src/ui/views/skills.ts:183"
+      issue: "File exceeds limit: 183 LOC (192 total lines) > 150 limit"
+
+    - id: "g9_size_src-plugins-manifest-registry_L182"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/plugins/manifest-registry.ts:182"
+      issue: "File exceeds limit: 182 LOC (202 total lines) > 150 limit"
+
+    - id: "g9_size_src-discord-probe_L182"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/discord/probe.ts:182"
+      issue: "File exceeds limit: 182 LOC (194 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-chutes-oauth_L182"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/chutes-oauth.ts:182"
+      issue: "File exceeds limit: 182 LOC (200 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-status-all-report-lines_L182"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/status-all/report-lines.ts:182"
+      issue: "File exceeds limit: 182 LOC (197 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-voice-call-src-runtime_L181"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/voice-call/src/runtime.ts:181"
+      issue: "File exceeds limit: 181 LOC (205 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-nextcloud-talk-src-send_L181"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/nextcloud-talk/src/send.ts:181"
+      issue: "File exceeds limit: 181 LOC (211 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-directives_L181"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/auto-reply/reply/directives.ts:181"
+      issue: "File exceeds limit: 181 LOC (194 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-subagent-announce-queue_L180"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/subagent-announce-queue.ts:180"
+      issue: "File exceeds limit: 180 LOC (192 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-session-write-lock_L180"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/session-write-lock.ts:180"
+      issue: "File exceeds limit: 180 LOC (209 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-apply-patch-update_L180"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/apply-patch-update.ts:180"
+      issue: "File exceeds limit: 180 LOC (200 total lines) > 150 limit"
+
+    - id: "g9_size_src-media-fetch_L180"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/media/fetch.ts:180"
+      issue: "File exceeds limit: 180 LOC (203 total lines) > 150 limit"
+
+    - id: "g9_size_src-config-includes_L180"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/config/includes.ts:180"
+      issue: "File exceeds limit: 180 LOC (251 total lines) > 150 limit"
+
+    - id: "g9_size_browser-cli-actions-input-register.files-downloads_L180"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/cli/browser-cli-actions-input/register.files-downloads.ts:180"
+      issue: "File exceeds limit: 180 LOC (185 total lines) > 150 limit"
+
+    - id: "g9_size_src-security-audit-fs_L179"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/security/audit-fs.ts:179"
+      issue: "File exceeds limit: 179 LOC (196 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-chutes-oauth_L179"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/chutes-oauth.ts:179"
+      issue: "File exceeds limit: 179 LOC (208 total lines) > 150 limit"
+
+    - id: "g9_size_src-signal-send-reactions_L179"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/signal/send-reactions.ts:179"
+      issue: "File exceeds limit: 179 LOC (216 total lines) > 150 limit"
+
+    - id: "g9_size_src-hooks-gmail-watcher_L179"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/hooks/gmail-watcher.ts:179"
+      issue: "File exceeds limit: 179 LOC (247 total lines) > 150 limit"
+
+    - id: "g9_size_src-web-auto-reply-deliver-reply_L179"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/web/auto-reply/deliver-reply.ts:179"
+      issue: "File exceeds limit: 179 LOC (190 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-status-all-gateway_L179"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/status-all/gateway.ts:179"
+      issue: "File exceeds limit: 179 LOC (204 total lines) > 150 limit"
+
+    - id: "g9_size_src-slack-monitor-message-handler-dispatch_L179"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/slack/monitor/message-handler/dispatch.ts:179"
+      issue: "File exceeds limit: 179 LOC (198 total lines) > 150 limit"
+
+    - id: "g9_size_src-signal-client_L178"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/signal/client.ts:178"
+      issue: "File exceeds limit: 178 LOC (196 total lines) > 150 limit"
+
+    - id: "g9_size_src-media-parse_L178"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/media/parse.ts:178"
+      issue: "File exceeds limit: 178 LOC (221 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-auth-choice.apply.plugin-provider_L178"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/auth-choice.apply.plugin-provider.ts:178"
+      issue: "File exceeds limit: 178 LOC (199 total lines) > 150 limit"
+
+    - id: "g9_size_src-memory-manager-search_L177"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/memory/manager-search.ts:177"
+      issue: "File exceeds limit: 177 LOC (189 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-mattermost-src-onboarding_L177"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/mattermost/src/onboarding.ts:177"
+      issue: "File exceeds limit: 177 LOC (188 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-program-command-registry_L177"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/cli/program/command-registry.ts:177"
+      issue: "File exceeds limit: 177 LOC (190 total lines) > 150 limit"
+
+    - id: "g9_size_src-infra-outbound-outbound-policy_L177"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/infra/outbound/outbound-policy.ts:177"
+      issue: "File exceeds limit: 177 LOC (203 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-controllers-cron_L177"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "ui/src/ui/controllers/cron.ts:177"
+      issue: "File exceeds limit: 177 LOC (188 total lines) > 150 limit"
+
+    - id: "g9_size_src-media-understanding-resolve_L176"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/media-understanding/resolve.ts:176"
+      issue: "File exceeds limit: 176 LOC (188 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-tool-call-id_L176"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/tool-call-id.ts:176"
+      issue: "File exceeds limit: 176 LOC (223 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-command-auth_L176"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/auto-reply/command-auth.ts:176"
+      issue: "File exceeds limit: 176 LOC (188 total lines) > 150 limit"
+
+    - id: "g9_size_src-web-auth-store_L176"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/web/auth-store.ts:176"
+      issue: "File exceeds limit: 176 LOC (203 total lines) > 150 limit"
+
+    - id: "g9_size_src-config-legacy.migrations.part-3_L176"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/config/legacy.migrations.part-3.ts:176"
+      issue: "File exceeds limit: 176 LOC (192 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-nostr-src-nostr-profile-import_L176"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/nostr/src/nostr-profile-import.ts:176"
+      issue: "File exceeds limit: 176 LOC (264 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-server-runtime-state_L175"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/gateway/server-runtime-state.ts:175"
+      issue: "File exceeds limit: 175 LOC (183 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-date-time_L175"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/date-time.ts:175"
+      issue: "File exceeds limit: 175 LOC (192 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-nextcloud-talk-src-policy_L175"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/nextcloud-talk/src/policy.ts:175"
+      issue: "File exceeds limit: 175 LOC (190 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-auth-profiles-order_L175"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/auth-profiles/order.ts:175"
+      issue: "File exceeds limit: 175 LOC (211 total lines) > 150 limit"
+
+    - id: "g9_size_src-web-inbound-access-control_L175"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/web/inbound/access-control.ts:175"
+      issue: "File exceeds limit: 175 LOC (190 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-docs_L174"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/docs.ts:174"
+      issue: "File exceeds limit: 174 LOC (196 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-agent-via-gateway_L174"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/agent-via-gateway.ts:174"
+      issue: "File exceeds limit: 174 LOC (192 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-agents.providers_L174"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/agents.providers.ts:174"
+      issue: "File exceeds limit: 174 LOC (189 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-navigation_L174"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "ui/src/ui/navigation.ts:174"
+      issue: "File exceeds limit: 174 LOC (187 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-controllers-config_L174"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "ui/src/ui/controllers/config.ts:174"
+      issue: "File exceeds limit: 174 LOC (186 total lines) > 150 limit"
+
+    - id: "g9_size_src-infra-widearea-dns_L173"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/infra/widearea-dns.ts:173"
+      issue: "File exceeds limit: 173 LOC (201 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-history_L173"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/auto-reply/reply/history.ts:173"
+      issue: "File exceeds limit: 173 LOC (194 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-webhooks-cli_L172"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/cli/webhooks-cli.ts:172"
+      issue: "File exceeds limit: 172 LOC (183 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-tool-display_L172"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "ui/src/ui/tool-display.ts:172"
+      issue: "File exceeds limit: 172 LOC (196 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-matrix-src-directory-live_L172"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/matrix/src/directory-live.ts:172"
+      issue: "File exceeds limit: 172 LOC (190 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-skills-config_L172"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/skills/config.ts:172"
+      issue: "File exceeds limit: 172 LOC (192 total lines) > 150 limit"
+
+    - id: "g9_size_src-web-outbound_L171"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/web/outbound.ts:171"
+      issue: "File exceeds limit: 171 LOC (178 total lines) > 150 limit"
+
+    - id: "g9_size_src-markdown-render_L170"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/markdown/render.ts:170"
+      issue: "File exceeds limit: 170 LOC (196 total lines) > 150 limit"
+
+    - id: "g9_size_src-infra-provider-usage.fetch.claude_L170"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/infra/provider-usage.fetch.claude.ts:170"
+      issue: "File exceeds limit: 170 LOC (198 total lines) > 150 limit"
+
+    - id: "g9_size_src-config-zod-schema.agent-defaults_L170"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/config/zod-schema.agent-defaults.ts:170"
+      issue: "File exceeds limit: 170 LOC (173 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-googlechat-src-actions_L170"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/googlechat/src/actions.ts:170"
+      issue: "File exceeds limit: 170 LOC (183 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-nostr-src-nostr-profile_L170"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/nostr/src/nostr-profile.ts:170"
+      issue: "File exceeds limit: 170 LOC (278 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-controllers-chat_L170"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "ui/src/ui/controllers/chat.ts:170"
+      issue: "File exceeds limit: 170 LOC (191 total lines) > 150 limit"
+
+    - id: "g9_size_src-channels-channel-config_L169"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/channels/channel-config.ts:169"
+      issue: "File exceeds limit: 169 LOC (183 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-zalouser-src-zca_L169"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/zalouser/src/zca.ts:169"
+      issue: "File exceeds limit: 169 LOC (204 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-bluebubbles-src-reactions_L168"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/bluebubbles/src/reactions.ts:168"
+      issue: "File exceeds limit: 168 LOC (189 total lines) > 150 limit"
+
+    - id: "g9_size_src-media-mime_L167"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/media/mime.ts:167"
+      issue: "File exceeds limit: 167 LOC (191 total lines) > 150 limit"
+
+    - id: "g9_size_src-acp-client_L167"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/acp/client.ts:167"
+      issue: "File exceeds limit: 167 LOC (194 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-doctor-security_L167"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/doctor-security.ts:167"
+      issue: "File exceeds limit: 167 LOC (186 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-server-methods-logs_L167"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/gateway/server-methods/logs.ts:167"
+      issue: "File exceeds limit: 167 LOC (184 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-tools-canvas-tool_L167"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/tools/canvas-tool.ts:167"
+      issue: "File exceeds limit: 167 LOC (182 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-typing_L167"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/auto-reply/reply/typing.ts:167"
+      issue: "File exceeds limit: 167 LOC (190 total lines) > 150 limit"
+
+    - id: "g9_size_ui-src-ui-views-config-form.analyze_L167"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "ui/src/ui/views/config-form.analyze.ts:167"
+      issue: "File exceeds limit: 167 LOC (187 total lines) > 150 limit"
+
+    - id: "g9_size_src-slack-directory-live_L166"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/slack/directory-live.ts:166"
+      issue: "File exceeds limit: 166 LOC (186 total lines) > 150 limit"
+
+    - id: "g9_size_src-line-auto-reply-delivery_L166"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/line/auto-reply-delivery.ts:166"
+      issue: "File exceeds limit: 166 LOC (183 total lines) > 150 limit"
+
+    - id: "g9_size_src-browser-chrome.profile-decoration_L165"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/browser/chrome.profile-decoration.ts:165"
+      issue: "File exceeds limit: 165 LOC (200 total lines) > 150 limit"
+
+    - id: "g9_size_src-discord-resolve-users_L165"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/discord/resolve-users.ts:165"
+      issue: "File exceeds limit: 165 LOC (181 total lines) > 150 limit"
+
+    - id: "g9_size_src-browser-routes-basic_L165"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/browser/routes/basic.ts:165"
+      issue: "File exceeds limit: 165 LOC (191 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-channels-list_L165"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/channels/list.ts:165"
+      issue: "File exceeds limit: 165 LOC (184 total lines) > 150 limit"
+
+    - id: "g9_size_src-daemon-service-env_L164"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/daemon/service-env.ts:164"
+      issue: "File exceeds limit: 164 LOC (196 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-agent-scope_L162"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/agent-scope.ts:162"
+      issue: "File exceeds limit: 162 LOC (180 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-bluebubbles-src-media-send_L162"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/bluebubbles/src/media-send.ts:162"
+      issue: "File exceeds limit: 162 LOC (177 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-qwen-portal-auth-oauth_L161"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/qwen-portal-auth/oauth.ts:161"
+      issue: "File exceeds limit: 161 LOC (191 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-skills-frontmatter_L161"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/skills/frontmatter.ts:161"
+      issue: "File exceeds limit: 161 LOC (174 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-stage-sandbox-media_L161"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/auto-reply/reply/stage-sandbox-media.ts:161"
+      issue: "File exceeds limit: 161 LOC (181 total lines) > 150 limit"
+
+    - id: "g9_size_src-browser-profiles-service_L160"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/browser/profiles-service.ts:160"
+      issue: "File exceeds limit: 160 LOC (189 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-msteams-src-errors_L160"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/msteams/src/errors.ts:160"
+      issue: "File exceeds limit: 160 LOC (191 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-tools-nodes-utils_L160"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/tools/nodes-utils.ts:160"
+      issue: "File exceeds limit: 160 LOC (178 total lines) > 150 limit"
+
+    - id: "g9_size_src-infra-device-identity_L159"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/infra/device-identity.ts:159"
+      issue: "File exceeds limit: 159 LOC (180 total lines) > 150 limit"
+
+    - id: "g9_size_src-config-sessions-metadata_L159"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/config/sessions/metadata.ts:159"
+      issue: "File exceeds limit: 159 LOC (173 total lines) > 150 limit"
+
+    - id: "g9_size_src-infra-diagnostic-events_L158"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/infra/diagnostic-events.ts:158"
+      issue: "File exceeds limit: 158 LOC (180 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-signal-install_L158"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/signal-install.ts:158"
+      issue: "File exceeds limit: 158 LOC (184 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-program-register.onboard_L158"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/cli/program/register.onboard.ts:158"
+      issue: "File exceeds limit: 158 LOC (164 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-sandbox-config_L158"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/sandbox/config.ts:158"
+      issue: "File exceeds limit: 158 LOC (173 total lines) > 150 limit"
+
+    - id: "g9_size_src-auto-reply-reply-reply-dispatcher_L158"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/auto-reply/reply/reply-dispatcher.ts:158"
+      issue: "File exceeds limit: 158 LOC (193 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-voice-call-src-manager-events_L158"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/voice-call/src/manager/events.ts:158"
+      issue: "File exceeds limit: 158 LOC (188 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-sandbox_L157"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/sandbox.ts:157"
+      issue: "File exceeds limit: 157 LOC (202 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-onboard-auth.credentials_L157"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/onboard-auth.credentials.ts:157"
+      issue: "File exceeds limit: 157 LOC (181 total lines) > 150 limit"
+
+    - id: "g9_size_src-web-accounts_L156"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/web/accounts.ts:156"
+      issue: "File exceeds limit: 156 LOC (178 total lines) > 150 limit"
+
+    - id: "g9_size_src-providers-github-copilot-auth_L156"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/providers/github-copilot-auth.ts:156"
+      issue: "File exceeds limit: 156 LOC (186 total lines) > 150 limit"
+
+    - id: "g9_size_src-gateway-server-methods-tts_L156"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/gateway/server-methods/tts.ts:156"
+      issue: "File exceeds limit: 156 LOC (158 total lines) > 150 limit"
+
+    - id: "g9_size_src-web-auto-reply-monitor-on-message_L156"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/web/auto-reply/monitor/on-message.ts:156"
+      issue: "File exceeds limit: 156 LOC (170 total lines) > 150 limit"
+
+    - id: "g9_size_test-setup_L155"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "test/setup.ts:155"
+      issue: "File exceeds limit: 155 LOC (167 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-sandbox-cli_L155"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/cli/sandbox-cli.ts:155"
+      issue: "File exceeds limit: 155 LOC (176 total lines) > 150 limit"
+
+    - id: "g9_size_src-commands-reset_L155"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/commands/reset.ts:155"
+      issue: "File exceeds limit: 155 LOC (170 total lines) > 150 limit"
+
+    - id: "g9_size_extensions-matrix-src-tool-actions_L155"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "extensions/matrix/src/tool-actions.ts:155"
+      issue: "File exceeds limit: 155 LOC (166 total lines) > 150 limit"
+
+    - id: "g9_size_src-agents-skills-refresh_L155"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/agents/skills/refresh.ts:155"
+      issue: "File exceeds limit: 155 LOC (178 total lines) > 150 limit"
+
+    - id: "g9_size_src-config-sessions-reset_L155"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/config/sessions/reset.ts:155"
+      issue: "File exceeds limit: 155 LOC (171 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-browser-cli-inspect_L154"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/cli/browser-cli-inspect.ts:154"
+      issue: "File exceeds limit: 154 LOC (162 total lines) > 150 limit"
+
+    - id: "g9_size_src-cli-argv_L154"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/cli/argv.ts:154"
+      issue: "File exceeds limit: 154 LOC (170 total lines) > 150 limit"
+
+    - id: "g9_size_src-tui-commands_L154"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/tui/commands.ts:154"
+      issue: "File exceeds limit: 154 LOC (164 total lines) > 150 limit"

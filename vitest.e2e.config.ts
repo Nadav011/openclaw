@@ -2,7 +2,7 @@ import os from "node:os";
 import { defineConfig } from "vitest/config";
 import baseConfig from "./vitest.config.ts";
 
-const base = baseConfig as unknown as Record<string, unknown>;
+const base = baseConfig as unknown as Record<string, unknown>; // type-ok — upstream pattern
 const isCI = process.env.CI === "true" || process.env.GITHUB_ACTIONS === "true";
 const cpuCount = os.cpus().length;
 // Keep e2e runs deterministic and cheap by default; callers can still override via OPENCLAW_E2E_WORKERS.
@@ -22,6 +22,11 @@ export default defineConfig({
   test: {
     ...baseTest,
     pool: "vmForks",
+    poolOptions: {
+      forks: {
+        execArgv: ["--max-old-space-size=512"],
+      },
+    },
     maxWorkers: e2eWorkers,
     silent: !verboseE2E,
     include: ["test/**/*.e2e.test.ts", "src/**/*.e2e.test.ts"],

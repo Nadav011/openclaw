@@ -1,0 +1,5588 @@
+apex_audit:
+  version: "23.1.0"
+  project: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui"
+  project_absolute: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui"
+  project_name: "ui"
+  timestamp: "2026-02-05T19:12:44.324Z"
+  duration_ms: 80304
+  score: 39
+  max_score: 70
+  verdict: "FAILED"
+  summary:
+    passed: 15
+    warned: 32
+    failed: 7
+    skipped: 16
+    healable: 5
+    auto_fixable: 0
+claude_instructions:
+  fix_order: "תקן לפי סדר העדיפות (priority). תקן GATE אחד בכל פעם. אל תנסה לתקן הכל ביחד!"
+  verification: "אחרי כל תיקון הרץ: npm run typecheck && npm run lint"
+  important_notes:
+    - "קרא את הקובץ לפני עריכה (Read tool)"
+    - "תקן שורה אחת בכל פעם (Edit tool)"
+    - "וודא שהתיקון עובד לפני המעבר ל-GATE הבא"
+    - "שים לב ל-context - 3 שורות מעל ומתחת"
+    - "אם יש depends_on, תקן את ה-GATE התלוי קודם"
+fix_plan:
+  total_fixes: 141
+  estimated_phases: 3
+  phases:
+    - phase: 1
+      description: "תקן הגדרות טיפוסים ויסודות"
+      gates:
+        - 7
+        - 9
+        - 17
+        - 2
+        - 3
+        - 5
+        - 8
+        - 11
+        - 12
+        - 19
+      files:
+        - "src/ui/views/nodes.ts"
+        - "src/ui/views/config-form.node.ts"
+        - "src/ui/views/config.ts"
+        - "src/ui/app-render.ts"
+        - "src/ui/types.ts"
+        - "src/ui/views/cron.ts"
+        - "src/ui/views/config-form.render.ts"
+        - "src/ui/views/chat.ts"
+        - "src/ui/app.ts"
+        - "src/ui/app-render.helpers.ts"
+        - "src/ui/app-settings.ts"
+        - "src/ui/views/channels.ts"
+        - "src/ui/gateway.ts"
+        - "src/ui/views/sessions.ts"
+        - "src/ui/views/channels.nostr-profile-form.ts"
+        - "src/ui/views/overview.ts"
+        - "src/ui/chat/grouped-render.ts"
+        - "src/ui/app-gateway.ts"
+        - "src/ui/icons.ts"
+        - "src/ui/app-chat.ts"
+        - "src/ui/app-channels.ts"
+        - "src/ui/views/channels.nostr.ts"
+        - "src/ui/app-tool-stream.ts"
+        - "src/ui/app-view-state.ts"
+        - "src/ui/views/skills.ts"
+        - "src/ui/controllers/cron.ts"
+        - "src/ui/navigation.ts"
+        - "src/ui/controllers/config.ts"
+        - "src/ui/tool-display.ts"
+        - "src/ui/controllers/chat.ts"
+        - "src/ui/views/config-form.analyze.ts"
+        - "src/ui/components/resizable-divider.ts"
+        - "src/styles/layout.css"
+        - "src/styles/components.css"
+        - "src/styles/config.css"
+        - "src/styles/chat/layout.css"
+        - "src/styles/chat/sidebar.css"
+        - "src/styles/chat/grouped.css"
+        - "src/styles/chat/text.css"
+        - "vite.config.ts"
+        - "src/ui/markdown.test.ts"
+        - "src/ui/navigation.browser.test.ts"
+        - "src/ui/app-settings.test.ts"
+        - "src/ui/navigation.test.ts"
+        - "src/ui/chat-markdown.browser.test.ts"
+        - "src/ui/uuid.test.ts"
+        - "src/ui/config-form.browser.test.ts"
+        - "src/ui/format.test.ts"
+        - "src/ui/focus-mode.browser.test.ts"
+        - "src/ui/__screenshots__/navigation.browser.test.ts"
+        - "src/ui/__screenshots__/config-form.browser.test.ts"
+        - "src/ui/controllers/channels.types.ts"
+        - "src/ui/controllers/chat.test.ts"
+        - "src/ui/controllers/config.test.ts"
+        - "src/ui/chat/message-normalizer.test.ts"
+        - "src/ui/chat/tool-helpers.test.ts"
+        - "src/ui/chat/message-extract.test.ts"
+        - "src/ui/views/channels.types.ts"
+      estimated_effort: "30 דקות"
+    - phase: 2
+      description: "תקן בעיות אבטחה"
+      gates:
+        - 46
+        - 50
+        - 42
+        - 45
+        - 47
+        - 48
+      files: []
+      estimated_effort: "5 דקות"
+    - phase: 3
+      description: "תקן בעיות נוספות"
+      gates:
+        - 30
+        - 59
+        - 24
+        - 33
+        - 34
+        - 51
+        - 52
+        - 53
+        - 55
+        - 56
+        - 57
+        - 58
+        - 60
+        - 61
+        - 62
+        - 63
+        - 64
+        - 65
+        - 66
+        - 67
+        - 68
+        - 69
+        - 70
+      files: []
+      estimated_effort: "5 דקות"
+by_file:
+  src/ui/views/nodes.ts:
+    file: "src/ui/views/nodes.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/nodes.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 1086
+        severity: "FAIL"
+        message: "File exceeds limit: 1086 LOC (1138 total lines) > 150 limit"
+        context: "     1084:     const record = entry as Record<string, unknown>;
+
+          \     1085:     const id = typeof record.id === \"string\" ? record.id.trim() : \"\";
+
+          \ --> 1086:     if (!id) return;
+
+          \     1087:     const name = typeof record.name === \"string\" ? record.name.trim() : undefined;
+
+          \     1088:     const isDefault = record.default === true;
+
+          \     1089:     const toolsEntry = (record.tools ?? {}) as Record<string, unknown>;"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/views/config-form.node.ts:
+    file: "src/ui/views/config-form.node.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/config-form.node.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 720
+        severity: "FAIL"
+        message: "File exceeds limit: 720 LOC (779 total lines) > 150 limit"
+        context: "     718:                   />
+
+          \     719:                 </div>
+
+          \ --> 720:                 <div class=\"cfg-map__item-value\">
+
+          \     721:                   ${
+
+          \     722:                     anySchema
+
+          \     723:                       ? html`"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/views/config.ts:
+    file: "src/ui/views/config.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/config.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 653
+        severity: "FAIL"
+        message: "File exceeds limit: 653 LOC (691 total lines) > 150 limit"
+        context: "     651:                         onPatch: props.onFormPatch,
+
+          \     652:                         searchQuery: props.searchQuery,
+
+          \ --> 653:                         activeSection: props.activeSection,
+
+          \     654:                         activeSubsection: effectiveSubsection,
+
+          \     655:                       })
+
+          \     656:                 }"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/app-render.ts:
+    file: "src/ui/app-render.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-render.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 590
+        severity: "FAIL"
+        message: "File exceeds limit: 590 LOC (608 total lines) > 150 limit"
+        context: "     588:                 levelFilters: state.logsLevelFilters,
+
+          \     589:                 autoFollow: state.logsAutoFollow,
+
+          \ --> 590:                 truncated: state.logsTruncated,
+
+          \     591:                 onFilterTextChange: (next) => (state.logsFilterText = next),
+
+          \     592:                 onLevelToggle: (level, enabled) => {
+
+          \     593:                   state.logsLevelFilters = { ...state.logsLevelFilters, [level]: enabled };"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/types.ts:
+    file: "src/ui/types.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/types.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 471
+        severity: "FAIL"
+        message: "File exceeds limit: 471 LOC (527 total lines) > 150 limit"
+        context: "     469:\ 
+
+          \     470: export type SkillInstallOption = {
+
+          \ --> 471:   id: string;
+
+          \     472:   kind: \"brew\" | \"node\" | \"go\" | \"uv\";
+
+          \     473:   label: string;
+
+          \     474:   bins: string[];"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/views/cron.ts:
+    file: "src/ui/views/cron.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/cron.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 450
+        severity: "FAIL"
+        message: "File exceeds limit: 450 LOC (462 total lines) > 150 limit"
+        context: "     448:   return html`
+
+          \     449:     <div class=\"list-item\">
+
+          \ --> 450:       <div class=\"list-main\">
+
+          \     451:         <div class=\"list-title\">${entry.status}</div>
+
+          \     452:         <div class=\"list-sub\">${entry.summary ?? \"\"}</div>
+
+          \     453:       </div>"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/views/config-form.render.ts:
+    file: "src/ui/views/config-form.render.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/config-form.render.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 445
+        severity: "FAIL"
+        message: "File exceeds limit: 445 LOC (473 total lines) > 150 limit"
+        context: "     443:                 <div class=\"config-section-card__header\">
+
+          \     444:                   <span class=\"config-section-card__icon\">${getSectionIcon(key)}</span>
+
+          \ --> 445:                   <div class=\"config-section-card__titles\">
+
+          \     446:                     <h3 class=\"config-section-card__title\">${meta.label}</h3>
+
+          \     447:                     ${
+
+          \     448:                       meta.description"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/views/chat.ts:
+    file: "src/ui/views/chat.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/chat.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 438
+        severity: "FAIL"
+        message: "File exceeds limit: 438 LOC (488 total lines) > 150 limit"
+        context: "     436:     const normalized = normalizeMessage(msg);
+
+          \     437:\ 
+
+          \ --> 438:     if (!props.showThinking && normalized.role.toLowerCase() === \"toolresult\") {
+
+          \     439:       continue;
+
+          \     440:     }
+
+          \     441: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/app.ts:
+    file: "src/ui/app.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 416
+        severity: "FAIL"
+        message: "File exceeds limit: 416 LOC (476 total lines) > 150 limit"
+        context: "     414:       await this.client.request(\"exec.approval.resolve\", {
+
+          \     415:         id: active.id,
+
+          \ --> 416:         decision,
+
+          \     417:       });
+
+          \     418:       this.execApprovalQueue = this.execApprovalQueue.filter((entry) => entry.id !== active.id);
+
+          \     419:     } catch (err) {"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/app-render.helpers.ts:
+    file: "src/ui/app-render.helpers.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-render.helpers.ts"
+    total_issues: 2
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 8
+        gate_name: "File_Org"
+        line: 1
+        severity: "WARN"
+        message: "File name \"app-render.helpers\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import { html } from \"lit\";
+
+          \     2: import { repeat } from \"lit/directives/repeat.js\";
+
+          \     3:\ 
+
+          \     4: import type { AppViewState } from \"./app-view-state\";"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 309
+        severity: "FAIL"
+        message: "File exceeds limit: 309 LOC (332 total lines) > 150 limit"
+        context: "     307:       <path d=\"m6.34 17.66-1.41 1.41\"></path>
+
+          \     308:       <path d=\"m19.07 4.93-1.41 1.41\"></path>
+
+          \ --> 309:     </svg>
+
+          \     310:   `;
+
+          \     311: }
+
+          \     312: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/app-settings.ts:
+    file: "src/ui/app-settings.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-settings.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 302
+        severity: "FAIL"
+        message: "File exceeds limit: 302 LOC (333 total lines) > 150 limit"
+        context: "     300: export function syncUrlWithSessionKey(host: SettingsHost, sessionKey: string, replace: boolean) {
+
+          \     301:   if (typeof window === \"undefined\") return;
+
+          \ --> 302:   const url = new URL(window.location.href);
+
+          \     303:   url.searchParams.set(\"session\", sessionKey);
+
+          \     304:   if (replace) window.history.replaceState({}, \"\", url.toString());
+
+          \     305:   else window.history.pushState({}, \"\", url.toString());"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/views/channels.ts:
+    file: "src/ui/views/channels.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/channels.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 289
+        severity: "FAIL"
+        message: "File exceeds limit: 289 LOC (311 total lines) > 150 limit"
+        context: "     287:           <span class=\"label\">Configured</span>
+
+          \     288:           <span>${account.configured ? \"Yes\" : \"No\"}</span>
+
+          \ --> 289:         </div>
+
+          \     290:         <div>
+
+          \     291:           <span class=\"label\">Connected</span>
+
+          \     292:           <span>${connectedStatus}</span>"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/gateway.ts:
+    file: "src/ui/gateway.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/gateway.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 266
+        severity: "FAIL"
+        message: "File exceeds limit: 266 LOC (298 total lines) > 150 limit"
+        context: "     264:\ 
+
+          \     265:     if (frame.type === \"res\") {
+
+          \ --> 266:       const res = parsed as GatewayResponseFrame;
+
+          \     267:       const pending = this.pending.get(res.id);
+
+          \     268:       if (!pending) return;
+
+          \     269:       this.pending.delete(res.id);"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/views/sessions.ts:
+    file: "src/ui/views/sessions.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/sessions.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 253
+        severity: "FAIL"
+        message: "File exceeds limit: 253 LOC (269 total lines) > 150 limit"
+        context: "     251:           @change=${(e: Event) => {
+
+          \     252:             const value = (e.target as HTMLSelectElement).value;
+
+          \ --> 253:             onPatch(row.key, { reasoningLevel: value || null });
+
+          \     254:           }}
+
+          \     255:         >
+
+          \     256:           ${REASONING_LEVELS.map("
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/views/channels.nostr-profile-form.ts:
+    file: "src/ui/views/channels.nostr-profile-form.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/channels.nostr-profile-form.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 251
+        severity: "FAIL"
+        message: "File exceeds limit: 251 LOC (321 total lines) > 150 limit"
+        context: "     249:           ${state.saving ? \"Saving...\" : \"Save & Publish\"}
+
+          \     250:         </button>
+
+          \ --> 251:\ 
+
+          \     252:         <button
+
+          \     253:           class=\"btn\"
+
+          \     254:           @click=${callbacks.onImport}"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/views/overview.ts:
+    file: "src/ui/views/overview.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/overview.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 249
+        severity: "FAIL"
+        message: "File exceeds limit: 249 LOC (257 total lines) > 150 limit"
+        context: "     247:           <div class=\"muted\">Use /new or sessions.patch to reset context.</div>
+
+          \     248:         </div>
+
+          \ --> 249:         <div>
+
+          \     250:           <div class=\"note-title\">Cron reminders</div>
+
+          \     251:           <div class=\"muted\">Use isolated sessions for recurring runs.</div>
+
+          \     252:         </div>"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/chat/grouped-render.ts:
+    file: "src/ui/chat/grouped-render.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/chat/grouped-render.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 249
+        severity: "FAIL"
+        message: "File exceeds limit: 249 LOC (277 total lines) > 150 limit"
+        context: "     247:   ]
+
+          \     248:     .filter(Boolean)
+
+          \ --> 249:     .join(\" \");
+
+          \     250:\ 
+
+          \     251:   if (!markdown && hasToolCards && isToolResult) {
+
+          \     252:     return html`${toolCards.map((card) => renderToolCardSidebar(card, onOpenSidebar))}`;"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/app-gateway.ts:
+    file: "src/ui/app-gateway.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-gateway.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 242
+        severity: "FAIL"
+        message: "File exceeds limit: 242 LOC (262 total lines) > 150 limit"
+        context: "     240:     }
+
+          \     241:   }
+
+          \ --> 242: }
+
+          \     243:\ 
+
+          \     244: export function applySnapshot(host: GatewayHost, hello: GatewayHelloOk) {
+
+          \     245:   const snapshot = hello.snapshot as"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/icons.ts:
+    file: "src/ui/icons.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/icons.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 233
+        severity: "FAIL"
+        message: "File exceeds limit: 233 LOC (249 total lines) > 150 limit"
+        context: "     231: }
+
+          \     232:\ 
+
+          \ --> 233: export function renderIcon(name: IconName, className = \"nav-item__icon\"): TemplateResult {
+
+          \     234:   return html`<span class=${className} aria-hidden=\"true\">${icons[name]}</span>`;
+
+          \     235: }
+
+          \     236: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/app-chat.ts:
+    file: "src/ui/app-chat.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-chat.ts"
+    total_issues: 2
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 11
+        gate_name: "No_Circular"
+        line: 1
+        severity: "FAIL"
+        message: "Circular dependency chain #1: src/ui/app-chat.ts -> src/ui/app-settings.ts"
+        context: " --> 1: import { abortChatRun, loadChatHistory, sendChatMessage } from \"./controllers/chat\";
+
+          \     2: import { loadSessions } from \"./controllers/sessions\";
+
+          \     3: import { generateUUID } from \"./uuid\";
+
+          \     4: import { resetToolStream } from \"./app-tool-stream\";"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 218
+        severity: "WARN"
+        message: "File exceeds limit: 218 LOC (243 total lines) > 150 limit"
+        context: "     216: }
+
+          \     217:\ 
+
+          \ --> 218: export async function refreshChatAvatar(host: ChatHost) {
+
+          \     219:   if (!host.connected) {
+
+          \     220:     host.chatAvatarUrl = null;
+
+          \     221:     return;"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/app-channels.ts:
+    file: "src/ui/app-channels.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-channels.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 215
+        severity: "WARN"
+        message: "File exceeds limit: 215 LOC (241 total lines) > 150 limit"
+        context: "     213:     const nextValues = merged ? { ...state.values, ...merged } : state.values;
+
+          \     214:     const showAdvanced = Boolean(
+
+          \ --> 215:       nextValues.banner || nextValues.website || nextValues.nip05 || nextValues.lud16,
+
+          \     216:     );
+
+          \     217:\ 
+
+          \     218:     host.nostrProfileFormState = {"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/views/channels.nostr.ts:
+    file: "src/ui/views/channels.nostr.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/channels.nostr.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 213
+        severity: "WARN"
+        message: "File exceeds limit: 213 LOC (235 total lines) > 150 limit"
+        context: "     211:               <div>
+
+          \     212:                 <span class=\"label\">Last start</span>
+
+          \ --> 213:                 <span>${summaryLastStartAt ? formatAgo(summaryLastStartAt) : \"n/a\"}</span>
+
+          \     214:               </div>
+
+          \     215:             </div>
+
+          \     216:           `"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/app-tool-stream.ts:
+    file: "src/ui/app-tool-stream.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-tool-stream.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 212
+        severity: "WARN"
+        message: "File exceeds limit: 212 LOC (241 total lines) > 150 limit"
+        context: "     210:       : phase === \"result\"
+
+          \     211:         ? formatToolOutput(data.result)
+
+          \ --> 212:         : undefined;
+
+          \     213:\ 
+
+          \     214:   const now = Date.now();
+
+          \     215:   let entry = host.toolStreamById.get(toolCallId);"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/app-view-state.ts:
+    file: "src/ui/app-view-state.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-view-state.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 205
+        severity: "WARN"
+        message: "File exceeds limit: 205 LOC (207 total lines) > 150 limit"
+        context: "     203:   handleLogsLevelFilterToggle: (level: LogLevel) => void;
+
+          \     204:   handleLogsAutoFollowToggle: (next: boolean) => void;
+
+          \ --> 205:   handleCallDebugMethod: (method: string, params: string) => Promise<void>;
+
+          \     206: };
+
+          \     207: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/views/skills.ts:
+    file: "src/ui/views/skills.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/skills.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 183
+        severity: "WARN"
+        message: "File exceeds limit: 183 LOC (192 total lines) > 150 limit"
+        context: "     181:                 @click=${() => props.onSaveKey(skill.skillKey)}
+
+          \     182:               >
+
+          \ --> 183:                 Save key
+
+          \     184:               </button>
+
+          \     185:             `
+
+          \     186:             : nothing"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/controllers/cron.ts:
+    file: "src/ui/controllers/cron.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/cron.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 177
+        severity: "WARN"
+        message: "File exceeds limit: 177 LOC (188 total lines) > 150 limit"
+        context: "     175: export async function loadCronRuns(state: CronState, jobId: string) {
+
+          \     176:   if (!state.client || !state.connected) return;
+
+          \ --> 177:   try {
+
+          \     178:     const res = (await state.client.request(\"cron.runs\", {
+
+          \     179:       id: jobId,
+
+          \     180:       limit: 50,"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/navigation.ts:
+    file: "src/ui/navigation.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/navigation.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 174
+        severity: "WARN"
+        message: "File exceeds limit: 174 LOC (187 total lines) > 150 limit"
+        context: "     172:       return \"Manage skill availability and API key injection.\";
+
+          \     173:     case \"nodes\":
+
+          \ --> 174:       return \"Paired devices, capabilities, and command exposure.\";
+
+          \     175:     case \"chat\":
+
+          \     176:       return \"Direct gateway chat session for quick interventions.\";
+
+          \     177:     case \"config\":"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/controllers/config.ts:
+    file: "src/ui/controllers/config.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/config.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 174
+        severity: "WARN"
+        message: "File exceeds limit: 174 LOC (186 total lines) > 150 limit"
+        context: "     172:   if (state.configFormMode === \"form\") {
+
+          \     173:     state.configRaw = serializeConfigForm(base);
+
+          \ --> 174:   }
+
+          \     175: }
+
+          \     176:\ 
+
+          \     177: export function removeConfigFormValue(state: ConfigState, path: Array<string | number>) {"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/tool-display.ts:
+    file: "src/ui/tool-display.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/tool-display.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 172
+        severity: "WARN"
+        message: "File exceeds limit: 172 LOC (196 total lines) > 150 limit"
+        context: "     170:     name,
+
+          \     171:     icon,
+
+          \ --> 172:     title,
+
+          \     173:     label,
+
+          \     174:     verb,
+
+          \     175:     detail,"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/controllers/chat.ts:
+    file: "src/ui/controllers/chat.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/chat.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 170
+        severity: "WARN"
+        message: "File exceeds limit: 170 LOC (191 total lines) > 150 limit"
+        context: "     168:     const next = extractText(payload.message);
+
+          \     169:     if (typeof next === \"string\") {
+
+          \ --> 170:       const current = state.chatStream ?? \"\";
+
+          \     171:       if (!current || next.length >= current.length) {
+
+          \     172:         state.chatStream = next;
+
+          \     173:       }"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/views/config-form.analyze.ts:
+    file: "src/ui/views/config-form.analyze.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/config-form.analyze.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 9
+        gate_name: "Atomic_Size"
+        line: 167
+        severity: "WARN"
+        message: "File exceeds limit: 167 LOC (187 total lines) > 150 limit"
+        context: "     165:       res.schema.nullable = nullable || res.schema.nullable;
+
+          \     166:     }
+
+          \ --> 167:     return res;
+
+          \     168:   }
+
+          \     169:\ 
+
+          \     170:   const primitiveTypes = [\"string\", \"number\", \"integer\", \"boolean\"];"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1
+  src/ui/components/resizable-divider.ts:
+    file: "src/ui/components/resizable-divider.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/components/resizable-divider.ts"
+    total_issues: 2
+    auto_fixable_count: 2
+    issues:
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 32
+        severity: "WARN"
+        message: "Using left: -4px; instead of inset-inline-start:"
+        code: "left: -4px;"
+        context: "     30:       position: absolute;
+
+          \     31:       top: 0;
+
+          \ --> 32:       left: -4px;
+
+          \     33:       right: -4px;
+
+          \     34:       bottom: 0;
+
+          \     35:     }"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 33
+        severity: "WARN"
+        message: "Using right: -4px; instead of inset-inline-end:"
+        code: "right: -4px;"
+        context: "     31:       top: 0;
+
+          \     32:       left: -4px;
+
+          \ --> 33:       right: -4px;
+
+          \     34:       bottom: 0;
+
+          \     35:     }
+
+          \     36:     "
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+  src/styles/layout.css:
+    file: "src/styles/layout.css"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/layout.css"
+    total_issues: 3
+    auto_fixable_count: 3
+    issues:
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 312
+        severity: "WARN"
+        message: "Using text-align: left instead of text-align: start"
+        code: "text-align: left"
+        context: "     310:   border: none;
+
+          \     311:   cursor: pointer;
+
+          \ --> 312:   text-align: left;
+
+          \     313:   border-radius: var(--radius-sm);
+
+          \     314:   transition:
+
+          \     315:     color var(--duration-fast) ease,"
+        fix: "text-align: start"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 493
+        severity: "WARN"
+        message: "Using text-align: left instead of text-align: start"
+        code: "text-align: left"
+        context: "     491:\ 
+
+          \     492: .content--chat .content-header > div:first-child {
+
+          \ --> 493:   text-align: left;
+
+          \     494: }
+
+          \     495:\ 
+
+          \     496: .content--chat .page-meta {"
+        fix: "text-align: start"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 574
+        severity: "WARN"
+        message: "Using border-right: instead of border-inline-end:"
+        code: "border-right:"
+        context: "     572:     gap: 6px;
+
+          \     573:     overflow-x: auto;
+
+          \ --> 574:     border-right: none;
+
+          \     575:     border-bottom: 1px solid var(--border);
+
+          \     576:     padding: 10px 14px;
+
+          \     577:     background: var(--bg);"
+        fix: "border-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+  src/styles/components.css:
+    file: "src/styles/components.css"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css"
+    total_issues: 15
+    auto_fixable_count: 15
+    issues:
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 370
+        severity: "WARN"
+        message: "Using margin-left: instead of margin-inline-start:"
+        code: "margin-left:"
+        context: "     368:   align-items: center;
+
+          \     369:   justify-content: center;
+
+          \ --> 370:   margin-left: 6px;
+
+          \     371:   padding: 2px 5px;
+
+          \     372:   font-family: var(--mono);
+
+          \     373:   font-size: 11px;"
+        fix: "margin-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 370
+        severity: "WARN"
+        message: "Using left: 6 instead of inset-inline-start:"
+        code: "left: 6"
+        context: "     368:   align-items: center;
+
+          \     369:   justify-content: center;
+
+          \ --> 370:   margin-left: 6px;
+
+          \     371:   padding: 2px 5px;
+
+          \     372:   font-family: var(--mono);
+
+          \     373:   font-size: 11px;"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 462
+        severity: "WARN"
+        message: "Using padding-right: instead of padding-inline-end:"
+        code: "padding-right:"
+        context: "     460: .field select {
+
+          \     461:   appearance: none;
+
+          \ --> 462:   padding-right: 36px;
+
+          \     463:   background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16'
+          height='16' viewBox='0 0 24 24' fill='none' stroke='%23a1a1aa' stroke-width='2'%3E%3Cpolyline points='6 9 12
+          15 18 9'%3E%3C/polyline%3E%3C/svg%3E\");
+
+          \     464:   background-repeat: no-repeat;
+
+          \     465:   background-position: right 10px center;"
+        fix: "padding-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 462
+        severity: "WARN"
+        message: "Using right: 3 instead of inset-inline-end:"
+        code: "right: 3"
+        context: "     460: .field select {
+
+          \     461:   appearance: none;
+
+          \ --> 462:   padding-right: 36px;
+
+          \     463:   background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16'
+          height='16' viewBox='0 0 24 24' fill='none' stroke='%23a1a1aa' stroke-width='2'%3E%3Cpolyline points='6 9 12
+          15 18 9'%3E%3C/polyline%3E%3C/svg%3E\");
+
+          \     464:   background-repeat: no-repeat;
+
+          \     465:   background-position: right 10px center;"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 666
+        severity: "WARN"
+        message: "Using text-align: right instead of text-align: end"
+        code: "text-align: right"
+        context: "     664:\ 
+
+          \     665: .list-meta {
+
+          \ --> 666:   text-align: right;
+
+          \     667:   color: var(--muted);
+
+          \     668:   font-size: 12px;
+
+          \     669:   display: grid;"
+        fix: "text-align: end"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 691
+        severity: "WARN"
+        message: "Using text-align: left instead of text-align: start"
+        code: "text-align: left"
+        context: "     689:   .list-meta {
+
+          \     690:     min-width: 0;
+
+          \ --> 691:     text-align: left;
+
+          \     692:   }
+
+          \     693: }
+
+          \     694: "
+        fix: "text-align: start"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 725
+        severity: "WARN"
+        message: "Using margin-right: instead of margin-inline-end:"
+        code: "margin-right:"
+        context: "     723:\ 
+
+          \     724: .chip input {
+
+          \ --> 725:   margin-right: 6px;
+
+          \     726: }
+
+          \     727:\ 
+
+          \     728: .chip-ok {"
+        fix: "margin-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 725
+        severity: "WARN"
+        message: "Using right: 6 instead of inset-inline-end:"
+        code: "right: 6"
+        context: "     723:\ 
+
+          \     724: .chip input {
+
+          \ --> 725:   margin-right: 6px;
+
+          \     726: }
+
+          \     727:\ 
+
+          \     728: .chip-ok {"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 1152
+        severity: "WARN"
+        message: "Using padding-left: instead of padding-inline-start:"
+        code: "padding-left:"
+        context: "     1150:\ 
+
+          \     1151: .chat-text :where(ul, ol) {
+
+          \ --> 1152:   padding-left: 1.2em;
+
+          \     1153: }
+
+          \     1154:\ 
+
+          \     1155: .chat-text :where(li + li) {"
+        fix: "padding-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 1152
+        severity: "WARN"
+        message: "Using left: 1 instead of inset-inline-start:"
+        code: "left: 1"
+        context: "     1150:\ 
+
+          \     1151: .chat-text :where(ul, ol) {
+
+          \ --> 1152:   padding-left: 1.2em;
+
+          \     1153: }
+
+          \     1154:\ 
+
+          \     1155: .chat-text :where(li + li) {"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 1168
+        severity: "WARN"
+        message: "Using left: 2 instead of inset-inline-start:"
+        code: "left: 2"
+        context: "     1166:\ 
+
+          \     1167: .chat-text :where(blockquote) {
+
+          \ --> 1168:   border-left: 2px solid var(--border-strong);
+
+          \     1169:   padding-left: 12px;
+
+          \     1170:   color: var(--muted);
+
+          \     1171: }"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 1168
+        severity: "WARN"
+        message: "Using border-left: instead of border-inline-start:"
+        code: "border-left:"
+        context: "     1166:\ 
+
+          \     1167: .chat-text :where(blockquote) {
+
+          \ --> 1168:   border-left: 2px solid var(--border-strong);
+
+          \     1169:   padding-left: 12px;
+
+          \     1170:   color: var(--muted);
+
+          \     1171: }"
+        fix: "border-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 1169
+        severity: "WARN"
+        message: "Using padding-left: instead of padding-inline-start:"
+        code: "padding-left:"
+        context: "     1167: .chat-text :where(blockquote) {
+
+          \     1168:   border-left: 2px solid var(--border-strong);
+
+          \ --> 1169:   padding-left: 12px;
+
+          \     1170:   color: var(--muted);
+
+          \     1171: }
+
+          \     1172: "
+        fix: "padding-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 1169
+        severity: "WARN"
+        message: "Using left: 1 instead of inset-inline-start:"
+        code: "left: 1"
+        context: "     1167: .chat-text :where(blockquote) {
+
+          \     1168:   border-left: 2px solid var(--border-strong);
+
+          \ --> 1169:   padding-left: 12px;
+
+          \     1170:   color: var(--muted);
+
+          \     1171: }
+
+          \     1172: "
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 1312
+        severity: "WARN"
+        message: "Using text-align: right instead of text-align: end"
+        code: "text-align: right"
+        context: "     1310:\ 
+
+          \     1311: .chat-line.user .chat-stamp {
+
+          \ --> 1312:   text-align: right;
+
+          \     1313: }
+
+          \     1314:\ 
+
+          \     1315: /* Chat compose */"
+        fix: "text-align: end"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+  src/styles/config.css:
+    file: "src/styles/config.css"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css"
+    total_issues: 11
+    auto_fixable_count: 11
+    issues:
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 26
+        severity: "WARN"
+        message: "Using right: 1 instead of inset-inline-end:"
+        code: "right: 1"
+        context: "     24:   flex-direction: column;
+
+          \     25:   background: var(--bg-accent);
+
+          \ --> 26:   border-right: 1px solid var(--border);
+
+          \     27:   min-height: 0;
+
+          \     28:   overflow: hidden;
+
+          \     29: }"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 26
+        severity: "WARN"
+        message: "Using border-right: instead of border-inline-end:"
+        code: "border-right:"
+        context: "     24:   flex-direction: column;
+
+          \     25:   background: var(--bg-accent);
+
+          \ --> 26:   border-right: 1px solid var(--border);
+
+          \     27:   min-height: 0;
+
+          \     28:   overflow: hidden;
+
+          \     29: }"
+        fix: "border-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 64
+        severity: "WARN"
+        message: "Using left: 2 instead of inset-inline-start:"
+        code: "left: 2"
+        context: "     62: .config-search__icon {
+
+          \     63:   position: absolute;
+
+          \ --> 64:   left: 28px;
+
+          \     65:   top: 50%;
+
+          \     66:   transform: translateY(-50%);
+
+          \     67:   width: 16px;"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 107
+        severity: "WARN"
+        message: "Using right: 2 instead of inset-inline-end:"
+        code: "right: 2"
+        context: "     105: .config-search__clear {
+
+          \     106:   position: absolute;
+
+          \ --> 107:   right: 22px;
+
+          \     108:   top: 50%;
+
+          \     109:   transform: translateY(-50%);
+
+          \     110:   width: 22px;"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 151
+        severity: "WARN"
+        message: "Using text-align: left instead of text-align: start"
+        code: "text-align: left"
+        context: "     149:   font-size: 13px;
+
+          \     150:   font-weight: 500;
+
+          \ --> 151:   text-align: left;
+
+          \     152:   cursor: pointer;
+
+          \     153:   transition:
+
+          \     154:     background var(--duration-fast) ease,"
+        fix: "text-align: start"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 791
+        severity: "WARN"
+        message: "Using left: 1 instead of inset-inline-start:"
+        code: "left: 1"
+        context: "     789:   padding: 11px;
+
+          \     790:   border: none;
+
+          \ --> 791:   border-left: 1px solid var(--border);
+
+          \     792:   border-right: 1px solid var(--border);
+
+          \     793:   background: transparent;
+
+          \     794:   font-size: 14px;"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 791
+        severity: "WARN"
+        message: "Using border-left: instead of border-inline-start:"
+        code: "border-left:"
+        context: "     789:   padding: 11px;
+
+          \     790:   border: none;
+
+          \ --> 791:   border-left: 1px solid var(--border);
+
+          \     792:   border-right: 1px solid var(--border);
+
+          \     793:   background: transparent;
+
+          \     794:   font-size: 14px;"
+        fix: "border-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 792
+        severity: "WARN"
+        message: "Using right: 1 instead of inset-inline-end:"
+        code: "right: 1"
+        context: "     790:   border: none;
+
+          \     791:   border-left: 1px solid var(--border);
+
+          \ --> 792:   border-right: 1px solid var(--border);
+
+          \     793:   background: transparent;
+
+          \     794:   font-size: 14px;
+
+          \     795:   text-align: center;"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 792
+        severity: "WARN"
+        message: "Using border-right: instead of border-inline-end:"
+        code: "border-right:"
+        context: "     790:   border: none;
+
+          \     791:   border-left: 1px solid var(--border);
+
+          \ --> 792:   border-right: 1px solid var(--border);
+
+          \     793:   background: transparent;
+
+          \     794:   font-size: 14px;
+
+          \     795:   text-align: center;"
+        fix: "border-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 964
+        severity: "WARN"
+        message: "Using left: 3 instead of inset-inline-start:"
+        code: "left: 3"
+        context: "     962:   position: absolute;
+
+          \     963:   top: 3px;
+
+          \ --> 964:   left: 3px;
+
+          \     965:   width: 20px;
+
+          \     966:   height: 20px;
+
+          \     967:   background: var(--text);"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 1343
+        severity: "WARN"
+        message: "Using border-right: instead of border-inline-end:"
+        code: "border-right:"
+        context: "     1341:\ 
+
+          \     1342:   .config-sidebar {
+
+          \ --> 1343:     border-right: none;
+
+          \     1344:     border-bottom: 1px solid var(--border);
+
+          \     1345:   }
+
+          \     1346: "
+        fix: "border-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+  src/styles/chat/layout.css:
+    file: "src/styles/chat/layout.css"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/layout.css"
+    total_issues: 2
+    auto_fixable_count: 2
+    issues:
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 66
+        severity: "WARN"
+        message: "Using right: 1 instead of inset-inline-end:"
+        code: "right: 1"
+        context: "     64:   position: absolute;
+
+          \     65:   top: 12px;
+
+          \ --> 66:   right: 12px;
+
+          \     67:   z-index: 100;
+
+          \     68:   width: 32px;
+
+          \     69:   height: 32px;"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 150
+        severity: "WARN"
+        message: "Using right: 4 instead of inset-inline-end:"
+        code: "right: 4"
+        context: "     148:   position: absolute;
+
+          \     149:   top: 4px;
+
+          \ --> 150:   right: 4px;
+
+          \     151:   width: 20px;
+
+          \     152:   height: 20px;
+
+          \     153:   border-radius: 50%;"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+  src/styles/chat/sidebar.css:
+    file: "src/styles/chat/sidebar.css"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/sidebar.css"
+    total_issues: 5
+    auto_fixable_count: 5
+    issues:
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 22
+        severity: "WARN"
+        message: "Using left: 1 instead of inset-inline-start:"
+        code: "left: 1"
+        context: "     20:   flex: 1;
+
+          \     21:   min-width: 300px;
+
+          \ --> 22:   border-left: 1px solid var(--border);
+
+          \     23:   display: flex;
+
+          \     24:   flex-direction: column;
+
+          \     25:   overflow: hidden;"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 22
+        severity: "WARN"
+        message: "Using border-left: instead of border-inline-start:"
+        code: "border-left:"
+        context: "     20:   flex: 1;
+
+          \     21:   min-width: 300px;
+
+          \ --> 22:   border-left: 1px solid var(--border);
+
+          \     23:   display: flex;
+
+          \     24:   flex-direction: column;
+
+          \     25:   overflow: hidden;"
+        fix: "border-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 102
+        severity: "WARN"
+        message: "Using left: 0 instead of inset-inline-start:"
+        code: "left: 0"
+        context: "     100:     position: fixed;
+
+          \     101:     top: 0;
+
+          \ --> 102:     left: 0;
+
+          \     103:     right: 0;
+
+          \     104:     bottom: 0;
+
+          \     105:     z-index: 1000;"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 103
+        severity: "WARN"
+        message: "Using right: 0 instead of inset-inline-end:"
+        code: "right: 0"
+        context: "     101:     top: 0;
+
+          \     102:     left: 0;
+
+          \ --> 103:     right: 0;
+
+          \     104:     bottom: 0;
+
+          \     105:     z-index: 1000;
+
+          \     106:   }"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 115
+        severity: "WARN"
+        message: "Using border-left: instead of border-inline-start:"
+        code: "border-left:"
+        context: "     113:     width: 100%;
+
+          \     114:     min-width: 0;
+
+          \ --> 115:     border-left: none;
+
+          \     116:   }
+
+          \     117: }
+
+          \     118: "
+        fix: "border-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+  src/styles/chat/grouped.css:
+    file: "src/styles/chat/grouped.css"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/grouped.css"
+    total_issues: 8
+    auto_fixable_count: 8
+    issues:
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 11
+        severity: "WARN"
+        message: "Using margin-left: instead of margin-inline-start:"
+        code: "margin-left:"
+        context: "     9:   align-items: flex-start;
+
+          \     10:   margin-bottom: 16px;
+
+          \ --> 11:   margin-left: 4px;
+
+          \     12:   margin-right: 16px;
+
+          \     13: }
+
+          \     14: "
+        fix: "margin-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 11
+        severity: "WARN"
+        message: "Using left: 4 instead of inset-inline-start:"
+        code: "left: 4"
+        context: "     9:   align-items: flex-start;
+
+          \     10:   margin-bottom: 16px;
+
+          \ --> 11:   margin-left: 4px;
+
+          \     12:   margin-right: 16px;
+
+          \     13: }
+
+          \     14: "
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 12
+        severity: "WARN"
+        message: "Using margin-right: instead of margin-inline-end:"
+        code: "margin-right:"
+        context: "     10:   margin-bottom: 16px;
+
+          \     11:   margin-left: 4px;
+
+          \ --> 12:   margin-right: 16px;
+
+          \     13: }
+
+          \     14:\ 
+
+          \     15: /* User messages on right */"
+        fix: "margin-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 12
+        severity: "WARN"
+        message: "Using right: 1 instead of inset-inline-end:"
+        code: "right: 1"
+        context: "     10:   margin-bottom: 16px;
+
+          \     11:   margin-left: 4px;
+
+          \ --> 12:   margin-right: 16px;
+
+          \     13: }
+
+          \     14:\ 
+
+          \     15: /* User messages on right */"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 116
+        severity: "WARN"
+        message: "Using padding-right: instead of padding-inline-end:"
+        code: "padding-right:"
+        context: "     114:\ 
+
+          \     115: .chat-bubble.has-copy {
+
+          \ --> 116:   padding-right: 36px;
+
+          \     117: }
+
+          \     118:\ 
+
+          \     119: .chat-copy-btn {"
+        fix: "padding-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 116
+        severity: "WARN"
+        message: "Using right: 3 instead of inset-inline-end:"
+        code: "right: 3"
+        context: "     114:\ 
+
+          \     115: .chat-bubble.has-copy {
+
+          \ --> 116:   padding-right: 36px;
+
+          \     117: }
+
+          \     118:\ 
+
+          \     119: .chat-copy-btn {"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 122
+        severity: "WARN"
+        message: "Using right: 8 instead of inset-inline-end:"
+        code: "right: 8"
+        context: "     120:   position: absolute;
+
+          \     121:   top: 6px;
+
+          \ --> 122:   right: 8px;
+
+          \     123:   border: 1px solid var(--border);
+
+          \     124:   background: var(--bg);
+
+          \     125:   color: var(--muted);"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 159
+        severity: "WARN"
+        message: "Using left: 0 instead of inset-inline-start:"
+        code: "left: 0"
+        context: "     157:   position: absolute;
+
+          \     158:   top: 0;
+
+          \ --> 159:   left: 0;
+
+          \     160:   transition: opacity 150ms ease;
+
+          \     161: }
+
+          \     162: "
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+  src/styles/chat/text.css:
+    file: "src/styles/chat/text.css"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/text.css"
+    total_issues: 8
+    auto_fixable_count: 8
+    issues:
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 37
+        severity: "WARN"
+        message: "Using padding-left: instead of padding-inline-start:"
+        code: "padding-left:"
+        context: "     35:\ 
+
+          \     36: .chat-text :where(ul, ol) {
+
+          \ --> 37:   padding-left: 1.5em;
+
+          \     38: }
+
+          \     39:\ 
+
+          \     40: .chat-text :where(li + li) {"
+        fix: "padding-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 37
+        severity: "WARN"
+        message: "Using left: 1 instead of inset-inline-start:"
+        code: "left: 1"
+        context: "     35:\ 
+
+          \     36: .chat-text :where(ul, ol) {
+
+          \ --> 37:   padding-left: 1.5em;
+
+          \     38: }
+
+          \     39:\ 
+
+          \     40: .chat-text :where(li + li) {"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 78
+        severity: "WARN"
+        message: "Using left: 3 instead of inset-inline-start:"
+        code: "left: 3"
+        context: "     76:\ 
+
+          \     77: .chat-text :where(blockquote) {
+
+          \ --> 78:   border-left: 3px solid var(--border-strong);
+
+          \     79:   padding-left: 12px;
+
+          \     80:   margin-left: 0;
+
+          \     81:   color: var(--muted);"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 78
+        severity: "WARN"
+        message: "Using border-left: instead of border-inline-start:"
+        code: "border-left:"
+        context: "     76:\ 
+
+          \     77: .chat-text :where(blockquote) {
+
+          \ --> 78:   border-left: 3px solid var(--border-strong);
+
+          \     79:   padding-left: 12px;
+
+          \     80:   margin-left: 0;
+
+          \     81:   color: var(--muted);"
+        fix: "border-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 79
+        severity: "WARN"
+        message: "Using padding-left: instead of padding-inline-start:"
+        code: "padding-left:"
+        context: "     77: .chat-text :where(blockquote) {
+
+          \     78:   border-left: 3px solid var(--border-strong);
+
+          \ --> 79:   padding-left: 12px;
+
+          \     80:   margin-left: 0;
+
+          \     81:   color: var(--muted);
+
+          \     82:   background: rgba(255, 255, 255, 0.02);"
+        fix: "padding-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 79
+        severity: "WARN"
+        message: "Using left: 1 instead of inset-inline-start:"
+        code: "left: 1"
+        context: "     77: .chat-text :where(blockquote) {
+
+          \     78:   border-left: 3px solid var(--border-strong);
+
+          \ --> 79:   padding-left: 12px;
+
+          \     80:   margin-left: 0;
+
+          \     81:   color: var(--muted);
+
+          \     82:   background: rgba(255, 255, 255, 0.02);"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 80
+        severity: "WARN"
+        message: "Using margin-left: instead of margin-inline-start:"
+        code: "margin-left:"
+        context: "     78:   border-left: 3px solid var(--border-strong);
+
+          \     79:   padding-left: 12px;
+
+          \ --> 80:   margin-left: 0;
+
+          \     81:   color: var(--muted);
+
+          \     82:   background: rgba(255, 255, 255, 0.02);
+
+          \     83:   padding: 8px 12px;"
+        fix: "margin-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+      - gate_id: 17
+        gate_name: "Logical_RTL"
+        line: 80
+        severity: "WARN"
+        message: "Using left: 0 instead of inset-inline-start:"
+        code: "left: 0"
+        context: "     78:   border-left: 3px solid var(--border-strong);
+
+          \     79:   padding-left: 12px;
+
+          \ --> 80:   margin-left: 0;
+
+          \     81:   color: var(--muted);
+
+          \     82:   background: rgba(255, 255, 255, 0.02);
+
+          \     83:   padding: 8px 12px;"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        priority: 1
+  vite.config.ts:
+    file: "vite.config.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/vite.config.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 8
+        gate_name: "File_Org"
+        line: 1
+        severity: "WARN"
+        message: "File name \"vite.config\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import path from \"node:path\";
+
+          \     2: import { fileURLToPath } from \"node:url\";
+
+          \     3: import { defineConfig } from \"vite\";
+
+          \     4: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+  src/ui/markdown.test.ts:
+    file: "src/ui/markdown.test.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/markdown.test.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 8
+        gate_name: "File_Org"
+        line: 1
+        severity: "WARN"
+        message: "File name \"markdown.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import { describe, expect, it } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import { toSanitizedMarkdownHtml } from \"./markdown\";
+
+          \     4: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+  src/ui/navigation.browser.test.ts:
+    file: "src/ui/navigation.browser.test.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/navigation.browser.test.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 8
+        gate_name: "File_Org"
+        line: 1
+        severity: "WARN"
+        message: "File name \"navigation.browser.test\" doesn't follow naming convention (use kebab-case, PascalCase, or
+          camelCase)"
+        context: " --> 1: import { afterEach, beforeEach, describe, expect, it } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import { OpenClawApp } from \"./app\";
+
+          \     4: import \"../styles.css\";"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+  src/ui/app-settings.test.ts:
+    file: "src/ui/app-settings.test.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-settings.test.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 8
+        gate_name: "File_Org"
+        line: 1
+        severity: "WARN"
+        message: "File name \"app-settings.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import { afterEach, beforeEach, describe, expect, it, vi } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import type { Tab } from \"./navigation\";
+
+          \     4: import { setTabFromRoute } from \"./app-settings\";"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+  src/ui/navigation.test.ts:
+    file: "src/ui/navigation.test.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/navigation.test.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 8
+        gate_name: "File_Org"
+        line: 1
+        severity: "WARN"
+        message: "File name \"navigation.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import { describe, expect, it } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import {
+
+          \     4:   TAB_GROUPS,"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+  src/ui/chat-markdown.browser.test.ts:
+    file: "src/ui/chat-markdown.browser.test.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/chat-markdown.browser.test.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 8
+        gate_name: "File_Org"
+        line: 1
+        severity: "WARN"
+        message: "File name \"chat-markdown.browser.test\" doesn't follow naming convention (use kebab-case, PascalCase, or
+          camelCase)"
+        context: " --> 1: import { afterEach, beforeEach, describe, expect, it } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import { OpenClawApp } from \"./app\";
+
+          \     4: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+  src/ui/uuid.test.ts:
+    file: "src/ui/uuid.test.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/uuid.test.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 8
+        gate_name: "File_Org"
+        line: 1
+        severity: "WARN"
+        message: "File name \"uuid.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import { describe, expect, it, vi } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import { generateUUID } from \"./uuid\";
+
+          \     4: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+  src/ui/config-form.browser.test.ts:
+    file: "src/ui/config-form.browser.test.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/config-form.browser.test.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 8
+        gate_name: "File_Org"
+        line: 1
+        severity: "WARN"
+        message: "File name \"config-form.browser.test\" doesn't follow naming convention (use kebab-case, PascalCase, or
+          camelCase)"
+        context: " --> 1: import { render } from \"lit\";
+
+          \     2: import { describe, expect, it, vi } from \"vitest\";
+
+          \     3:\ 
+
+          \     4: import { analyzeConfigSchema, renderConfigForm } from \"./views/config-form\";"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+  src/ui/format.test.ts:
+    file: "src/ui/format.test.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/format.test.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 8
+        gate_name: "File_Org"
+        line: 1
+        severity: "WARN"
+        message: "File name \"format.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import { describe, expect, it } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import { stripThinkingTags } from \"./format\";
+
+          \     4: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+  src/ui/focus-mode.browser.test.ts:
+    file: "src/ui/focus-mode.browser.test.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/focus-mode.browser.test.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 8
+        gate_name: "File_Org"
+        line: 1
+        severity: "WARN"
+        message: "File name \"focus-mode.browser.test\" doesn't follow naming convention (use kebab-case, PascalCase, or
+          camelCase)"
+        context: " --> 1: import { afterEach, beforeEach, describe, expect, it } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import { OpenClawApp } from \"./app\";
+
+          \     4: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+  src/ui/__screenshots__/navigation.browser.test.ts:
+    file: "src/ui/__screenshots__/navigation.browser.test.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/__screenshots__/navigation.browser.test.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 8
+        gate_name: "File_Org"
+        line: 1
+        severity: "WARN"
+        message: "File name \"navigation.browser.test\" doesn't follow naming convention (use kebab-case, PascalCase, or
+          camelCase)"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+  src/ui/__screenshots__/config-form.browser.test.ts:
+    file: "src/ui/__screenshots__/config-form.browser.test.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/__screenshots__/config-form.browser.test.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 8
+        gate_name: "File_Org"
+        line: 1
+        severity: "WARN"
+        message: "File name \"config-form.browser.test\" doesn't follow naming convention (use kebab-case, PascalCase, or
+          camelCase)"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+  src/ui/controllers/channels.types.ts:
+    file: "src/ui/controllers/channels.types.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/channels.types.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 8
+        gate_name: "File_Org"
+        line: 1
+        severity: "WARN"
+        message: "File name \"channels.types\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import type { GatewayBrowserClient } from \"../gateway\";
+
+          \     2: import type { ChannelsStatusSnapshot } from \"../types\";
+
+          \     3:\ 
+
+          \     4: export type ChannelsState = {"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+  src/ui/controllers/chat.test.ts:
+    file: "src/ui/controllers/chat.test.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/chat.test.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 8
+        gate_name: "File_Org"
+        line: 1
+        severity: "WARN"
+        message: "File name \"chat.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import { describe, expect, it } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import { handleChatEvent, type ChatEventPayload, type ChatState } from \"./chat\";
+
+          \     4: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+  src/ui/controllers/config.test.ts:
+    file: "src/ui/controllers/config.test.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/config.test.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 8
+        gate_name: "File_Org"
+        line: 1
+        severity: "WARN"
+        message: "File name \"config.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import { describe, expect, it, vi } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import {
+
+          \     4:   applyConfigSnapshot,"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+  src/ui/chat/message-normalizer.test.ts:
+    file: "src/ui/chat/message-normalizer.test.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/chat/message-normalizer.test.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 8
+        gate_name: "File_Org"
+        line: 1
+        severity: "WARN"
+        message: "File name \"message-normalizer.test\" doesn't follow naming convention (use kebab-case, PascalCase, or
+          camelCase)"
+        context: " --> 1: import { describe, it, expect, vi, beforeEach, afterEach } from \"vitest\";
+
+          \     2: import {
+
+          \     3:   normalizeMessage,
+
+          \     4:   normalizeRoleForGrouping,"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+  src/ui/chat/tool-helpers.test.ts:
+    file: "src/ui/chat/tool-helpers.test.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/chat/tool-helpers.test.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 8
+        gate_name: "File_Org"
+        line: 1
+        severity: "WARN"
+        message: "File name \"tool-helpers.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import { describe, it, expect } from \"vitest\";
+
+          \     2: import { formatToolOutputForSidebar, getTruncatedPreview } from \"./tool-helpers\";
+
+          \     3:\ 
+
+          \     4: describe(\"tool-helpers\", () => {"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+  src/ui/chat/message-extract.test.ts:
+    file: "src/ui/chat/message-extract.test.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/chat/message-extract.test.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 8
+        gate_name: "File_Org"
+        line: 1
+        severity: "WARN"
+        message: "File name \"message-extract.test\" doesn't follow naming convention (use kebab-case, PascalCase, or
+          camelCase)"
+        context: " --> 1: import { describe, expect, it } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import {
+
+          \     4:   extractText,"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+  src/ui/views/channels.types.ts:
+    file: "src/ui/views/channels.types.ts"
+    absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/channels.types.ts"
+    total_issues: 1
+    auto_fixable_count: 0
+    issues:
+      - gate_id: 8
+        gate_name: "File_Org"
+        line: 1
+        severity: "WARN"
+        message: "File name \"channels.types\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import type {
+
+          \     2:   ChannelAccountSnapshot,
+
+          \     3:   ChannelsStatusSnapshot,
+
+          \     4:   ConfigUiHints,"
+        fix_confidence: 0.7
+        auto_fixable: false
+        priority: 1.3
+gates:
+  - &a1
+    id: 7
+    name: "Truth_Anchor"
+    cluster: "FOUNDATION"
+    status: "FAIL"
+    message: "Invalid config files: package.json"
+    priority: 1
+    effort: "quick"
+    duration_ms: 29
+    apex_law: "RTL_FIRST"
+    why: "חוק #5: RTL קודם - רק ms-/me-/ps-/pe-/start-/end-. אסור ml/mr/pl/pr/left/right."
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Fix JSON/YAML syntax errors in config files"
+      - "Ensure config files are not empty"
+      - "package.json must have 'name' and 'version' fields"
+      - "tsconfig.json must have 'compilerOptions' section"
+      - "GitHub workflow files must have 'name' and 'on' fields"
+      - "YAML files use spaces for indentation, not tabs"
+  - &a2
+    id: 9
+    name: "Atomic_Size"
+    cluster: "STRUCTURE"
+    status: "FAIL"
+    message: "31 files exceed 150 LOC limit"
+    priority: 1
+    effort: "refactor"
+    duration_ms: 173
+    depends_on:
+      - 17
+      - 19
+    violations:
+      - file: "src/ui/views/nodes.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/nodes.ts"
+        line: 1086
+        message: "File exceeds limit: 1086 LOC (1138 total lines) > 150 limit"
+        context: "     1084:     const record = entry as Record<string, unknown>;
+
+          \     1085:     const id = typeof record.id === \"string\" ? record.id.trim() : \"\";
+
+          \ --> 1086:     if (!id) return;
+
+          \     1087:     const name = typeof record.name === \"string\" ? record.name.trim() : undefined;
+
+          \     1088:     const isDefault = record.default === true;
+
+          \     1089:     const toolsEntry = (record.tools ?? {}) as Record<string, unknown>;"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "FAIL"
+      - file: "src/ui/views/config-form.node.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/config-form.node.ts"
+        line: 720
+        message: "File exceeds limit: 720 LOC (779 total lines) > 150 limit"
+        context: "     718:                   />
+
+          \     719:                 </div>
+
+          \ --> 720:                 <div class=\"cfg-map__item-value\">
+
+          \     721:                   ${
+
+          \     722:                     anySchema
+
+          \     723:                       ? html`"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "FAIL"
+      - file: "src/ui/views/config.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/config.ts"
+        line: 653
+        message: "File exceeds limit: 653 LOC (691 total lines) > 150 limit"
+        context: "     651:                         onPatch: props.onFormPatch,
+
+          \     652:                         searchQuery: props.searchQuery,
+
+          \ --> 653:                         activeSection: props.activeSection,
+
+          \     654:                         activeSubsection: effectiveSubsection,
+
+          \     655:                       })
+
+          \     656:                 }"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "FAIL"
+      - file: "src/ui/app-render.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-render.ts"
+        line: 590
+        message: "File exceeds limit: 590 LOC (608 total lines) > 150 limit"
+        context: "     588:                 levelFilters: state.logsLevelFilters,
+
+          \     589:                 autoFollow: state.logsAutoFollow,
+
+          \ --> 590:                 truncated: state.logsTruncated,
+
+          \     591:                 onFilterTextChange: (next) => (state.logsFilterText = next),
+
+          \     592:                 onLevelToggle: (level, enabled) => {
+
+          \     593:                   state.logsLevelFilters = { ...state.logsLevelFilters, [level]: enabled };"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "FAIL"
+      - file: "src/ui/types.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/types.ts"
+        line: 471
+        message: "File exceeds limit: 471 LOC (527 total lines) > 150 limit"
+        context: "     469:\ 
+
+          \     470: export type SkillInstallOption = {
+
+          \ --> 471:   id: string;
+
+          \     472:   kind: \"brew\" | \"node\" | \"go\" | \"uv\";
+
+          \     473:   label: string;
+
+          \     474:   bins: string[];"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "FAIL"
+      - file: "src/ui/views/cron.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/cron.ts"
+        line: 450
+        message: "File exceeds limit: 450 LOC (462 total lines) > 150 limit"
+        context: "     448:   return html`
+
+          \     449:     <div class=\"list-item\">
+
+          \ --> 450:       <div class=\"list-main\">
+
+          \     451:         <div class=\"list-title\">${entry.status}</div>
+
+          \     452:         <div class=\"list-sub\">${entry.summary ?? \"\"}</div>
+
+          \     453:       </div>"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "FAIL"
+      - file: "src/ui/views/config-form.render.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/config-form.render.ts"
+        line: 445
+        message: "File exceeds limit: 445 LOC (473 total lines) > 150 limit"
+        context: "     443:                 <div class=\"config-section-card__header\">
+
+          \     444:                   <span class=\"config-section-card__icon\">${getSectionIcon(key)}</span>
+
+          \ --> 445:                   <div class=\"config-section-card__titles\">
+
+          \     446:                     <h3 class=\"config-section-card__title\">${meta.label}</h3>
+
+          \     447:                     ${
+
+          \     448:                       meta.description"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "FAIL"
+      - file: "src/ui/views/chat.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/chat.ts"
+        line: 438
+        message: "File exceeds limit: 438 LOC (488 total lines) > 150 limit"
+        context: "     436:     const normalized = normalizeMessage(msg);
+
+          \     437:\ 
+
+          \ --> 438:     if (!props.showThinking && normalized.role.toLowerCase() === \"toolresult\") {
+
+          \     439:       continue;
+
+          \     440:     }
+
+          \     441: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "FAIL"
+      - file: "src/ui/app.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app.ts"
+        line: 416
+        message: "File exceeds limit: 416 LOC (476 total lines) > 150 limit"
+        context: "     414:       await this.client.request(\"exec.approval.resolve\", {
+
+          \     415:         id: active.id,
+
+          \ --> 416:         decision,
+
+          \     417:       });
+
+          \     418:       this.execApprovalQueue = this.execApprovalQueue.filter((entry) => entry.id !== active.id);
+
+          \     419:     } catch (err) {"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "FAIL"
+      - file: "src/ui/app-render.helpers.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-render.helpers.ts"
+        line: 309
+        message: "File exceeds limit: 309 LOC (332 total lines) > 150 limit"
+        context: "     307:       <path d=\"m6.34 17.66-1.41 1.41\"></path>
+
+          \     308:       <path d=\"m19.07 4.93-1.41 1.41\"></path>
+
+          \ --> 309:     </svg>
+
+          \     310:   `;
+
+          \     311: }
+
+          \     312: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "FAIL"
+      - file: "src/ui/app-settings.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-settings.ts"
+        line: 302
+        message: "File exceeds limit: 302 LOC (333 total lines) > 150 limit"
+        context: "     300: export function syncUrlWithSessionKey(host: SettingsHost, sessionKey: string, replace: boolean) {
+
+          \     301:   if (typeof window === \"undefined\") return;
+
+          \ --> 302:   const url = new URL(window.location.href);
+
+          \     303:   url.searchParams.set(\"session\", sessionKey);
+
+          \     304:   if (replace) window.history.replaceState({}, \"\", url.toString());
+
+          \     305:   else window.history.pushState({}, \"\", url.toString());"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "FAIL"
+      - file: "src/ui/views/channels.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/channels.ts"
+        line: 289
+        message: "File exceeds limit: 289 LOC (311 total lines) > 150 limit"
+        context: "     287:           <span class=\"label\">Configured</span>
+
+          \     288:           <span>${account.configured ? \"Yes\" : \"No\"}</span>
+
+          \ --> 289:         </div>
+
+          \     290:         <div>
+
+          \     291:           <span class=\"label\">Connected</span>
+
+          \     292:           <span>${connectedStatus}</span>"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "FAIL"
+      - file: "src/ui/gateway.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/gateway.ts"
+        line: 266
+        message: "File exceeds limit: 266 LOC (298 total lines) > 150 limit"
+        context: "     264:\ 
+
+          \     265:     if (frame.type === \"res\") {
+
+          \ --> 266:       const res = parsed as GatewayResponseFrame;
+
+          \     267:       const pending = this.pending.get(res.id);
+
+          \     268:       if (!pending) return;
+
+          \     269:       this.pending.delete(res.id);"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "FAIL"
+      - file: "src/ui/views/sessions.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/sessions.ts"
+        line: 253
+        message: "File exceeds limit: 253 LOC (269 total lines) > 150 limit"
+        context: "     251:           @change=${(e: Event) => {
+
+          \     252:             const value = (e.target as HTMLSelectElement).value;
+
+          \ --> 253:             onPatch(row.key, { reasoningLevel: value || null });
+
+          \     254:           }}
+
+          \     255:         >
+
+          \     256:           ${REASONING_LEVELS.map("
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "FAIL"
+      - file: "src/ui/views/channels.nostr-profile-form.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/channels.nostr-profile-form.ts"
+        line: 251
+        message: "File exceeds limit: 251 LOC (321 total lines) > 150 limit"
+        context: "     249:           ${state.saving ? \"Saving...\" : \"Save & Publish\"}
+
+          \     250:         </button>
+
+          \ --> 251:\ 
+
+          \     252:         <button
+
+          \     253:           class=\"btn\"
+
+          \     254:           @click=${callbacks.onImport}"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "FAIL"
+      - file: "src/ui/views/overview.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/overview.ts"
+        line: 249
+        message: "File exceeds limit: 249 LOC (257 total lines) > 150 limit"
+        context: "     247:           <div class=\"muted\">Use /new or sessions.patch to reset context.</div>
+
+          \     248:         </div>
+
+          \ --> 249:         <div>
+
+          \     250:           <div class=\"note-title\">Cron reminders</div>
+
+          \     251:           <div class=\"muted\">Use isolated sessions for recurring runs.</div>
+
+          \     252:         </div>"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "FAIL"
+      - file: "src/ui/chat/grouped-render.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/chat/grouped-render.ts"
+        line: 249
+        message: "File exceeds limit: 249 LOC (277 total lines) > 150 limit"
+        context: "     247:   ]
+
+          \     248:     .filter(Boolean)
+
+          \ --> 249:     .join(\" \");
+
+          \     250:\ 
+
+          \     251:   if (!markdown && hasToolCards && isToolResult) {
+
+          \     252:     return html`${toolCards.map((card) => renderToolCardSidebar(card, onOpenSidebar))}`;"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "FAIL"
+      - file: "src/ui/app-gateway.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-gateway.ts"
+        line: 242
+        message: "File exceeds limit: 242 LOC (262 total lines) > 150 limit"
+        context: "     240:     }
+
+          \     241:   }
+
+          \ --> 242: }
+
+          \     243:\ 
+
+          \     244: export function applySnapshot(host: GatewayHost, hello: GatewayHelloOk) {
+
+          \     245:   const snapshot = hello.snapshot as"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "FAIL"
+      - file: "src/ui/icons.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/icons.ts"
+        line: 233
+        message: "File exceeds limit: 233 LOC (249 total lines) > 150 limit"
+        context: "     231: }
+
+          \     232:\ 
+
+          \ --> 233: export function renderIcon(name: IconName, className = \"nav-item__icon\"): TemplateResult {
+
+          \     234:   return html`<span class=${className} aria-hidden=\"true\">${icons[name]}</span>`;
+
+          \     235: }
+
+          \     236: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "FAIL"
+      - file: "src/ui/app-chat.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-chat.ts"
+        line: 218
+        message: "File exceeds limit: 218 LOC (243 total lines) > 150 limit"
+        context: "     216: }
+
+          \     217:\ 
+
+          \ --> 218: export async function refreshChatAvatar(host: ChatHost) {
+
+          \     219:   if (!host.connected) {
+
+          \     220:     host.chatAvatarUrl = null;
+
+          \     221:     return;"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/app-channels.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-channels.ts"
+        line: 215
+        message: "File exceeds limit: 215 LOC (241 total lines) > 150 limit"
+        context: "     213:     const nextValues = merged ? { ...state.values, ...merged } : state.values;
+
+          \     214:     const showAdvanced = Boolean(
+
+          \ --> 215:       nextValues.banner || nextValues.website || nextValues.nip05 || nextValues.lud16,
+
+          \     216:     );
+
+          \     217:\ 
+
+          \     218:     host.nostrProfileFormState = {"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/views/channels.nostr.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/channels.nostr.ts"
+        line: 213
+        message: "File exceeds limit: 213 LOC (235 total lines) > 150 limit"
+        context: "     211:               <div>
+
+          \     212:                 <span class=\"label\">Last start</span>
+
+          \ --> 213:                 <span>${summaryLastStartAt ? formatAgo(summaryLastStartAt) : \"n/a\"}</span>
+
+          \     214:               </div>
+
+          \     215:             </div>
+
+          \     216:           `"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/app-tool-stream.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-tool-stream.ts"
+        line: 212
+        message: "File exceeds limit: 212 LOC (241 total lines) > 150 limit"
+        context: "     210:       : phase === \"result\"
+
+          \     211:         ? formatToolOutput(data.result)
+
+          \ --> 212:         : undefined;
+
+          \     213:\ 
+
+          \     214:   const now = Date.now();
+
+          \     215:   let entry = host.toolStreamById.get(toolCallId);"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/app-view-state.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-view-state.ts"
+        line: 205
+        message: "File exceeds limit: 205 LOC (207 total lines) > 150 limit"
+        context: "     203:   handleLogsLevelFilterToggle: (level: LogLevel) => void;
+
+          \     204:   handleLogsAutoFollowToggle: (next: boolean) => void;
+
+          \ --> 205:   handleCallDebugMethod: (method: string, params: string) => Promise<void>;
+
+          \     206: };
+
+          \     207: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/views/skills.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/skills.ts"
+        line: 183
+        message: "File exceeds limit: 183 LOC (192 total lines) > 150 limit"
+        context: "     181:                 @click=${() => props.onSaveKey(skill.skillKey)}
+
+          \     182:               >
+
+          \ --> 183:                 Save key
+
+          \     184:               </button>
+
+          \     185:             `
+
+          \     186:             : nothing"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/controllers/cron.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/cron.ts"
+        line: 177
+        message: "File exceeds limit: 177 LOC (188 total lines) > 150 limit"
+        context: "     175: export async function loadCronRuns(state: CronState, jobId: string) {
+
+          \     176:   if (!state.client || !state.connected) return;
+
+          \ --> 177:   try {
+
+          \     178:     const res = (await state.client.request(\"cron.runs\", {
+
+          \     179:       id: jobId,
+
+          \     180:       limit: 50,"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/navigation.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/navigation.ts"
+        line: 174
+        message: "File exceeds limit: 174 LOC (187 total lines) > 150 limit"
+        context: "     172:       return \"Manage skill availability and API key injection.\";
+
+          \     173:     case \"nodes\":
+
+          \ --> 174:       return \"Paired devices, capabilities, and command exposure.\";
+
+          \     175:     case \"chat\":
+
+          \     176:       return \"Direct gateway chat session for quick interventions.\";
+
+          \     177:     case \"config\":"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/controllers/config.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/config.ts"
+        line: 174
+        message: "File exceeds limit: 174 LOC (186 total lines) > 150 limit"
+        context: "     172:   if (state.configFormMode === \"form\") {
+
+          \     173:     state.configRaw = serializeConfigForm(base);
+
+          \ --> 174:   }
+
+          \     175: }
+
+          \     176:\ 
+
+          \     177: export function removeConfigFormValue(state: ConfigState, path: Array<string | number>) {"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/tool-display.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/tool-display.ts"
+        line: 172
+        message: "File exceeds limit: 172 LOC (196 total lines) > 150 limit"
+        context: "     170:     name,
+
+          \     171:     icon,
+
+          \ --> 172:     title,
+
+          \     173:     label,
+
+          \     174:     verb,
+
+          \     175:     detail,"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/controllers/chat.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/chat.ts"
+        line: 170
+        message: "File exceeds limit: 170 LOC (191 total lines) > 150 limit"
+        context: "     168:     const next = extractText(payload.message);
+
+          \     169:     if (typeof next === \"string\") {
+
+          \ --> 170:       const current = state.chatStream ?? \"\";
+
+          \     171:       if (!current || next.length >= current.length) {
+
+          \     172:         state.chatStream = next;
+
+          \     173:       }"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/views/config-form.analyze.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/config-form.analyze.ts"
+        line: 167
+        message: "File exceeds limit: 167 LOC (187 total lines) > 150 limit"
+        context: "     165:       res.schema.nullable = nullable || res.schema.nullable;
+
+          \     166:     }
+
+          \ --> 167:     return res;
+
+          \     168:   }
+
+          \     169:\ 
+
+          \     170:   const primitiveTypes = [\"string\", \"number\", \"integer\", \"boolean\"];"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+    suggestions:
+      - "Split large files into smaller, focused modules"
+      - "Extract reusable logic into separate files"
+      - "Use composition over monolithic components"
+      - "Consider using barrel exports (index.ts) to organize"
+  - &a3
+    id: 17
+    name: "Logical_RTL"
+    cluster: "SENSATION"
+    status: "FAIL"
+    message: "Found 54 RTL violations"
+    priority: 1
+    effort: "refactor"
+    duration_ms: 729
+    fixable: true
+    blocks:
+      - 2
+      - 3
+      - 5
+      - 7
+      - 8
+      - 9
+      - 11
+      - 12
+      - 13
+      - 22
+      - 23
+      - 24
+      - 25
+      - 27
+      - 28
+      - 29
+      - 30
+      - 31
+      - 32
+      - 33
+      - 34
+      - 36
+      - 37
+      - 38
+      - 39
+      - 41
+      - 42
+      - 45
+      - 46
+      - 47
+      - 48
+      - 49
+      - 50
+      - 51
+      - 52
+      - 53
+      - 54
+      - 55
+      - 56
+      - 57
+      - 58
+      - 59
+      - 60
+      - 61
+      - 62
+      - 63
+      - 64
+      - 65
+      - 66
+      - 67
+      - 68
+      - 69
+      - 70
+    violations:
+      - file: "src/ui/components/resizable-divider.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/components/resizable-divider.ts"
+        line: 32
+        message: "Using left: -4px; instead of inset-inline-start:"
+        code: "left: -4px;"
+        context: "     30:       position: absolute;
+
+          \     31:       top: 0;
+
+          \ --> 32:       left: -4px;
+
+          \     33:       right: -4px;
+
+          \     34:       bottom: 0;
+
+          \     35:     }"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/ui/components/resizable-divider.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/components/resizable-divider.ts"
+        line: 33
+        message: "Using right: -4px; instead of inset-inline-end:"
+        code: "right: -4px;"
+        context: "     31:       top: 0;
+
+          \     32:       left: -4px;
+
+          \ --> 33:       right: -4px;
+
+          \     34:       bottom: 0;
+
+          \     35:     }
+
+          \     36:     "
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/layout.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/layout.css"
+        line: 312
+        message: "Using text-align: left instead of text-align: start"
+        code: "text-align: left"
+        context: "     310:   border: none;
+
+          \     311:   cursor: pointer;
+
+          \ --> 312:   text-align: left;
+
+          \     313:   border-radius: var(--radius-sm);
+
+          \     314:   transition:
+
+          \     315:     color var(--duration-fast) ease,"
+        fix: "text-align: start"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/layout.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/layout.css"
+        line: 493
+        message: "Using text-align: left instead of text-align: start"
+        code: "text-align: left"
+        context: "     491:\ 
+
+          \     492: .content--chat .content-header > div:first-child {
+
+          \ --> 493:   text-align: left;
+
+          \     494: }
+
+          \     495:\ 
+
+          \     496: .content--chat .page-meta {"
+        fix: "text-align: start"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/layout.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/layout.css"
+        line: 574
+        message: "Using border-right: instead of border-inline-end:"
+        code: "border-right:"
+        context: "     572:     gap: 6px;
+
+          \     573:     overflow-x: auto;
+
+          \ --> 574:     border-right: none;
+
+          \     575:     border-bottom: 1px solid var(--border);
+
+          \     576:     padding: 10px 14px;
+
+          \     577:     background: var(--bg);"
+        fix: "border-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/components.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css"
+        line: 370
+        message: "Using margin-left: instead of margin-inline-start:"
+        code: "margin-left:"
+        context: "     368:   align-items: center;
+
+          \     369:   justify-content: center;
+
+          \ --> 370:   margin-left: 6px;
+
+          \     371:   padding: 2px 5px;
+
+          \     372:   font-family: var(--mono);
+
+          \     373:   font-size: 11px;"
+        fix: "margin-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/components.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css"
+        line: 370
+        message: "Using left: 6 instead of inset-inline-start:"
+        code: "left: 6"
+        context: "     368:   align-items: center;
+
+          \     369:   justify-content: center;
+
+          \ --> 370:   margin-left: 6px;
+
+          \     371:   padding: 2px 5px;
+
+          \     372:   font-family: var(--mono);
+
+          \     373:   font-size: 11px;"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/components.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css"
+        line: 462
+        message: "Using padding-right: instead of padding-inline-end:"
+        code: "padding-right:"
+        context: "     460: .field select {
+
+          \     461:   appearance: none;
+
+          \ --> 462:   padding-right: 36px;
+
+          \     463:   background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16'
+          height='16' viewBox='0 0 24 24' fill='none' stroke='%23a1a1aa' stroke-width='2'%3E%3Cpolyline points='6 9 12
+          15 18 9'%3E%3C/polyline%3E%3C/svg%3E\");
+
+          \     464:   background-repeat: no-repeat;
+
+          \     465:   background-position: right 10px center;"
+        fix: "padding-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/components.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css"
+        line: 462
+        message: "Using right: 3 instead of inset-inline-end:"
+        code: "right: 3"
+        context: "     460: .field select {
+
+          \     461:   appearance: none;
+
+          \ --> 462:   padding-right: 36px;
+
+          \     463:   background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16'
+          height='16' viewBox='0 0 24 24' fill='none' stroke='%23a1a1aa' stroke-width='2'%3E%3Cpolyline points='6 9 12
+          15 18 9'%3E%3C/polyline%3E%3C/svg%3E\");
+
+          \     464:   background-repeat: no-repeat;
+
+          \     465:   background-position: right 10px center;"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/components.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css"
+        line: 666
+        message: "Using text-align: right instead of text-align: end"
+        code: "text-align: right"
+        context: "     664:\ 
+
+          \     665: .list-meta {
+
+          \ --> 666:   text-align: right;
+
+          \     667:   color: var(--muted);
+
+          \     668:   font-size: 12px;
+
+          \     669:   display: grid;"
+        fix: "text-align: end"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/components.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css"
+        line: 691
+        message: "Using text-align: left instead of text-align: start"
+        code: "text-align: left"
+        context: "     689:   .list-meta {
+
+          \     690:     min-width: 0;
+
+          \ --> 691:     text-align: left;
+
+          \     692:   }
+
+          \     693: }
+
+          \     694: "
+        fix: "text-align: start"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/components.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css"
+        line: 725
+        message: "Using margin-right: instead of margin-inline-end:"
+        code: "margin-right:"
+        context: "     723:\ 
+
+          \     724: .chip input {
+
+          \ --> 725:   margin-right: 6px;
+
+          \     726: }
+
+          \     727:\ 
+
+          \     728: .chip-ok {"
+        fix: "margin-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/components.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css"
+        line: 725
+        message: "Using right: 6 instead of inset-inline-end:"
+        code: "right: 6"
+        context: "     723:\ 
+
+          \     724: .chip input {
+
+          \ --> 725:   margin-right: 6px;
+
+          \     726: }
+
+          \     727:\ 
+
+          \     728: .chip-ok {"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/components.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css"
+        line: 1152
+        message: "Using padding-left: instead of padding-inline-start:"
+        code: "padding-left:"
+        context: "     1150:\ 
+
+          \     1151: .chat-text :where(ul, ol) {
+
+          \ --> 1152:   padding-left: 1.2em;
+
+          \     1153: }
+
+          \     1154:\ 
+
+          \     1155: .chat-text :where(li + li) {"
+        fix: "padding-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/components.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css"
+        line: 1152
+        message: "Using left: 1 instead of inset-inline-start:"
+        code: "left: 1"
+        context: "     1150:\ 
+
+          \     1151: .chat-text :where(ul, ol) {
+
+          \ --> 1152:   padding-left: 1.2em;
+
+          \     1153: }
+
+          \     1154:\ 
+
+          \     1155: .chat-text :where(li + li) {"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/components.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css"
+        line: 1168
+        message: "Using left: 2 instead of inset-inline-start:"
+        code: "left: 2"
+        context: "     1166:\ 
+
+          \     1167: .chat-text :where(blockquote) {
+
+          \ --> 1168:   border-left: 2px solid var(--border-strong);
+
+          \     1169:   padding-left: 12px;
+
+          \     1170:   color: var(--muted);
+
+          \     1171: }"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/components.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css"
+        line: 1168
+        message: "Using border-left: instead of border-inline-start:"
+        code: "border-left:"
+        context: "     1166:\ 
+
+          \     1167: .chat-text :where(blockquote) {
+
+          \ --> 1168:   border-left: 2px solid var(--border-strong);
+
+          \     1169:   padding-left: 12px;
+
+          \     1170:   color: var(--muted);
+
+          \     1171: }"
+        fix: "border-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/components.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css"
+        line: 1169
+        message: "Using padding-left: instead of padding-inline-start:"
+        code: "padding-left:"
+        context: "     1167: .chat-text :where(blockquote) {
+
+          \     1168:   border-left: 2px solid var(--border-strong);
+
+          \ --> 1169:   padding-left: 12px;
+
+          \     1170:   color: var(--muted);
+
+          \     1171: }
+
+          \     1172: "
+        fix: "padding-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/components.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css"
+        line: 1169
+        message: "Using left: 1 instead of inset-inline-start:"
+        code: "left: 1"
+        context: "     1167: .chat-text :where(blockquote) {
+
+          \     1168:   border-left: 2px solid var(--border-strong);
+
+          \ --> 1169:   padding-left: 12px;
+
+          \     1170:   color: var(--muted);
+
+          \     1171: }
+
+          \     1172: "
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/components.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/components.css"
+        line: 1312
+        message: "Using text-align: right instead of text-align: end"
+        code: "text-align: right"
+        context: "     1310:\ 
+
+          \     1311: .chat-line.user .chat-stamp {
+
+          \ --> 1312:   text-align: right;
+
+          \     1313: }
+
+          \     1314:\ 
+
+          \     1315: /* Chat compose */"
+        fix: "text-align: end"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/config.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css"
+        line: 26
+        message: "Using right: 1 instead of inset-inline-end:"
+        code: "right: 1"
+        context: "     24:   flex-direction: column;
+
+          \     25:   background: var(--bg-accent);
+
+          \ --> 26:   border-right: 1px solid var(--border);
+
+          \     27:   min-height: 0;
+
+          \     28:   overflow: hidden;
+
+          \     29: }"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/config.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css"
+        line: 26
+        message: "Using border-right: instead of border-inline-end:"
+        code: "border-right:"
+        context: "     24:   flex-direction: column;
+
+          \     25:   background: var(--bg-accent);
+
+          \ --> 26:   border-right: 1px solid var(--border);
+
+          \     27:   min-height: 0;
+
+          \     28:   overflow: hidden;
+
+          \     29: }"
+        fix: "border-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/config.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css"
+        line: 64
+        message: "Using left: 2 instead of inset-inline-start:"
+        code: "left: 2"
+        context: "     62: .config-search__icon {
+
+          \     63:   position: absolute;
+
+          \ --> 64:   left: 28px;
+
+          \     65:   top: 50%;
+
+          \     66:   transform: translateY(-50%);
+
+          \     67:   width: 16px;"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/config.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css"
+        line: 107
+        message: "Using right: 2 instead of inset-inline-end:"
+        code: "right: 2"
+        context: "     105: .config-search__clear {
+
+          \     106:   position: absolute;
+
+          \ --> 107:   right: 22px;
+
+          \     108:   top: 50%;
+
+          \     109:   transform: translateY(-50%);
+
+          \     110:   width: 22px;"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/config.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css"
+        line: 151
+        message: "Using text-align: left instead of text-align: start"
+        code: "text-align: left"
+        context: "     149:   font-size: 13px;
+
+          \     150:   font-weight: 500;
+
+          \ --> 151:   text-align: left;
+
+          \     152:   cursor: pointer;
+
+          \     153:   transition:
+
+          \     154:     background var(--duration-fast) ease,"
+        fix: "text-align: start"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/config.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css"
+        line: 791
+        message: "Using left: 1 instead of inset-inline-start:"
+        code: "left: 1"
+        context: "     789:   padding: 11px;
+
+          \     790:   border: none;
+
+          \ --> 791:   border-left: 1px solid var(--border);
+
+          \     792:   border-right: 1px solid var(--border);
+
+          \     793:   background: transparent;
+
+          \     794:   font-size: 14px;"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/config.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css"
+        line: 791
+        message: "Using border-left: instead of border-inline-start:"
+        code: "border-left:"
+        context: "     789:   padding: 11px;
+
+          \     790:   border: none;
+
+          \ --> 791:   border-left: 1px solid var(--border);
+
+          \     792:   border-right: 1px solid var(--border);
+
+          \     793:   background: transparent;
+
+          \     794:   font-size: 14px;"
+        fix: "border-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/config.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css"
+        line: 792
+        message: "Using right: 1 instead of inset-inline-end:"
+        code: "right: 1"
+        context: "     790:   border: none;
+
+          \     791:   border-left: 1px solid var(--border);
+
+          \ --> 792:   border-right: 1px solid var(--border);
+
+          \     793:   background: transparent;
+
+          \     794:   font-size: 14px;
+
+          \     795:   text-align: center;"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/config.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css"
+        line: 792
+        message: "Using border-right: instead of border-inline-end:"
+        code: "border-right:"
+        context: "     790:   border: none;
+
+          \     791:   border-left: 1px solid var(--border);
+
+          \ --> 792:   border-right: 1px solid var(--border);
+
+          \     793:   background: transparent;
+
+          \     794:   font-size: 14px;
+
+          \     795:   text-align: center;"
+        fix: "border-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/config.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css"
+        line: 964
+        message: "Using left: 3 instead of inset-inline-start:"
+        code: "left: 3"
+        context: "     962:   position: absolute;
+
+          \     963:   top: 3px;
+
+          \ --> 964:   left: 3px;
+
+          \     965:   width: 20px;
+
+          \     966:   height: 20px;
+
+          \     967:   background: var(--text);"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/config.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/config.css"
+        line: 1343
+        message: "Using border-right: instead of border-inline-end:"
+        code: "border-right:"
+        context: "     1341:\ 
+
+          \     1342:   .config-sidebar {
+
+          \ --> 1343:     border-right: none;
+
+          \     1344:     border-bottom: 1px solid var(--border);
+
+          \     1345:   }
+
+          \     1346: "
+        fix: "border-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/layout.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/layout.css"
+        line: 66
+        message: "Using right: 1 instead of inset-inline-end:"
+        code: "right: 1"
+        context: "     64:   position: absolute;
+
+          \     65:   top: 12px;
+
+          \ --> 66:   right: 12px;
+
+          \     67:   z-index: 100;
+
+          \     68:   width: 32px;
+
+          \     69:   height: 32px;"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/layout.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/layout.css"
+        line: 150
+        message: "Using right: 4 instead of inset-inline-end:"
+        code: "right: 4"
+        context: "     148:   position: absolute;
+
+          \     149:   top: 4px;
+
+          \ --> 150:   right: 4px;
+
+          \     151:   width: 20px;
+
+          \     152:   height: 20px;
+
+          \     153:   border-radius: 50%;"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/sidebar.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/sidebar.css"
+        line: 22
+        message: "Using left: 1 instead of inset-inline-start:"
+        code: "left: 1"
+        context: "     20:   flex: 1;
+
+          \     21:   min-width: 300px;
+
+          \ --> 22:   border-left: 1px solid var(--border);
+
+          \     23:   display: flex;
+
+          \     24:   flex-direction: column;
+
+          \     25:   overflow: hidden;"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/sidebar.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/sidebar.css"
+        line: 22
+        message: "Using border-left: instead of border-inline-start:"
+        code: "border-left:"
+        context: "     20:   flex: 1;
+
+          \     21:   min-width: 300px;
+
+          \ --> 22:   border-left: 1px solid var(--border);
+
+          \     23:   display: flex;
+
+          \     24:   flex-direction: column;
+
+          \     25:   overflow: hidden;"
+        fix: "border-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/sidebar.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/sidebar.css"
+        line: 102
+        message: "Using left: 0 instead of inset-inline-start:"
+        code: "left: 0"
+        context: "     100:     position: fixed;
+
+          \     101:     top: 0;
+
+          \ --> 102:     left: 0;
+
+          \     103:     right: 0;
+
+          \     104:     bottom: 0;
+
+          \     105:     z-index: 1000;"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/sidebar.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/sidebar.css"
+        line: 103
+        message: "Using right: 0 instead of inset-inline-end:"
+        code: "right: 0"
+        context: "     101:     top: 0;
+
+          \     102:     left: 0;
+
+          \ --> 103:     right: 0;
+
+          \     104:     bottom: 0;
+
+          \     105:     z-index: 1000;
+
+          \     106:   }"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/sidebar.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/sidebar.css"
+        line: 115
+        message: "Using border-left: instead of border-inline-start:"
+        code: "border-left:"
+        context: "     113:     width: 100%;
+
+          \     114:     min-width: 0;
+
+          \ --> 115:     border-left: none;
+
+          \     116:   }
+
+          \     117: }
+
+          \     118: "
+        fix: "border-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/grouped.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/grouped.css"
+        line: 11
+        message: "Using margin-left: instead of margin-inline-start:"
+        code: "margin-left:"
+        context: "     9:   align-items: flex-start;
+
+          \     10:   margin-bottom: 16px;
+
+          \ --> 11:   margin-left: 4px;
+
+          \     12:   margin-right: 16px;
+
+          \     13: }
+
+          \     14: "
+        fix: "margin-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/grouped.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/grouped.css"
+        line: 11
+        message: "Using left: 4 instead of inset-inline-start:"
+        code: "left: 4"
+        context: "     9:   align-items: flex-start;
+
+          \     10:   margin-bottom: 16px;
+
+          \ --> 11:   margin-left: 4px;
+
+          \     12:   margin-right: 16px;
+
+          \     13: }
+
+          \     14: "
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/grouped.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/grouped.css"
+        line: 12
+        message: "Using margin-right: instead of margin-inline-end:"
+        code: "margin-right:"
+        context: "     10:   margin-bottom: 16px;
+
+          \     11:   margin-left: 4px;
+
+          \ --> 12:   margin-right: 16px;
+
+          \     13: }
+
+          \     14:\ 
+
+          \     15: /* User messages on right */"
+        fix: "margin-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/grouped.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/grouped.css"
+        line: 12
+        message: "Using right: 1 instead of inset-inline-end:"
+        code: "right: 1"
+        context: "     10:   margin-bottom: 16px;
+
+          \     11:   margin-left: 4px;
+
+          \ --> 12:   margin-right: 16px;
+
+          \     13: }
+
+          \     14:\ 
+
+          \     15: /* User messages on right */"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/grouped.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/grouped.css"
+        line: 116
+        message: "Using padding-right: instead of padding-inline-end:"
+        code: "padding-right:"
+        context: "     114:\ 
+
+          \     115: .chat-bubble.has-copy {
+
+          \ --> 116:   padding-right: 36px;
+
+          \     117: }
+
+          \     118:\ 
+
+          \     119: .chat-copy-btn {"
+        fix: "padding-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/grouped.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/grouped.css"
+        line: 116
+        message: "Using right: 3 instead of inset-inline-end:"
+        code: "right: 3"
+        context: "     114:\ 
+
+          \     115: .chat-bubble.has-copy {
+
+          \ --> 116:   padding-right: 36px;
+
+          \     117: }
+
+          \     118:\ 
+
+          \     119: .chat-copy-btn {"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/grouped.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/grouped.css"
+        line: 122
+        message: "Using right: 8 instead of inset-inline-end:"
+        code: "right: 8"
+        context: "     120:   position: absolute;
+
+          \     121:   top: 6px;
+
+          \ --> 122:   right: 8px;
+
+          \     123:   border: 1px solid var(--border);
+
+          \     124:   background: var(--bg);
+
+          \     125:   color: var(--muted);"
+        fix: "inset-inline-end:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/grouped.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/grouped.css"
+        line: 159
+        message: "Using left: 0 instead of inset-inline-start:"
+        code: "left: 0"
+        context: "     157:   position: absolute;
+
+          \     158:   top: 0;
+
+          \ --> 159:   left: 0;
+
+          \     160:   transition: opacity 150ms ease;
+
+          \     161: }
+
+          \     162: "
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/text.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/text.css"
+        line: 37
+        message: "Using padding-left: instead of padding-inline-start:"
+        code: "padding-left:"
+        context: "     35:\ 
+
+          \     36: .chat-text :where(ul, ol) {
+
+          \ --> 37:   padding-left: 1.5em;
+
+          \     38: }
+
+          \     39:\ 
+
+          \     40: .chat-text :where(li + li) {"
+        fix: "padding-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/text.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/text.css"
+        line: 37
+        message: "Using left: 1 instead of inset-inline-start:"
+        code: "left: 1"
+        context: "     35:\ 
+
+          \     36: .chat-text :where(ul, ol) {
+
+          \ --> 37:   padding-left: 1.5em;
+
+          \     38: }
+
+          \     39:\ 
+
+          \     40: .chat-text :where(li + li) {"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/text.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/text.css"
+        line: 78
+        message: "Using left: 3 instead of inset-inline-start:"
+        code: "left: 3"
+        context: "     76:\ 
+
+          \     77: .chat-text :where(blockquote) {
+
+          \ --> 78:   border-left: 3px solid var(--border-strong);
+
+          \     79:   padding-left: 12px;
+
+          \     80:   margin-left: 0;
+
+          \     81:   color: var(--muted);"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/text.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/text.css"
+        line: 78
+        message: "Using border-left: instead of border-inline-start:"
+        code: "border-left:"
+        context: "     76:\ 
+
+          \     77: .chat-text :where(blockquote) {
+
+          \ --> 78:   border-left: 3px solid var(--border-strong);
+
+          \     79:   padding-left: 12px;
+
+          \     80:   margin-left: 0;
+
+          \     81:   color: var(--muted);"
+        fix: "border-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/text.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/text.css"
+        line: 79
+        message: "Using padding-left: instead of padding-inline-start:"
+        code: "padding-left:"
+        context: "     77: .chat-text :where(blockquote) {
+
+          \     78:   border-left: 3px solid var(--border-strong);
+
+          \ --> 79:   padding-left: 12px;
+
+          \     80:   margin-left: 0;
+
+          \     81:   color: var(--muted);
+
+          \     82:   background: rgba(255, 255, 255, 0.02);"
+        fix: "padding-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/text.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/text.css"
+        line: 79
+        message: "Using left: 1 instead of inset-inline-start:"
+        code: "left: 1"
+        context: "     77: .chat-text :where(blockquote) {
+
+          \     78:   border-left: 3px solid var(--border-strong);
+
+          \ --> 79:   padding-left: 12px;
+
+          \     80:   margin-left: 0;
+
+          \     81:   color: var(--muted);
+
+          \     82:   background: rgba(255, 255, 255, 0.02);"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/text.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/text.css"
+        line: 80
+        message: "Using margin-left: instead of margin-inline-start:"
+        code: "margin-left:"
+        context: "     78:   border-left: 3px solid var(--border-strong);
+
+          \     79:   padding-left: 12px;
+
+          \ --> 80:   margin-left: 0;
+
+          \     81:   color: var(--muted);
+
+          \     82:   background: rgba(255, 255, 255, 0.02);
+
+          \     83:   padding: 8px 12px;"
+        fix: "margin-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+      - file: "src/styles/chat/text.css"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/styles/chat/text.css"
+        line: 80
+        message: "Using left: 0 instead of inset-inline-start:"
+        code: "left: 0"
+        context: "     78:   border-left: 3px solid var(--border-strong);
+
+          \     79:   padding-left: 12px;
+
+          \ --> 80:   margin-left: 0;
+
+          \     81:   color: var(--muted);
+
+          \     82:   background: rgba(255, 255, 255, 0.02);
+
+          \     83:   padding: 8px 12px;"
+        fix: "inset-inline-start:"
+        fix_confidence: 0.95
+        auto_fixable: true
+        severity: "WARN"
+    suggestions:
+      - "Replace ml-/mr- with ms-/me- (margin-inline-start/end)"
+      - "Replace pl-/pr- with ps-/pe- (padding-inline-start/end)"
+      - "Replace left-/right- with start-/end-"
+      - "Use margin-inline-start/end in styled-components/emotion"
+      - "Run `apex heal --gate 17` to auto-fix"
+  - &a4
+    id: 30
+    name: "Lazy_Loading"
+    cluster: "PERFORMANCE"
+    status: "FAIL"
+    message: "Only 0 lazy loading usages found"
+    priority: 1
+    effort: "quick"
+    duration_ms: 666
+    apex_law: "RESPONSIVE"
+    why: "חוק #6: רספונסיבי - מובייל פירסט. מגע מינימום 44x44 פיקסל."
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "import dynamic from 'next/dynamic'"
+      - "const Component = dynamic(() => import(\"./Component\"), { loading: () => <Loading /> })"
+      - "Wrap lazy components with <Suspense fallback={...}>"
+      - "Add loading=\"lazy\" to below-fold images"
+    verify_command: "npm run build && npm run analyze"
+  - &a5
+    id: 46
+    name: "CI_Pipeline"
+    cluster: "EVOLUTION"
+    status: "FAIL"
+    message: "No CI/CD pipeline found"
+    priority: 1
+    effort: "quick"
+    duration_ms: 7
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Create .github/workflows/ci.yml"
+      - "Add jobs: lint -> build -> test (in dependency order)"
+      - "Enable concurrency to cancel stale runs"
+  - &a6
+    id: 50
+    name: "Lock_Integrity"
+    cluster: "SUPPLY_CHAIN"
+    status: "FAIL"
+    message: "No lock file found"
+    priority: 1
+    effort: "quick"
+    duration_ms: 1
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Run npm install to generate package-lock.json"
+      - "Or use pnpm/yarn/bun for their lock files"
+  - &a7
+    id: 59
+    name: "Graceful_Degradation"
+    cluster: "RESILIENCE"
+    status: "FAIL"
+    message: "Graceful degradation patterns missing or poorly implemented"
+    priority: 1
+    effort: "quick"
+    duration_ms: 3
+    fixable: true
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Create app/loading.tsx with skeleton/spinner component"
+      - "Create app/not-found.tsx with helpful 404 message and navigation"
+      - "Wrap async components with <Suspense fallback={<Loading />}>"
+      - "Add timeout handling for external requests with AbortController"
+  - &a8
+    id: 24
+    name: "Env_Validation"
+    cluster: "INTEGRITY"
+    status: "WARN"
+    message: "No hardcoded secrets, but .env not in .gitignore"
+    priority: 1.2
+    effort: "quick"
+    duration_ms: 1
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Add .env and .env.* to .gitignore"
+  - &a9
+    id: 2
+    name: "DNA_Alignment"
+    cluster: "FOUNDATION"
+    status: "WARN"
+    message: "No AI_CONTEXT.md or CLAUDE.md in project (optional but recommended)"
+    priority: 1.3
+    effort: "quick"
+    duration_ms: 1
+    apex_law: "ZERO_TRUST"
+    why: "חוק #1: אמון אפס - כל קלט חייב אימות עם Zod. אסור 'any'. Result<T,E> לטיפול בשגיאות."
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Run /scan to generate AI_CONTEXT.md"
+      - "Or create .claude/AI_CONTEXT.md manually with project info"
+  - &a10
+    id: 3
+    name: "Schema_Lock"
+    cluster: "FOUNDATION"
+    status: "WARN"
+    message: "No validation library installed; 4 unused production dependencies"
+    priority: 1.3
+    effort: "quick"
+    duration_ms: 52
+    apex_law: "ZERO_TRUST"
+    why: "חוק #1: אמון אפס - כל קלט חייב אימות עם Zod. אסור 'any'. Result<T,E> לטיפול בשגיאות."
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Remove unused deps: @noble/ed25519, dompurify, lit, marked"
+      - "Install zod: bun add zod"
+  - &a11
+    id: 5
+    name: "Boundary_Check"
+    cluster: "FOUNDATION"
+    status: "WARN"
+    message: "81 client-side API usages need 'use client' or typeof guard (AST verified)"
+    priority: 1.3
+    effort: "quick"
+    duration_ms: 715
+    apex_law: "RTL_FIRST"
+    why: "חוק #5: RTL קודם - רק ms-/me-/ps-/pe-/start-/end-. אסור ml/mr/pl/pr/left/right."
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Add 'use client' at the top of components using React hooks"
+      - "Add 'use client' for files using browser APIs (localStorage, etc.)"
+      - "Or wrap browser API access in: if (typeof window !== 'undefined')"
+      - "Consider extracting client logic into separate components"
+  - &a12
+    id: 8
+    name: "File_Org"
+    cluster: "STRUCTURE"
+    status: "WARN"
+    message: "Found 38 organization issues (0 critical, 38 warnings)"
+    priority: 1.3
+    effort: "refactor"
+    duration_ms: 87
+    depends_on:
+      - 17
+      - 19
+    violations:
+      - file: "vite.config.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/vite.config.ts"
+        line: 1
+        message: "File name \"vite.config\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import path from \"node:path\";
+
+          \     2: import { fileURLToPath } from \"node:url\";
+
+          \     3: import { defineConfig } from \"vite\";
+
+          \     4: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/markdown.test.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/markdown.test.ts"
+        line: 1
+        message: "File name \"markdown.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import { describe, expect, it } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import { toSanitizedMarkdownHtml } from \"./markdown\";
+
+          \     4: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/navigation.browser.test.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/navigation.browser.test.ts"
+        line: 1
+        message: "File name \"navigation.browser.test\" doesn't follow naming convention (use kebab-case, PascalCase, or
+          camelCase)"
+        context: " --> 1: import { afterEach, beforeEach, describe, expect, it } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import { OpenClawApp } from \"./app\";
+
+          \     4: import \"../styles.css\";"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/app-settings.test.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-settings.test.ts"
+        line: 1
+        message: "File name \"app-settings.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import { afterEach, beforeEach, describe, expect, it, vi } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import type { Tab } from \"./navigation\";
+
+          \     4: import { setTabFromRoute } from \"./app-settings\";"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/navigation.test.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/navigation.test.ts"
+        line: 1
+        message: "File name \"navigation.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import { describe, expect, it } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import {
+
+          \     4:   TAB_GROUPS,"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/chat-markdown.browser.test.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/chat-markdown.browser.test.ts"
+        line: 1
+        message: "File name \"chat-markdown.browser.test\" doesn't follow naming convention (use kebab-case, PascalCase, or
+          camelCase)"
+        context: " --> 1: import { afterEach, beforeEach, describe, expect, it } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import { OpenClawApp } from \"./app\";
+
+          \     4: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/uuid.test.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/uuid.test.ts"
+        line: 1
+        message: "File name \"uuid.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import { describe, expect, it, vi } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import { generateUUID } from \"./uuid\";
+
+          \     4: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/config-form.browser.test.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/config-form.browser.test.ts"
+        line: 1
+        message: "File name \"config-form.browser.test\" doesn't follow naming convention (use kebab-case, PascalCase, or
+          camelCase)"
+        context: " --> 1: import { render } from \"lit\";
+
+          \     2: import { describe, expect, it, vi } from \"vitest\";
+
+          \     3:\ 
+
+          \     4: import { analyzeConfigSchema, renderConfigForm } from \"./views/config-form\";"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/format.test.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/format.test.ts"
+        line: 1
+        message: "File name \"format.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import { describe, expect, it } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import { stripThinkingTags } from \"./format\";
+
+          \     4: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/app-render.helpers.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-render.helpers.ts"
+        line: 1
+        message: "File name \"app-render.helpers\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import { html } from \"lit\";
+
+          \     2: import { repeat } from \"lit/directives/repeat.js\";
+
+          \     3:\ 
+
+          \     4: import type { AppViewState } from \"./app-view-state\";"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/focus-mode.browser.test.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/focus-mode.browser.test.ts"
+        line: 1
+        message: "File name \"focus-mode.browser.test\" doesn't follow naming convention (use kebab-case, PascalCase, or
+          camelCase)"
+        context: " --> 1: import { afterEach, beforeEach, describe, expect, it } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import { OpenClawApp } from \"./app\";
+
+          \     4: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/__screenshots__/navigation.browser.test.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/__screenshots__/navigation.browser.test.ts"
+        line: 1
+        message: "File name \"navigation.browser.test\" doesn't follow naming convention (use kebab-case, PascalCase, or
+          camelCase)"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/__screenshots__/config-form.browser.test.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/__screenshots__/config-form.browser.test.ts"
+        line: 1
+        message: "File name \"config-form.browser.test\" doesn't follow naming convention (use kebab-case, PascalCase, or
+          camelCase)"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/controllers/channels.types.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/channels.types.ts"
+        line: 1
+        message: "File name \"channels.types\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import type { GatewayBrowserClient } from \"../gateway\";
+
+          \     2: import type { ChannelsStatusSnapshot } from \"../types\";
+
+          \     3:\ 
+
+          \     4: export type ChannelsState = {"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/controllers/chat.test.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/chat.test.ts"
+        line: 1
+        message: "File name \"chat.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import { describe, expect, it } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import { handleChatEvent, type ChatEventPayload, type ChatState } from \"./chat\";
+
+          \     4: "
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/controllers/config.test.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/controllers/config.test.ts"
+        line: 1
+        message: "File name \"config.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import { describe, expect, it, vi } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import {
+
+          \     4:   applyConfigSnapshot,"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/chat/message-normalizer.test.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/chat/message-normalizer.test.ts"
+        line: 1
+        message: "File name \"message-normalizer.test\" doesn't follow naming convention (use kebab-case, PascalCase, or
+          camelCase)"
+        context: " --> 1: import { describe, it, expect, vi, beforeEach, afterEach } from \"vitest\";
+
+          \     2: import {
+
+          \     3:   normalizeMessage,
+
+          \     4:   normalizeRoleForGrouping,"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/chat/tool-helpers.test.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/chat/tool-helpers.test.ts"
+        line: 1
+        message: "File name \"tool-helpers.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import { describe, it, expect } from \"vitest\";
+
+          \     2: import { formatToolOutputForSidebar, getTruncatedPreview } from \"./tool-helpers\";
+
+          \     3:\ 
+
+          \     4: describe(\"tool-helpers\", () => {"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/chat/message-extract.test.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/chat/message-extract.test.ts"
+        line: 1
+        message: "File name \"message-extract.test\" doesn't follow naming convention (use kebab-case, PascalCase, or
+          camelCase)"
+        context: " --> 1: import { describe, expect, it } from \"vitest\";
+
+          \     2:\ 
+
+          \     3: import {
+
+          \     4:   extractText,"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+      - file: "src/ui/views/channels.types.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/views/channels.types.ts"
+        line: 1
+        message: "File name \"channels.types\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+        context: " --> 1: import type {
+
+          \     2:   ChannelAccountSnapshot,
+
+          \     3:   ChannelsStatusSnapshot,
+
+          \     4:   ConfigUiHints,"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "WARN"
+    suggestions:
+      - "Use PascalCase for component files (e.g., UserProfile.tsx)"
+      - "Use kebab-case for utility files (e.g., date-utils.ts)"
+      - "Keep directory nesting under 5 levels"
+      - "Organize all source code under src/ directory"
+  - &a13
+    id: 11
+    name: "No_Circular"
+    cluster: "STRUCTURE"
+    status: "WARN"
+    message: "Found 1 circular dependency chains"
+    priority: 1.3
+    effort: "quick"
+    duration_ms: 61595
+    apex_law: "INFINITE_SCALE"
+    why: "חוק #2: סקייל אינסופי - Bundle מקסימום 100KB. חלוקת קוד הכרחית."
+    depends_on:
+      - 17
+      - 19
+    violations:
+      - file: "src/ui/app-chat.ts"
+        absolute_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui/src/ui/app-chat.ts"
+        line: 1
+        message: "Circular dependency chain #1: src/ui/app-chat.ts -> src/ui/app-settings.ts"
+        context: " --> 1: import { abortChatRun, loadChatHistory, sendChatMessage } from \"./controllers/chat\";
+
+          \     2: import { loadSessions } from \"./controllers/sessions\";
+
+          \     3: import { generateUUID } from \"./uuid\";
+
+          \     4: import { resetToolStream } from \"./app-tool-stream\";"
+        fix_confidence: 0.7
+        auto_fixable: false
+        severity: "FAIL"
+        why: "חוק #2: סקייל אינסופי - Bundle מקסימום 100KB. חלוקת קוד הכרחית."
+    suggestions:
+      - "Use dependency injection to break cycles"
+      - "Extract shared types to a separate module"
+      - "Consider using barrel exports (index.ts) strategically"
+      - "Run: npx madge --circular --extensions ts,tsx src/"
+      - "Create an abstraction layer for bidirectional dependencies"
+  - &a14
+    id: 12
+    name: "Code_Splitting_Check"
+    cluster: "STRUCTURE"
+    status: "WARN"
+    message: "Dynamic imports: 0, Lazy components: 0, Routes: 0"
+    priority: 1.3
+    effort: "quick"
+    duration_ms: 140
+    apex_law: "INFINITE_SCALE"
+    why: "חוק #2: סקייל אינסופי - Bundle מקסימום 100KB. חלוקת קוד הכרחית."
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Use dynamic import() for code splitting heavy modules"
+      - "Use React.lazy() or next/dynamic for component-level splitting"
+  - &a15
+    id: 19
+    name: "Speculative_UX"
+    cluster: "SENSATION"
+    status: "WARN"
+    message: "Speculative UX: parallel-load"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 28
+    blocks:
+      - 2
+      - 3
+      - 5
+      - 7
+      - 8
+      - 9
+      - 11
+      - 12
+      - 13
+      - 22
+      - 23
+      - 24
+      - 25
+      - 27
+      - 28
+      - 29
+      - 30
+      - 31
+      - 32
+      - 33
+      - 34
+      - 36
+      - 37
+      - 38
+      - 39
+      - 41
+      - 42
+      - 45
+      - 46
+      - 47
+      - 48
+      - 49
+      - 50
+      - 51
+      - 52
+      - 53
+      - 54
+      - 55
+      - 56
+      - 57
+      - 58
+      - 59
+      - 60
+      - 61
+      - 62
+      - 63
+      - 64
+      - 65
+      - 66
+      - 67
+      - 68
+      - 69
+      - 70
+    suggestions:
+      - "Use useOptimistic() for instant feedback on mutations"
+      - "Add prefetch on hover/focus for predictive loading"
+      - "Use Suspense boundaries for streaming SSR and code splitting"
+      - "Consider stale-while-revalidate for better perceived performance"
+  - &a16
+    id: 33
+    name: "Cache_Headers"
+    cluster: "PERFORMANCE"
+    status: "WARN"
+    message: "No cache configuration found"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 2
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Add cache headers in next.config.js:"
+      - "{ source: '/_next/static/:path*', headers: [{
+        key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] }"
+      - "Or configure in vercel.json, netlify.toml, or _headers file"
+    verify_command: "npm run build && npm run analyze"
+  - &a17
+    id: 34
+    name: "Core_Web_Vitals"
+    cluster: "PERFORMANCE"
+    status: "WARN"
+    message: "No CWV anti-patterns, but no monitoring detected"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 5
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Add @vercel/speed-insights or web-vitals for CWV monitoring"
+      - "Monitor LCP, CLS, INP in production"
+    verify_command: "npm run build && npm run analyze"
+  - &a18
+    id: 42
+    name: "Simulation"
+    cluster: "NEURAL"
+    status: "WARN"
+    message: "Limited simulation/preview capabilities"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 29
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Add --dry-run flag: if (dryRun) { console.log(\"Would:\", action); return; }"
+      - "Show diff preview: console.log(createPatch(original, modified))"
+      - "Create backups: fs.copyFile(file, `${file}.bak`) before modifications"
+      - "Initialize git for version-controlled rollback"
+  - &a19
+    id: 45
+    name: "PR_Template"
+    cluster: "EVOLUTION"
+    status: "WARN"
+    message: "No PR template found"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 9
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Create .github/pull_request_template.md"
+      - "Include: Summary, Changes, Test Plan, Checklist (5+ items)"
+  - &a20
+    id: 47
+    name: "Deploy_Checks"
+    cluster: "EVOLUTION"
+    status: "WARN"
+    message: "No deployment configuration found"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 1
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Create vercel.json for Vercel deployment"
+      - "Or create Dockerfile for containerized deployment"
+      - "Add engines.node to package.json"
+  - &a21
+    id: 48
+    name: "Rollback_Ready"
+    cluster: "EVOLUTION"
+    status: "WARN"
+    message: "Partial rollback: 40 semver tags (v2026.1.30)"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 5
+    depends_on:
+      - 17
+      - 19
+  - &a22
+    id: 51
+    name: "SBOM_Generation"
+    cluster: "SUPPLY_CHAIN"
+    status: "WARN"
+    message: "No SBOM generation configured"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 9
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Install @cyclonedx/cyclonedx-npm for CycloneDX format"
+      - "Or use @spdx/tools for SPDX format"
+      - "Add sbom script to package.json"
+      - "Generate SBOM in CI pipeline"
+  - &a23
+    id: 52
+    name: "Vuln_Scan"
+    cluster: "SUPPLY_CHAIN"
+    status: "WARN"
+    message: "npm audit failed: Command failed: npm audit --json"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 401
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Ensure npm is installed and accessible"
+      - "Check if package-lock.json exists"
+      - "Run npm audit manually to diagnose"
+  - &a24
+    id: 53
+    name: "License_Compliance"
+    cluster: "SUPPLY_CHAIN"
+    status: "WARN"
+    message: "Could not run license-checker"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 596
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Install license-checker: npm install -D license-checker"
+      - "Or run manually: npx license-checker --json --production"
+  - &a25
+    id: 55
+    name: "Typosquat_Guard"
+    cluster: "SUPPLY_CHAIN"
+    status: "WARN"
+    message: "5 potentially suspicious package(s) found (3 high, 2 medium risk)"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 6
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Verify suspicious packages are intentional"
+      - "Check npm registry for package authenticity"
+      - "Review package author and download counts"
+      - "Consider using npm-audit-resolver for package verification"
+  - &a26
+    id: 56
+    name: "Supply_Attestation"
+    cluster: "SUPPLY_CHAIN"
+    status: "WARN"
+    message: "No supply chain attestation configured"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 4
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Enable npm provenance: add { publishConfig: { provenance: true } } to package.json"
+      - "Configure SLSA L3 provenance: uses: slsa-framework/slsa-github-generator@v2"
+      - "Enable GPG commit signing: git config commit.gpgsign true"
+      - "Use Gitsign for keyless signing: https://github.com/sigstore/gitsign"
+      - "See SLSA levels: https://slsa.dev/spec/v1.0/levels"
+  - &a27
+    id: 57
+    name: "Error_Boundaries"
+    cluster: "RESILIENCE"
+    status: "WARN"
+    message: "No error boundaries found"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 7
+    fixable: true
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Create an ErrorBoundary component with getDerivedStateFromError"
+      - "Add componentDidCatch for error logging"
+      - "Include retry functionality for recoverable errors"
+      - "Wrap critical UI sections with error boundaries"
+  - &a28
+    id: 58
+    name: "Offline_Detection"
+    cluster: "RESILIENCE"
+    status: "WARN"
+    message: "No offline detection found"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 24
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Create useOnlineStatus hook with navigator.onLine + event listeners"
+      - "Add visual indicator when user is offline"
+      - "Use serwist or next-pwa for PWA support with caching"
+      - "Configure service worker with cache strategies"
+  - &a29
+    id: 60
+    name: "Health_Endpoints"
+    cluster: "RESILIENCE"
+    status: "WARN"
+    message: "No health check endpoint found (server not running for live test)"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 18
+    fixable: true
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Create app/api/health/route.ts with GET handler"
+      - "Return { status: 'healthy', timestamp: Date.now(), checks: {...} }"
+      - "Include database connectivity check"
+      - "Include external service checks (Redis, APIs, etc.)"
+      - "Start dev server to enable live health check testing"
+  - &a30
+    id: 61
+    name: "Retry_Patterns"
+    cluster: "RESILIENCE"
+    status: "WARN"
+    message: "No retry patterns found for external calls"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 20
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Use p-retry for promise-based retries with backoff"
+      - "Configure retry in TanStack Query: { retry: 3, retryDelay: attemptIndex => ... }"
+      - "Use axios-retry for HTTP retries"
+      - "Consider cockatiel for comprehensive resilience patterns"
+  - &a31
+    id: 62
+    name: "Circuit_Breaker"
+    cluster: "RESILIENCE"
+    status: "WARN"
+    message: "No circuit breaker or rate limiting found"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 20
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Use @upstash/ratelimit for serverless rate limiting"
+      - "Use cockatiel for circuit breaker patterns"
+      - "Implement circuit breaker for external service calls"
+      - "Add rate limiting to protect against abuse"
+  - &a32
+    id: 63
+    name: "Data_Recovery"
+    cluster: "RESILIENCE"
+    status: "WARN"
+    message: "Partial data resilience (score: 37/100): localStorage, backup strategy, restore procedure, job queue, queue
+      retry, job tracking, revalidation"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 62
+    fixable: true
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Implement autosave for forms and editors"
+      - "Add beforeunload warning for unsaved changes"
+      - "Add dead letter queue for failed jobs"
+      - "Invalidate queries after mutations (TanStack Query invalidateQueries)"
+  - &a33
+    id: 64
+    name: "Structured_Logging"
+    cluster: "OBSERVABILITY"
+    status: "WARN"
+    message: "No structured logging library installed"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 1
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Install pino: npm install pino"
+      - "Or winston: npm install winston"
+  - &a34
+    id: 65
+    name: "Error_Tracking"
+    cluster: "OBSERVABILITY"
+    status: "WARN"
+    message: "No error tracking library installed"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 1
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Install @sentry/nextjs for Next.js apps"
+      - "Install @sentry/react for React apps"
+  - &a35
+    id: 66
+    name: "Perf_Monitor"
+    cluster: "OBSERVABILITY"
+    status: "WARN"
+    message: "No performance monitoring detected"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 321
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Install @vercel/speed-insights for automatic Core Web Vitals"
+      - "Or use web-vitals: import { onCLS, onLCP, onINP } from 'web-vitals'"
+  - &a36
+    id: 67
+    name: "User_Analytics"
+    cluster: "OBSERVABILITY"
+    status: "WARN"
+    message: "No analytics tracking detected"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 110
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Install @vercel/analytics for simple analytics"
+      - "Or posthog-js for detailed product analytics"
+  - &a37
+    id: 68
+    name: "Trace_Context"
+    cluster: "OBSERVABILITY"
+    status: "WARN"
+    message: "No tracing library installed"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 3
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Install @opentelemetry/sdk-trace-node"
+      - "Install @opentelemetry/api for trace API"
+  - &a38
+    id: 69
+    name: "Metrics_Export"
+    cluster: "OBSERVABILITY"
+    status: "WARN"
+    message: "No metrics library installed"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 1
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Install @opentelemetry/sdk-metrics"
+      - "Or prom-client for Prometheus metrics"
+  - &a39
+    id: 70
+    name: "Dashboard_Ready"
+    cluster: "OBSERVABILITY"
+    status: "WARN"
+    message: "No dashboard or alert configuration files found"
+    priority: 1.5
+    effort: "quick"
+    duration_ms: 5
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Create dashboards/*.json for Grafana dashboards"
+      - "Create alerts.yaml for alerting rules"
+      - "Export dashboards from your monitoring tool and commit to repo"
+  - id: 22
+    name: "Zod_Validation"
+    cluster: "INTEGRITY"
+    status: "SKIP"
+    message: "No API routes or server actions found"
+    priority: 2.2
+    effort: "quick"
+    duration_ms: 4
+    apex_law: "IMMORTALITY"
+    why: "חוק #3: קוד נצחי - מקסימום 150 שורות לקובץ, 30 שורות לפונקציה."
+    depends_on:
+      - 17
+      - 19
+  - id: 23
+    name: "RLS_Policies"
+    cluster: "INTEGRITY"
+    status: "SKIP"
+    message: "No Supabase SQL files found"
+    priority: 2.2
+    effort: "quick"
+    duration_ms: 2
+    depends_on:
+      - 17
+      - 19
+  - id: 25
+    name: "CSRF_Protection"
+    cluster: "INTEGRITY"
+    status: "SKIP"
+    message: "No server actions or API middleware found"
+    priority: 2.2
+    effort: "quick"
+    duration_ms: 9
+    depends_on:
+      - 17
+      - 19
+  - id: 26
+    name: "XSS_Prevention"
+    cluster: "INTEGRITY"
+    status: "PASS"
+    message: "No unsafe HTML rendering detected"
+    priority: 2.2
+    effort: "quick"
+    duration_ms: 2
+  - id: 27
+    name: "Auth_Boundaries"
+    cluster: "INTEGRITY"
+    status: "SKIP"
+    message: "No protected routes or middleware found"
+    priority: 2.2
+    effort: "quick"
+    duration_ms: 9
+    depends_on:
+      - 17
+      - 19
+  - id: 28
+    name: "Rate_Limiting"
+    cluster: "INTEGRITY"
+    status: "SKIP"
+    message: "No API routes found"
+    priority: 2.2
+    effort: "quick"
+    duration_ms: 7
+    depends_on:
+      - 17
+      - 19
+  - id: 1
+    name: "Root_Sync"
+    cluster: "FOUNDATION"
+    status: "PASS"
+    message: "MASTER_COORDINATE.md valid (v23.0.0, semver OK)"
+    priority: 2.3
+    effort: "quick"
+    duration_ms: 14
+    apex_law: "ZERO_TRUST"
+    why: "חוק #1: אמון אפס - כל קלט חייב אימות עם Zod. אסור 'any'. Result<T,E> לטיפול בשגיאות."
+  - id: 4
+    name: "Type_Purity"
+    cluster: "FOUNDATION"
+    status: "PASS"
+    message: "Zero type violations in 83 production files (0 allowed in context)"
+    priority: 2.3
+    effort: "quick"
+    duration_ms: 1995
+  - id: 6
+    name: "Law_Enforcement"
+    cluster: "FOUNDATION"
+    status: "PASS"
+    message: "Clean code: 0 console logs, 1 TODOs, 0 RTL/Responsive violations (AST verified)"
+    priority: 2.3
+    effort: "quick"
+    duration_ms: 1364
+    apex_law: "RTL_FIRST"
+    why: "חוק #5: RTL קודם - רק ms-/me-/ps-/pe-/start-/end-. אסור ml/mr/pl/pr/left/right."
+  - id: 10
+    name: "Import_Order"
+    cluster: "STRUCTURE"
+    status: "PASS"
+    message: "All 0 files have properly ordered imports"
+    priority: 2.3
+    effort: "quick"
+    duration_ms: 17
+    apex_law: "INFINITE_SCALE"
+    why: "חוק #2: סקייל אינסופי - Bundle מקסימום 100KB. חלוקת קוד הכרחית."
+  - id: 13
+    name: "Server_Actions_Organization"
+    cluster: "STRUCTURE"
+    status: "SKIP"
+    message: "No server actions found in project"
+    priority: 2.3
+    effort: "quick"
+    duration_ms: 1
+    depends_on:
+      - 17
+      - 19
+  - id: 14
+    name: "Index_Clean"
+    cluster: "STRUCTURE"
+    status: "PASS"
+    message: "0 barrel files, 0 total exports, all properly organized"
+    priority: 2.3
+    effort: "quick"
+    duration_ms: 3
+    apex_law: "ZERO_TRUST"
+    why: "חוק #1: אמון אפס - כל קלט חייב אימות עם Zod. אסור 'any'. Result<T,E> לטיפול בשגיאות."
+  - id: 15
+    name: "FPS_Lock"
+    cluster: "SENSATION"
+    status: "PASS"
+    message: "Animation patterns OK (16 performant animations, transform, opacity, will-change)"
+    priority: 2.5
+    effort: "quick"
+    duration_ms: 40
+    apex_law: "ZERO_TRUST"
+    why: "חוק #1: אמון אפס - כל קלט חייב אימות עם Zod. אסור 'any'. Result<T,E> לטיפול בשגיאות."
+  - id: 16
+    name: "Input_Latency"
+    cluster: "SENSATION"
+    status: "PASS"
+    message: "UX patterns: skeleton (14 loading, 0 optimistic)"
+    priority: 2.5
+    effort: "quick"
+    duration_ms: 31
+    apex_law: "ZERO_TRUST"
+    why: "חוק #1: אמון אפס - כל קלט חייב אימות עם Zod. אסור 'any'. Result<T,E> לטיפול בשגיאות."
+    suggestions:
+      - "Consider useOptimistic() for instant feedback on mutations"
+      - "Use debounce for search inputs, throttle for scroll/resize handlers"
+      - "Use useTransition() for non-blocking state updates"
+  - id: 18
+    name: "A11y_AAA"
+    cluster: "SENSATION"
+    status: "PASS"
+    message: "A11y OK: 0 ARIA attrs, 0 files with focus styles (AST verified)"
+    priority: 2.5
+    effort: "quick"
+    duration_ms: 3
+  - id: 20
+    name: "Haptic_Ready"
+    cluster: "SENSATION"
+    status: "PASS"
+    message: "Touch UX: responsive, safe-area, active-states (0 proper targets)"
+    priority: 2.5
+    effort: "quick"
+    duration_ms: 37
+    apex_law: "IMMORTALITY"
+    why: "חוק #3: קוד נצחי - מקסימום 150 שורות לקובץ, 30 שורות לפונקציה."
+    suggestions:
+      - "Ensure touch targets are at least 44x44px (min-h-11 min-w-11)"
+      - "Add tap-highlight-transparent for custom touch feedback"
+  - id: 21
+    name: "Fluid_Motion"
+    cluster: "SENSATION"
+    status: "PASS"
+    message: "Animation patterns: scroll-driven, view-transitions, reduced-motion, cubic-bezier"
+    priority: 2.5
+    effort: "quick"
+    duration_ms: 39
+    apex_law: "IMMORTALITY"
+    why: "חוק #3: קוד נצחי - מקסימום 150 שורות לקובץ, 30 שורות לפונקציה."
+  - id: 29
+    name: "Bundle_Size"
+    cluster: "PERFORMANCE"
+    status: "SKIP"
+    message: "No build output found (run npm run build first)"
+    priority: 2.5
+    effort: "quick"
+    duration_ms: 2089
+    depends_on:
+      - 17
+      - 19
+    verify_command: "npm run build && npm run analyze"
+  - id: 31
+    name: "Image_Optimization"
+    cluster: "PERFORMANCE"
+    status: "SKIP"
+    message: "No images found in components, CSS, or HTML"
+    priority: 2.5
+    effort: "quick"
+    duration_ms: 11
+    apex_law: "RESPONSIVE"
+    why: "חוק #6: רספונסיבי - מובייל פירסט. מגע מינימום 44x44 פיקסל."
+    depends_on:
+      - 17
+      - 19
+    verify_command: "npm run build && npm run analyze"
+  - id: 32
+    name: "Font_Loading"
+    cluster: "PERFORMANCE"
+    status: "SKIP"
+    message: "No custom font loading detected (using system fonts)"
+    priority: 2.5
+    effort: "quick"
+    duration_ms: 31
+    apex_law: "RESPONSIVE"
+    why: "חוק #6: רספונסיבי - מובייל פירסט. מגע מינימום 44x44 פיקסל."
+    depends_on:
+      - 17
+      - 19
+    verify_command: "npm run build && npm run analyze"
+  - id: 35
+    name: "Memory_Leaks"
+    cluster: "PERFORMANCE"
+    status: "PASS"
+    message: "No potential memory leaks detected in useEffect hooks"
+    priority: 2.5
+    effort: "quick"
+    duration_ms: 424
+    verify_command: "npm run build && npm run analyze"
+  - id: 36
+    name: "Agent_Isolation"
+    cluster: "NEURAL"
+    status: "SKIP"
+    message: "No Task tool calls detected"
+    priority: 2.5
+    effort: "quick"
+    duration_ms: 5
+    depends_on:
+      - 17
+      - 19
+  - id: 37
+    name: "MCP_Discovery"
+    cluster: "NEURAL"
+    status: "SKIP"
+    message: "No MCP servers configured"
+    priority: 2.5
+    effort: "quick"
+    duration_ms: 2
+    depends_on:
+      - 17
+      - 19
+  - id: 38
+    name: "Context_Fork"
+    cluster: "NEURAL"
+    status: "SKIP"
+    message: "No code files found"
+    priority: 2.5
+    effort: "quick"
+    duration_ms: 1
+    depends_on:
+      - 17
+      - 19
+  - id: 39
+    name: "HLTM_Sync"
+    cluster: "NEURAL"
+    status: "SKIP"
+    message: "No todo tracking detected"
+    priority: 2.5
+    effort: "quick"
+    duration_ms: 119
+    depends_on:
+      - 17
+      - 19
+  - id: 40
+    name: "Shadow_Audit"
+    cluster: "NEURAL"
+    status: "PASS"
+    message: "No hidden side effects detected"
+    priority: 2.5
+    effort: "quick"
+    duration_ms: 2
+  - id: 41
+    name: "Token_FinOps"
+    cluster: "NEURAL"
+    status: "SKIP"
+    message: "No AI dependencies or environment configuration detected"
+    priority: 2.5
+    effort: "quick"
+    duration_ms: 2
+    depends_on:
+      - 17
+      - 19
+  - id: 43
+    name: "Commit_Format"
+    cluster: "EVOLUTION"
+    status: "PASS"
+    message: "85% conventional (17/20)"
+    priority: 2.5
+    effort: "quick"
+    duration_ms: 10
+  - id: 44
+    name: "Branch_Strategy"
+    cluster: "EVOLUTION"
+    status: "PASS"
+    message: "98% branches follow conventions"
+    priority: 2.5
+    effort: "quick"
+    duration_ms: 16
+  - id: 49
+    name: "Version_Bump"
+    cluster: "EVOLUTION"
+    status: "SKIP"
+    message: "No version in package.json"
+    priority: 2.5
+    effort: "quick"
+    duration_ms: 1
+    depends_on:
+      - 17
+      - 19
+  - id: 54
+    name: "Dep_Freshness"
+    cluster: "SUPPLY_CHAIN"
+    status: "SKIP"
+    message: "Dependency freshness check skipped (npm outdated unavailable)"
+    priority: 2.5
+    effort: "quick"
+    duration_ms: 8054
+    depends_on:
+      - 17
+      - 19
+    suggestions:
+      - "Run npm outdated manually when network is available"
+      - "Configure renovate.json or dependabot.yml"
+failed_gates:
+  - *a1
+  - *a2
+  - *a3
+  - *a4
+  - *a5
+  - *a6
+  - *a7
+warned_gates:
+  - *a8
+  - *a9
+  - *a10
+  - *a11
+  - *a12
+  - *a13
+  - *a14
+  - *a15
+  - *a16
+  - *a17
+  - *a18
+  - *a19
+  - *a20
+  - *a21
+  - *a22
+  - *a23
+  - *a24
+  - *a25
+  - *a26
+  - *a27
+  - *a28
+  - *a29
+  - *a30
+  - *a31
+  - *a32
+  - *a33
+  - *a34
+  - *a35
+  - *a36
+  - *a37
+  - *a38
+  - *a39

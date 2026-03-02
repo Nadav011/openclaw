@@ -1,0 +1,40 @@
+{
+  "projectName": "ui",
+  "projectPath": "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui",
+  "entries": [
+    {
+      "timestamp": "2026-02-05T17:29:56.107Z",
+      "score": 39,
+      "maxScore": 70,
+      "verdict": "FAILED",
+      "passCount": 13,
+      "failCount": 7,
+      "warnCount": 31,
+      "duration": 77592,
+      "gatesRun": 70
+    },
+    {
+      "timestamp": "2026-02-05T17:51:01.587Z",
+      "score": 39,
+      "maxScore": 70,
+      "verdict": "FAILED",
+      "passCount": 15,
+      "failCount": 7,
+      "warnCount": 32,
+      "duration": 75793,
+      "gatesRun": 70
+    },
+    {
+      "timestamp": "2026-02-05T19:12:44.324Z",
+      "score": 39,
+      "maxScore": 70,
+      "verdict": "FAILED",
+      "passCount": 15,
+      "failCount": 7,
+      "warnCount": 32,
+      "duration": 80304,
+      "gatesRun": 70
+    }
+  ],
+  "lastUpdated": "2026-02-05T19:12:44.425Z"
+}

@@ -6,7 +6,8 @@ import { defineConfig } from "vitest/config";
 const repoRoot = path.dirname(fileURLToPath(import.meta.url));
 const isCI = process.env.CI === "true" || process.env.GITHUB_ACTIONS === "true";
 const isWindows = process.platform === "win32";
-const localWorkers = Math.max(4, Math.min(16, os.cpus().length));
+// Cap local workers to 4 (Node 24 auto-sizes V8 heap to 8.4GB per fork on 32GB RAM)
+const localWorkers = Math.max(2, Math.min(4, os.cpus().length));
 const ciWorkers = isWindows ? 2 : 3;
 
 export default defineConfig({
@@ -36,6 +37,11 @@ export default defineConfig({
     // Same rationale as unstubEnvs: avoid cross-test pollution under vmForks.
     unstubGlobals: true,
     pool: "forks",
+    poolOptions: {
+      forks: {
+        execArgv: ["--max-old-space-size=512"],
+      },
+    },
     maxWorkers: isCI ? ciWorkers : localWorkers,
     include: [
       "src/**/*.test.ts",

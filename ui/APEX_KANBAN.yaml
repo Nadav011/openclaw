@@ -1,0 +1,1316 @@
+# APEX KANBAN - Claude-Actionable Tasks
+# Each task includes file:line for direct navigation
+# Use: code --goto file:line to jump to issue
+
+apex_kanban:
+  project: "ui"
+  project_path: "/home/nadavcohen/Desktop/openclaw-desktop/openclaw/ui"
+  last_audit: "2026-02-05T19:12:44.324Z"
+  score: 39
+  max_score: 70
+  verdict: "FAILED"
+
+  summary:
+    total_issues: 150
+    fixed_since_last: 0
+    remaining: 150
+    by_gate:
+      g2: 1
+      g3: 1
+      g5: 10
+      g7: 1
+      g8: 20
+      g9: 31
+      g11: 1
+      g12: 1
+      g17: 54
+      g19: 1
+      g24: 1
+      g30: 1
+      g33: 1
+      g34: 1
+      g42: 1
+      g45: 1
+      g46: 1
+      g47: 1
+      g48: 1
+      g50: 1
+      g51: 1
+      g52: 1
+      g53: 1
+      g55: 1
+      g56: 1
+      g57: 1
+      g58: 1
+      g59: 1
+      g60: 1
+      g61: 1
+      g62: 1
+      g63: 1
+      g64: 1
+      g65: 1
+      g66: 1
+      g67: 1
+      g68: 1
+      g69: 1
+      g70: 1
+
+  # ============================================
+  # TODO: Issues to fix (newest first)
+  # ============================================
+  todo:
+
+    - id: "g7_general_L0"
+      gate: 7
+      gate_name: "Truth_Anchor"
+      severity: "FAIL"
+      file: "general"
+      issue: "Invalid config files: package.json"
+      fix: "Fix JSON/YAML syntax errors in config files; Ensure config files are not empty; package.json must have 'name' and 'version' fields; tsconfig.json must have 'compilerOptions' section; GitHub workflow f"
+
+    - id: "g9_size_src-ui-views-nodes_L1086"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/ui/views/nodes.ts:1086"
+      issue: "File exceeds limit: 1086 LOC (1138 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-views-config-form.node_L720"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/ui/views/config-form.node.ts:720"
+      issue: "File exceeds limit: 720 LOC (779 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-views-config_L653"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/ui/views/config.ts:653"
+      issue: "File exceeds limit: 653 LOC (691 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-app-render_L590"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/ui/app-render.ts:590"
+      issue: "File exceeds limit: 590 LOC (608 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-types_L471"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/ui/types.ts:471"
+      issue: "File exceeds limit: 471 LOC (527 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-views-cron_L450"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/ui/views/cron.ts:450"
+      issue: "File exceeds limit: 450 LOC (462 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-views-config-form.render_L445"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/ui/views/config-form.render.ts:445"
+      issue: "File exceeds limit: 445 LOC (473 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-views-chat_L438"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/ui/views/chat.ts:438"
+      issue: "File exceeds limit: 438 LOC (488 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-app_L416"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/ui/app.ts:416"
+      issue: "File exceeds limit: 416 LOC (476 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-app-render.helpers_L309"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/ui/app-render.helpers.ts:309"
+      issue: "File exceeds limit: 309 LOC (332 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-app-settings_L302"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/ui/app-settings.ts:302"
+      issue: "File exceeds limit: 302 LOC (333 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-views-channels_L289"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/ui/views/channels.ts:289"
+      issue: "File exceeds limit: 289 LOC (311 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-gateway_L266"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/ui/gateway.ts:266"
+      issue: "File exceeds limit: 266 LOC (298 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-views-sessions_L253"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/ui/views/sessions.ts:253"
+      issue: "File exceeds limit: 253 LOC (269 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-views-channels.nostr-profile-form_L251"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/ui/views/channels.nostr-profile-form.ts:251"
+      issue: "File exceeds limit: 251 LOC (321 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-views-overview_L249"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/ui/views/overview.ts:249"
+      issue: "File exceeds limit: 249 LOC (257 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-chat-grouped-render_L249"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/ui/chat/grouped-render.ts:249"
+      issue: "File exceeds limit: 249 LOC (277 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-app-gateway_L242"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/ui/app-gateway.ts:242"
+      issue: "File exceeds limit: 242 LOC (262 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-icons_L233"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "FAIL"
+      location: "src/ui/icons.ts:233"
+      issue: "File exceeds limit: 233 LOC (249 total lines) > 150 limit"
+
+    - id: "g11_circular_src-ui-app-chat_L1"
+      gate: 11
+      gate_name: "No_Circular"
+      severity: "FAIL"
+      location: "src/ui/app-chat.ts:1"
+      issue: "Circular dependency chain #1: src/ui/app-chat.ts -> src/ui/app-settings.ts"
+
+    - id: "g30_general_L0"
+      gate: 30
+      gate_name: "Lazy_Loading"
+      severity: "FAIL"
+      file: "general"
+      issue: "Only 0 lazy loading usages found"
+      fix: "import dynamic from 'next/dynamic'; const Component = dynamic(() => import(\"./Component\"), { loading: () => <Loading /> }); Wrap lazy components with <Suspense fallback={...}>; Add loading=\"lazy\" to b"
+
+    - id: "g46_general_L0"
+      gate: 46
+      gate_name: "CI_Pipeline"
+      severity: "FAIL"
+      file: "general"
+      issue: "No CI/CD pipeline found"
+      fix: "Create .github/workflows/ci.yml; Add jobs: lint -> build -> test (in dependency order); Enable concurrency to cancel stale runs"
+
+    - id: "g50_general_L0"
+      gate: 50
+      gate_name: "Lock_Integrity"
+      severity: "FAIL"
+      file: "general"
+      issue: "No lock file found"
+      fix: "Run npm install to generate package-lock.json; Or use pnpm/yarn/bun for their lock files"
+
+    - id: "g59_general_L0"
+      gate: 59
+      gate_name: "Graceful_Degradation"
+      severity: "FAIL"
+      file: "general"
+      issue: "Graceful degradation patterns missing or poorly implemented"
+      fix: "Create app/loading.tsx with skeleton/spinner component; Create app/not-found.tsx with helpful 404 message and navigation; Wrap async components with <Suspense fallback={<Loading />}>; Add timeout hand"
+
+    - id: "g2_config_general_L0"
+      gate: 2
+      gate_name: "DNA_Alignment"
+      severity: "WARN"
+      file: "general"
+      issue: "No AI_CONTEXT.md or CLAUDE.md in project (optional but recommended)"
+      fix: "Run /scan to generate AI_CONTEXT.md; Or create .claude/AI_CONTEXT.md manually with project info"
+
+    - id: "g3_schema_package.json_L1"
+      gate: 3
+      gate_name: "Schema_Lock"
+      severity: "WARN"
+      location: "package.json:1"
+      issue: "Unused dependencies: @noble/ed25519, dompurify, lit, marked"
+      fix: "Run: npm uninstall @noble/ed25519 dompurify lit marked"
+
+    - id: "g5_boundary_src-ui-app_L88"
+      gate: 5
+      gate_name: "Boundary_Check"
+      severity: "WARN"
+      location: "src/ui/app.ts:88"
+      issue: "Client API \"window.location\" used without 'use client' or typeof guard"
+      fix: "Add 'use client' directive or wrap in: if (typeof window !== 'undefined')"
+
+    - id: "g5_boundary_src-ui-app_L89"
+      gate: 5
+      gate_name: "Boundary_Check"
+      severity: "WARN"
+      location: "src/ui/app.ts:89"
+      issue: "Client API \"window.location\" used without 'use client' or typeof guard"
+      fix: "Add 'use client' directive or wrap in: if (typeof window !== 'undefined')"
+
+    - id: "g5_boundary_src-ui-navigation.browser.test_L9"
+      gate: 5
+      gate_name: "Boundary_Check"
+      severity: "WARN"
+      location: "src/ui/navigation.browser.test.ts:9"
+      issue: "Client API \"window.history\" used without 'use client' or typeof guard"
+      fix: "Add 'use client' directive or wrap in: if (typeof window !== 'undefined')"
+
+    - id: "g5_boundary_src-ui-navigation.browser.test_L10"
+      gate: 5
+      gate_name: "Boundary_Check"
+      severity: "WARN"
+      location: "src/ui/navigation.browser.test.ts:10"
+      issue: "Client API \"document.createElement\" used without 'use client' or typeof guard"
+      fix: "Add 'use client' directive or wrap in: if (typeof window !== 'undefined')"
+
+    - id: "g5_boundary_src-ui-navigation.browser.test_L11"
+      gate: 5
+      gate_name: "Boundary_Check"
+      severity: "WARN"
+      location: "src/ui/navigation.browser.test.ts:11"
+      issue: "Client API \"document.body\" used without 'use client' or typeof guard"
+      fix: "Add 'use client' directive or wrap in: if (typeof window !== 'undefined')"
+
+    - id: "g5_boundary_src-ui-navigation.browser.test_L26"
+      gate: 5
+      gate_name: "Boundary_Check"
+      severity: "WARN"
+      location: "src/ui/navigation.browser.test.ts:26"
+      issue: "Client API \"localStorage\" used without 'use client' or typeof guard"
+      fix: "Add 'use client' directive or wrap in: if (typeof window !== 'undefined')"
+
+    - id: "g5_boundary_src-ui-navigation.browser.test_L27"
+      gate: 5
+      gate_name: "Boundary_Check"
+      severity: "WARN"
+      location: "src/ui/navigation.browser.test.ts:27"
+      issue: "Client API \"document.body\" used without 'use client' or typeof guard"
+      fix: "Add 'use client' directive or wrap in: if (typeof window !== 'undefined')"
+
+    - id: "g5_boundary_src-ui-navigation.browser.test_L33"
+      gate: 5
+      gate_name: "Boundary_Check"
+      severity: "WARN"
+      location: "src/ui/navigation.browser.test.ts:33"
+      issue: "Client API \"localStorage\" used without 'use client' or typeof guard"
+      fix: "Add 'use client' directive or wrap in: if (typeof window !== 'undefined')"
+
+    - id: "g5_boundary_src-ui-navigation.browser.test_L34"
+      gate: 5
+      gate_name: "Boundary_Check"
+      severity: "WARN"
+      location: "src/ui/navigation.browser.test.ts:34"
+      issue: "Client API \"document.body\" used without 'use client' or typeof guard"
+      fix: "Add 'use client' directive or wrap in: if (typeof window !== 'undefined')"
+
+    - id: "g5_boundary_src-ui-navigation.browser.test_L43"
+      gate: 5
+      gate_name: "Boundary_Check"
+      severity: "WARN"
+      location: "src/ui/navigation.browser.test.ts:43"
+      issue: "Client API \"window.location\" used without 'use client' or typeof guard"
+      fix: "Add 'use client' directive or wrap in: if (typeof window !== 'undefined')"
+
+    - id: "g8_org_vite.config_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "vite.config.ts:1"
+      issue: "File name \"vite.config\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-ui-markdown.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/ui/markdown.test.ts:1"
+      issue: "File name \"markdown.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-ui-navigation.browser.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/ui/navigation.browser.test.ts:1"
+      issue: "File name \"navigation.browser.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-ui-app-settings.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/ui/app-settings.test.ts:1"
+      issue: "File name \"app-settings.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-ui-navigation.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/ui/navigation.test.ts:1"
+      issue: "File name \"navigation.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-ui-chat-markdown.browser.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/ui/chat-markdown.browser.test.ts:1"
+      issue: "File name \"chat-markdown.browser.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-ui-uuid.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/ui/uuid.test.ts:1"
+      issue: "File name \"uuid.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-ui-config-form.browser.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/ui/config-form.browser.test.ts:1"
+      issue: "File name \"config-form.browser.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-ui-format.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/ui/format.test.ts:1"
+      issue: "File name \"format.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-ui-app-render.helpers_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/ui/app-render.helpers.ts:1"
+      issue: "File name \"app-render.helpers\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-ui-focus-mode.browser.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/ui/focus-mode.browser.test.ts:1"
+      issue: "File name \"focus-mode.browser.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-ui-__screenshots__-navigation.browser.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/ui/__screenshots__/navigation.browser.test.ts:1"
+      issue: "File name \"navigation.browser.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-ui-__screenshots__-config-form.browser.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/ui/__screenshots__/config-form.browser.test.ts:1"
+      issue: "File name \"config-form.browser.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-ui-controllers-channels.types_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/ui/controllers/channels.types.ts:1"
+      issue: "File name \"channels.types\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-ui-controllers-chat.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/ui/controllers/chat.test.ts:1"
+      issue: "File name \"chat.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-ui-controllers-config.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/ui/controllers/config.test.ts:1"
+      issue: "File name \"config.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-ui-chat-message-normalizer.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/ui/chat/message-normalizer.test.ts:1"
+      issue: "File name \"message-normalizer.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-ui-chat-tool-helpers.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/ui/chat/tool-helpers.test.ts:1"
+      issue: "File name \"tool-helpers.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-ui-chat-message-extract.test_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/ui/chat/message-extract.test.ts:1"
+      issue: "File name \"message-extract.test\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g8_org_src-ui-views-channels.types_L1"
+      gate: 8
+      gate_name: "File_Org"
+      severity: "WARN"
+      location: "src/ui/views/channels.types.ts:1"
+      issue: "File name \"channels.types\" doesn't follow naming convention (use kebab-case, PascalCase, or camelCase)"
+
+    - id: "g9_size_src-ui-app-chat_L218"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/ui/app-chat.ts:218"
+      issue: "File exceeds limit: 218 LOC (243 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-app-channels_L215"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/ui/app-channels.ts:215"
+      issue: "File exceeds limit: 215 LOC (241 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-views-channels.nostr_L213"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/ui/views/channels.nostr.ts:213"
+      issue: "File exceeds limit: 213 LOC (235 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-app-tool-stream_L212"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/ui/app-tool-stream.ts:212"
+      issue: "File exceeds limit: 212 LOC (241 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-app-view-state_L205"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/ui/app-view-state.ts:205"
+      issue: "File exceeds limit: 205 LOC (207 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-views-skills_L183"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/ui/views/skills.ts:183"
+      issue: "File exceeds limit: 183 LOC (192 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-controllers-cron_L177"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/ui/controllers/cron.ts:177"
+      issue: "File exceeds limit: 177 LOC (188 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-navigation_L174"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/ui/navigation.ts:174"
+      issue: "File exceeds limit: 174 LOC (187 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-controllers-config_L174"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/ui/controllers/config.ts:174"
+      issue: "File exceeds limit: 174 LOC (186 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-tool-display_L172"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/ui/tool-display.ts:172"
+      issue: "File exceeds limit: 172 LOC (196 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-controllers-chat_L170"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/ui/controllers/chat.ts:170"
+      issue: "File exceeds limit: 170 LOC (191 total lines) > 150 limit"
+
+    - id: "g9_size_src-ui-views-config-form.analyze_L167"
+      gate: 9
+      gate_name: "Atomic_Size"
+      severity: "WARN"
+      location: "src/ui/views/config-form.analyze.ts:167"
+      issue: "File exceeds limit: 167 LOC (187 total lines) > 150 limit"
+
+    - id: "g12_split_general_L0"
+      gate: 12
+      gate_name: "Code_Splitting_Check"
+      severity: "WARN"
+      file: "general"
+      issue: "Dynamic imports: 0, Lazy components: 0, Routes: 0"
+      fix: "Use dynamic import() for code splitting heavy modules; Use React.lazy() or next/dynamic for component-level splitting"
+
+    - id: "g17_src-ui-components-resizable-divider_L32"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/ui/components/resizable-divider.ts:32"
+      issue: "Using left: -4px; instead of inset-inline-start:"
+      code: "left: -4px;"
+      fix: "inset-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-ui-components-resizable-divider_L33"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/ui/components/resizable-divider.ts:33"
+      issue: "Using right: -4px; instead of inset-inline-end:"
+      code: "right: -4px;"
+      fix: "inset-inline-end:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-layout.css_L312"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/layout.css:312"
+      issue: "Using text-align: left instead of text-align: start"
+      code: "text-align: left"
+      fix: "text-align: start"
+      auto_fixable: true
+
+    - id: "g17_src-styles-layout.css_L493"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/layout.css:493"
+      issue: "Using text-align: left instead of text-align: start"
+      code: "text-align: left"
+      fix: "text-align: start"
+      auto_fixable: true
+
+    - id: "g17_src-styles-layout.css_L574"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/layout.css:574"
+      issue: "Using border-right: instead of border-inline-end:"
+      code: "border-right:"
+      fix: "border-inline-end:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-components.css_L370"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/components.css:370"
+      issue: "Using margin-left: instead of margin-inline-start:"
+      code: "margin-left:"
+      fix: "margin-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-components.css_L370_2"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/components.css:370"
+      issue: "Using left: 6 instead of inset-inline-start:"
+      code: "left: 6"
+      fix: "inset-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-components.css_L462"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/components.css:462"
+      issue: "Using padding-right: instead of padding-inline-end:"
+      code: "padding-right:"
+      fix: "padding-inline-end:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-components.css_L462_2"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/components.css:462"
+      issue: "Using right: 3 instead of inset-inline-end:"
+      code: "right: 3"
+      fix: "inset-inline-end:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-components.css_L666"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/components.css:666"
+      issue: "Using text-align: right instead of text-align: end"
+      code: "text-align: right"
+      fix: "text-align: end"
+      auto_fixable: true
+
+    - id: "g17_src-styles-components.css_L691"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/components.css:691"
+      issue: "Using text-align: left instead of text-align: start"
+      code: "text-align: left"
+      fix: "text-align: start"
+      auto_fixable: true
+
+    - id: "g17_src-styles-components.css_L725"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/components.css:725"
+      issue: "Using margin-right: instead of margin-inline-end:"
+      code: "margin-right:"
+      fix: "margin-inline-end:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-components.css_L725_2"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/components.css:725"
+      issue: "Using right: 6 instead of inset-inline-end:"
+      code: "right: 6"
+      fix: "inset-inline-end:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-components.css_L1152"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/components.css:1152"
+      issue: "Using padding-left: instead of padding-inline-start:"
+      code: "padding-left:"
+      fix: "padding-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-components.css_L1152_2"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/components.css:1152"
+      issue: "Using left: 1 instead of inset-inline-start:"
+      code: "left: 1"
+      fix: "inset-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-components.css_L1168"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/components.css:1168"
+      issue: "Using left: 2 instead of inset-inline-start:"
+      code: "left: 2"
+      fix: "inset-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-components.css_L1168_2"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/components.css:1168"
+      issue: "Using border-left: instead of border-inline-start:"
+      code: "border-left:"
+      fix: "border-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-components.css_L1169"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/components.css:1169"
+      issue: "Using padding-left: instead of padding-inline-start:"
+      code: "padding-left:"
+      fix: "padding-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-components.css_L1169_2"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/components.css:1169"
+      issue: "Using left: 1 instead of inset-inline-start:"
+      code: "left: 1"
+      fix: "inset-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-components.css_L1312"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/components.css:1312"
+      issue: "Using text-align: right instead of text-align: end"
+      code: "text-align: right"
+      fix: "text-align: end"
+      auto_fixable: true
+
+    - id: "g17_src-styles-config.css_L26"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/config.css:26"
+      issue: "Using right: 1 instead of inset-inline-end:"
+      code: "right: 1"
+      fix: "inset-inline-end:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-config.css_L26_2"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/config.css:26"
+      issue: "Using border-right: instead of border-inline-end:"
+      code: "border-right:"
+      fix: "border-inline-end:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-config.css_L64"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/config.css:64"
+      issue: "Using left: 2 instead of inset-inline-start:"
+      code: "left: 2"
+      fix: "inset-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-config.css_L107"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/config.css:107"
+      issue: "Using right: 2 instead of inset-inline-end:"
+      code: "right: 2"
+      fix: "inset-inline-end:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-config.css_L151"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/config.css:151"
+      issue: "Using text-align: left instead of text-align: start"
+      code: "text-align: left"
+      fix: "text-align: start"
+      auto_fixable: true
+
+    - id: "g17_src-styles-config.css_L791"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/config.css:791"
+      issue: "Using left: 1 instead of inset-inline-start:"
+      code: "left: 1"
+      fix: "inset-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-config.css_L791_2"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/config.css:791"
+      issue: "Using border-left: instead of border-inline-start:"
+      code: "border-left:"
+      fix: "border-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-config.css_L792"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/config.css:792"
+      issue: "Using right: 1 instead of inset-inline-end:"
+      code: "right: 1"
+      fix: "inset-inline-end:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-config.css_L792_2"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/config.css:792"
+      issue: "Using border-right: instead of border-inline-end:"
+      code: "border-right:"
+      fix: "border-inline-end:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-config.css_L964"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/config.css:964"
+      issue: "Using left: 3 instead of inset-inline-start:"
+      code: "left: 3"
+      fix: "inset-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-config.css_L1343"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/config.css:1343"
+      issue: "Using border-right: instead of border-inline-end:"
+      code: "border-right:"
+      fix: "border-inline-end:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-layout.css_L66"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/layout.css:66"
+      issue: "Using right: 1 instead of inset-inline-end:"
+      code: "right: 1"
+      fix: "inset-inline-end:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-layout.css_L150"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/layout.css:150"
+      issue: "Using right: 4 instead of inset-inline-end:"
+      code: "right: 4"
+      fix: "inset-inline-end:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-sidebar.css_L22"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/sidebar.css:22"
+      issue: "Using left: 1 instead of inset-inline-start:"
+      code: "left: 1"
+      fix: "inset-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-sidebar.css_L22_2"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/sidebar.css:22"
+      issue: "Using border-left: instead of border-inline-start:"
+      code: "border-left:"
+      fix: "border-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-sidebar.css_L102"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/sidebar.css:102"
+      issue: "Using left: 0 instead of inset-inline-start:"
+      code: "left: 0"
+      fix: "inset-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-sidebar.css_L103"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/sidebar.css:103"
+      issue: "Using right: 0 instead of inset-inline-end:"
+      code: "right: 0"
+      fix: "inset-inline-end:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-sidebar.css_L115"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/sidebar.css:115"
+      issue: "Using border-left: instead of border-inline-start:"
+      code: "border-left:"
+      fix: "border-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-grouped.css_L11"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/grouped.css:11"
+      issue: "Using margin-left: instead of margin-inline-start:"
+      code: "margin-left:"
+      fix: "margin-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-grouped.css_L11_2"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/grouped.css:11"
+      issue: "Using left: 4 instead of inset-inline-start:"
+      code: "left: 4"
+      fix: "inset-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-grouped.css_L12"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/grouped.css:12"
+      issue: "Using margin-right: instead of margin-inline-end:"
+      code: "margin-right:"
+      fix: "margin-inline-end:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-grouped.css_L12_2"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/grouped.css:12"
+      issue: "Using right: 1 instead of inset-inline-end:"
+      code: "right: 1"
+      fix: "inset-inline-end:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-grouped.css_L116"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/grouped.css:116"
+      issue: "Using padding-right: instead of padding-inline-end:"
+      code: "padding-right:"
+      fix: "padding-inline-end:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-grouped.css_L116_2"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/grouped.css:116"
+      issue: "Using right: 3 instead of inset-inline-end:"
+      code: "right: 3"
+      fix: "inset-inline-end:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-grouped.css_L122"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/grouped.css:122"
+      issue: "Using right: 8 instead of inset-inline-end:"
+      code: "right: 8"
+      fix: "inset-inline-end:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-grouped.css_L159"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/grouped.css:159"
+      issue: "Using left: 0 instead of inset-inline-start:"
+      code: "left: 0"
+      fix: "inset-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-text.css_L37"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/text.css:37"
+      issue: "Using padding-left: instead of padding-inline-start:"
+      code: "padding-left:"
+      fix: "padding-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-text.css_L37_2"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/text.css:37"
+      issue: "Using left: 1 instead of inset-inline-start:"
+      code: "left: 1"
+      fix: "inset-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-text.css_L78"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/text.css:78"
+      issue: "Using left: 3 instead of inset-inline-start:"
+      code: "left: 3"
+      fix: "inset-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-text.css_L78_2"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/text.css:78"
+      issue: "Using border-left: instead of border-inline-start:"
+      code: "border-left:"
+      fix: "border-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-text.css_L79"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/text.css:79"
+      issue: "Using padding-left: instead of padding-inline-start:"
+      code: "padding-left:"
+      fix: "padding-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-text.css_L79_2"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/text.css:79"
+      issue: "Using left: 1 instead of inset-inline-start:"
+      code: "left: 1"
+      fix: "inset-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-text.css_L80"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/text.css:80"
+      issue: "Using margin-left: instead of margin-inline-start:"
+      code: "margin-left:"
+      fix: "margin-inline-start:"
+      auto_fixable: true
+
+    - id: "g17_src-styles-chat-text.css_L80_2"
+      gate: 17
+      gate_name: "Logical_RTL"
+      severity: "WARN"
+      location: "src/styles/chat/text.css:80"
+      issue: "Using left: 0 instead of inset-inline-start:"
+      code: "left: 0"
+      fix: "inset-inline-start:"
+      auto_fixable: true
+
+    - id: "g19_general_L0"
+      gate: 19
+      gate_name: "Speculative_UX"
+      severity: "WARN"
+      file: "general"
+      issue: "Speculative UX: parallel-load"
+      fix: "Use useOptimistic() for instant feedback on mutations; Add prefetch on hover/focus for predictive loading; Use Suspense boundaries for streaming SSR and code splitting; Consider stale-while-revalidate"
+
+    - id: "g24_general_L0"
+      gate: 24
+      gate_name: "Env_Validation"
+      severity: "WARN"
+      file: "general"
+      issue: "No hardcoded secrets, but .env not in .gitignore"
+      fix: "Add .env and .env.* to .gitignore"
+
+    - id: "g33_general_L0"
+      gate: 33
+      gate_name: "Cache_Headers"
+      severity: "WARN"
+      file: "general"
+      issue: "No cache configuration found"
+      fix: "Add cache headers in next.config.js:; { source: '/_next/static/:path*', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] }; Or configure in vercel.json, netlify.toml, "
+
+    - id: "g34_general_L0"
+      gate: 34
+      gate_name: "Core_Web_Vitals"
+      severity: "WARN"
+      file: "general"
+      issue: "No CWV anti-patterns, but no monitoring detected"
+      fix: "Add @vercel/speed-insights or web-vitals for CWV monitoring; Monitor LCP, CLS, INP in production"
+
+    - id: "g42_general_L0"
+      gate: 42
+      gate_name: "Simulation"
+      severity: "WARN"
+      file: "general"
+      issue: "Limited simulation/preview capabilities"
+      fix: "Add --dry-run flag: if (dryRun) { console.log(\"Would:\", action); return; }; Show diff preview: console.log(createPatch(original, modified)); Create backups: fs.copyFile(file, `${file}.bak`) before mod"
+
+    - id: "g45_general_L0"
+      gate: 45
+      gate_name: "PR_Template"
+      severity: "WARN"
+      file: "general"
+      issue: "No PR template found"
+      fix: "Create .github/pull_request_template.md; Include: Summary, Changes, Test Plan, Checklist (5+ items)"
+
+    - id: "g47_general_L0"
+      gate: 47
+      gate_name: "Deploy_Checks"
+      severity: "WARN"
+      file: "general"
+      issue: "No deployment configuration found"
+      fix: "Create vercel.json for Vercel deployment; Or create Dockerfile for containerized deployment; Add engines.node to package.json"
+
+    - id: "g48_general_L0"
+      gate: 48
+      gate_name: "Rollback_Ready"
+      severity: "WARN"
+      file: "general"
+      issue: "Partial rollback: 40 semver tags (v2026.1.30)"
+
+    - id: "g51_general_L0"
+      gate: 51
+      gate_name: "SBOM_Generation"
+      severity: "WARN"
+      file: "general"
+      issue: "No SBOM generation configured"
+      fix: "Install @cyclonedx/cyclonedx-npm for CycloneDX format; Or use @spdx/tools for SPDX format; Add sbom script to package.json; Generate SBOM in CI pipeline"
+
+    - id: "g52_general_L0"
+      gate: 52
+      gate_name: "Vuln_Scan"
+      severity: "WARN"
+      file: "general"
+      issue: "npm audit failed: Command failed: npm audit --json"
+      fix: "Ensure npm is installed and accessible; Check if package-lock.json exists; Run npm audit manually to diagnose"
+
+    - id: "g53_general_L0"
+      gate: 53
+      gate_name: "License_Compliance"
+      severity: "WARN"
+      file: "general"
+      issue: "Could not run license-checker"
+      fix: "Install license-checker: npm install -D license-checker; Or run manually: npx license-checker --json --production"
+
+    - id: "g55_general_L0"
+      gate: 55
+      gate_name: "Typosquat_Guard"
+      severity: "WARN"
+      file: "general"
+      issue: "5 potentially suspicious package(s) found (3 high, 2 medium risk)"
+      fix: "Verify suspicious packages are intentional; Check npm registry for package authenticity; Review package author and download counts; Consider using npm-audit-resolver for package verification"
+
+    - id: "g56_general_L0"
+      gate: 56
+      gate_name: "Supply_Attestation"
+      severity: "WARN"
+      file: "general"
+      issue: "No supply chain attestation configured"
+      fix: "Enable npm provenance: add { publishConfig: { provenance: true } } to package.json; Configure SLSA L3 provenance: uses: slsa-framework/slsa-github-generator@v2; Enable GPG commit signing: git config c"
+
+    - id: "g57_general_L0"
+      gate: 57
+      gate_name: "Error_Boundaries"
+      severity: "WARN"
+      file: "general"
+      issue: "No error boundaries found"
+      fix: "Create an ErrorBoundary component with getDerivedStateFromError; Add componentDidCatch for error logging; Include retry functionality for recoverable errors; Wrap critical UI sections with error bound"
+
+    - id: "g58_general_L0"
+      gate: 58
+      gate_name: "Offline_Detection"
+      severity: "WARN"
+      file: "general"
+      issue: "No offline detection found"
+      fix: "Create useOnlineStatus hook with navigator.onLine + event listeners; Add visual indicator when user is offline; Use serwist or next-pwa for PWA support with caching; Configure service worker with cach"
+
+    - id: "g60_general_L0"
+      gate: 60
+      gate_name: "Health_Endpoints"
+      severity: "WARN"
+      file: "general"
+      issue: "No health check endpoint found (server not running for live test)"
+      fix: "Create app/api/health/route.ts with GET handler; Return { status: 'healthy', timestamp: Date.now(), checks: {...} }; Include database connectivity check; Include external service checks (Redis, APIs, "
+
+    - id: "g61_general_L0"
+      gate: 61
+      gate_name: "Retry_Patterns"
+      severity: "WARN"
+      file: "general"
+      issue: "No retry patterns found for external calls"
+      fix: "Use p-retry for promise-based retries with backoff; Configure retry in TanStack Query: { retry: 3, retryDelay: attemptIndex => ... }; Use axios-retry for HTTP retries; Consider cockatiel for comprehen"
+
+    - id: "g62_general_L0"
+      gate: 62
+      gate_name: "Circuit_Breaker"
+      severity: "WARN"
+      file: "general"
+      issue: "No circuit breaker or rate limiting found"
+      fix: "Use @upstash/ratelimit for serverless rate limiting; Use cockatiel for circuit breaker patterns; Implement circuit breaker for external service calls; Add rate limiting to protect against abuse"
+
+    - id: "g63_general_L0"
+      gate: 63
+      gate_name: "Data_Recovery"
+      severity: "WARN"
+      file: "general"
+      issue: "Partial data resilience (score: 37/100): localStorage, backup strategy, restore procedure, job queue, queue retry, job tracking, revalidation"
+      fix: "Implement autosave for forms and editors; Add beforeunload warning for unsaved changes; Add dead letter queue for failed jobs; Invalidate queries after mutations (TanStack Query invalidateQueries)"
+
+    - id: "g64_general_L0"
+      gate: 64
+      gate_name: "Structured_Logging"
+      severity: "WARN"
+      file: "general"
+      issue: "No structured logging library installed"
+      fix: "Install pino: npm install pino; Or winston: npm install winston"
+
+    - id: "g65_general_L0"
+      gate: 65
+      gate_name: "Error_Tracking"
+      severity: "WARN"
+      file: "general"
+      issue: "No error tracking library installed"
+      fix: "Install @sentry/nextjs for Next.js apps; Install @sentry/react for React apps"
+
+    - id: "g66_general_L0"
+      gate: 66
+      gate_name: "Perf_Monitor"
+      severity: "WARN"
+      file: "general"
+      issue: "No performance monitoring detected"
+      fix: "Install @vercel/speed-insights for automatic Core Web Vitals; Or use web-vitals: import { onCLS, onLCP, onINP } from 'web-vitals'"
+
+    - id: "g67_general_L0"
+      gate: 67
+      gate_name: "User_Analytics"
+      severity: "WARN"
+      file: "general"
+      issue: "No analytics tracking detected"
+      fix: "Install @vercel/analytics for simple analytics; Or posthog-js for detailed product analytics"
+
+    - id: "g68_general_L0"
+      gate: 68
+      gate_name: "Trace_Context"
+      severity: "WARN"
+      file: "general"
+      issue: "No tracing library installed"
+      fix: "Install @opentelemetry/sdk-trace-node; Install @opentelemetry/api for trace API"
+
+    - id: "g69_general_L0"
+      gate: 69
+      gate_name: "Metrics_Export"
+      severity: "WARN"
+      file: "general"
+      issue: "No metrics library installed"
+      fix: "Install @opentelemetry/sdk-metrics; Or prom-client for Prometheus metrics"
+
+    - id: "g70_general_L0"
+      gate: 70
+      gate_name: "Dashboard_Ready"
+      severity: "WARN"
+      file: "general"
+      issue: "No dashboard or alert configuration files found"
+      fix: "Create dashboards/*.json for Grafana dashboards; Create alerts.yaml for alerting rules; Export dashboards from your monitoring tool and commit to repo"
