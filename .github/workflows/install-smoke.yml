@@ -46,7 +46,7 @@ jobs:
           cache-key-suffix: "node22"
 
       - name: Install pnpm deps (minimal)
-        run: pnpm install --ignore-scripts --frozen-lockfile
+        run: ppnpm install --ignore-scripts --frozen-lockfile
 
       - name: Run root Dockerfile CLI smoke
         run: |
